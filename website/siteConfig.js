@@ -11,19 +11,35 @@
 /* List of projects/orgs using your project for the users page */
 const users = [
   {
-    caption: 'User1',
+    caption: 'Zimbabwe Online (ZOL)',
     // You will need to prepend the image path with your baseUrl
     // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/img/docusaurus.svg',
-    infoLink: 'https://www.facebook.com',
+    image: '/img/zol.png',
+    infoLink: 'https://www.zol.co.zw',
     pinned: true,
   },
+  {
+    caption: 'Total Zimbabwe',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: '/img/total.png',
+    infoLink: 'http://www.total.co.zw',
+    pinned: true,
+  },
+  {
+    caption: 'Food World',
+    // You will need to prepend the image path with your baseUrl
+    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+    image: '/img/foodworld.png',
+    infoLink: 'https://www.foodworld.co.zw/',
+    pinned: true,
+  },  
 ];
 
 const siteConfig = {
-  title: 'Paynow API Documentation' /* title for your website */,
-  tagline: 'Documetation for Paynow Zimbabwe\'s website ',
-  url: 'https://your-docusaurus-test-site.com' /* your website url */,
+  title: 'Paynow Developer Hub' /* title for your website */,
+  tagline: 'Zimbabwe\'s Leading Online Payments Gateway',
+  url: 'https://paynowzw.github.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://paynowzw.github.io',
@@ -48,8 +64,8 @@ const siteConfig = {
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/docusaurus.svg',
-  footerIcon: 'img/docusaurus.svg',
+  headerIcon: 'img/paynow.png',
+  footerIcon: 'img/paynow.png',
   favicon: 'img/favicon.png',
 
   /* colors for website */

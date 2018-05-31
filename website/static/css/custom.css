@@ -1,5 +1,10 @@
 /* your custom css */
 
+.fixedHeaderContainer {
+	/*padding: 3rem 0;*/
+    background-image: linear-gradient(to bottom, #185ff9, #99a2ff);
+}
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 
@@ -14,3 +19,4 @@
 
 @media only screen and (min-width: 1500px) {
 }
+

@@ -1,8 +1,15 @@
 {
   "docs": {
-    "Docusaurus": ["doc1"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3"]
+    "Guides": ["quickstart"],
+    "Reference Docs": [
+      "system_layout",
+      "initiate_transaction",
+      "initiate_mobile_transaction",
+      "complete_transaction",
+      "status_update",
+      "polling_status",
+      "generating_hash"
+    ]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]

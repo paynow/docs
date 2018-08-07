@@ -75,16 +75,16 @@ const siteConfig = {
   },
 
   /* custom fonts for website */
-  /*fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
+  fonts: {
+    bodyFont: [
+      "Work Sans Thin",
+      "sans-serif"
     ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
+    headerFont: [
+      "Work Sans Bold",
+      "sans-serif"
     ]
-  },*/
+  },
 
   // This copyright info is used in /core/Footer.js and blog rss/atom feeds.
   copyright:

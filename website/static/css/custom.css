@@ -1,4 +1,29 @@
 /* your custom css */
+body {
+    font-family: $bodyFont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $headerFont;
+}
+
+@font-face {
+    font-family: 'Work Sans Bold';
+    src: url('/fonts/worksans-bold-webfont.woff2') format('woff2'),
+         url('/fonts/worksans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Work Sans Thin';
+    src: url('/fonts/worksans-thin-webfont.woff2') format('woff2'),
+         url('/fonts/worksans-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 .fixedHeaderContainer {
 	/*padding: 3rem 0;*/

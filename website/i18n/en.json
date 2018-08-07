@@ -4,7 +4,6 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "Zimbabwe's Leading Online Payments Gateway",
-    "api": "Api Reference",
     "complete_transaction": "Complete transaction",
     "Complete transaction": "Complete transaction",
     "csharp_quickstart": "C# / .NET Quickstart Guide",
@@ -36,12 +35,10 @@
     "system_layout": "System Layout",
     "System Layout": "System Layout",
     "Docs": "Docs",
-    "API": "API",
     "Help": "Help",
     "Blog": "Blog",
     "Guides": "Guides",
     "Reference Docs": "Reference Docs",
-    "Second Category": "Second Category",
     "First Category": "First Category"
   },
   "pages-strings": {

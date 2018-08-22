@@ -9,11 +9,14 @@ sidebar_label: PHP Quickstart Guide
 > Before you can start making requests to Paynow's API, you need to get an integration ID and integration Key from Paynow. Details about how you can retrieve the ID and key are explained in detail on [this page](generation.md)
 
 ## Prerequisites
+
 This library has a set of prerequisites that must be met for it to work
+
 1. PHP version 5.6 or higher
 2. Curl extension
 
 ## Installation
+
 Install the library using composer
 
 ```sh
@@ -21,7 +24,9 @@ $ composer require paynowzw/php-sdk
 ```
 
 ## Usage example
+
 Create an instance of the Paynow class optionally setting the result and return url(s)
+
 ```php
 $paynow = new Paynow\Payments\Paynow(
 	new Paynow\Http\Client(),
@@ -39,14 +44,15 @@ Create a new payment passing in the reference for that payment (e.g invoice id, 
 $payment = $paynow->createPayment('Invoice 35');
 ```
 
-You can then start adding items to the payment 
+You can then start adding items to the payment
+
 ```php
 // Passing in the name of the item and the price of the item
 $payment->add('Bananas', 2.50);
 $payment->add('Apples', 3.40);
 ```
 
-When you're finally ready to send your payment to Paynow, you can use the `send` method in the `$paynow` object. 
+When you're finally ready to send your payment to Paynow, you can use the `send` method in the `$paynow` object.
 
 ```php
 // Save the response from paynow in a variable
@@ -61,8 +67,8 @@ If request was successful, you should consider saving the poll url sent from Pay
 if($response->success()) {
     // Redirect the user to Paynow
     $response->redirect();
-    
-    // Or if you prefer more control, get the link to redirect the user to, then use it as you see fit 
+
+    // Or if you prefer more control, get the link to redirect the user to, then use it as you see fit
     $link = $response->redirectLink();
 }
 ```
@@ -90,5 +96,4 @@ $response = $paynow->send($payment);
 if($response->success()) {
 	echo $response->redirectLink();
 }
-
 ```

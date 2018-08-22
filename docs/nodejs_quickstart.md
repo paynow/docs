@@ -76,13 +76,13 @@ If request was successful, you should consider saving the poll url sent from Pay
 
 ```javascript
 paynow.send(payment).then( (response) => {
-    
+
     // Check if request was successful
     if(response.success) {
         // Get the link to redirect the user to, then use it as you see fit
         let link = response->redirectUrl;
     }
-    
+
 });
 ```
 
@@ -108,7 +108,7 @@ payment.add("Apples", 3.4);
 
 // Send off the payment to Paynow
 paynow.send(payment).then( (response) => {
-    
+
     // Check if request was successful
     if(response.success) {
         // Get the link to redirect the user to, then use it as you see fit
@@ -117,7 +117,6 @@ paynow.send(payment).then( (response) => {
         // Save poll url, maybe (recommended)?
         let pollUrl = response.pollUrl;
     }
-    
-});
 
+});
 ```

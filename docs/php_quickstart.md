@@ -1,21 +1,15 @@
----
-id: php_quickstart
-title: PHP Quickstart Guide
-sidebar_label: PHP Quickstart Guide
----
+# Paynow Zimbabwe PHP SDK
 
-## Sign in to Paynow and get integration details
+PHP SDK for Paynow Zimbabwe's API
 
-> Before you can start making requests to Paynow's API, you need to get an integration ID and integration Key from Paynow. Details about how you can retrieve the ID and key are explained in detail on [this page](generation.md)
-
-## Prerequisites
+# Prerequisites
 
 This library has a set of prerequisites that must be met for it to work
 
-1. PHP version 5.6 or higher
-2. Curl extension
+1.  PHP version 5.6 or higher
+2.  Curl extension
 
-## Installation
+# Installation
 
 Install the library using composer
 
@@ -23,25 +17,25 @@ Install the library using composer
 $ composer require paynowzw/php-sdk
 ```
 
-## Usage example
+# Usage example
 
 Create an instance of the Paynow class optionally setting the result and return url(s)
 
 ```php
 $paynow = new Paynow\Payments\Paynow(
-	new Paynow\Http\Client(),
 	'INTEGRATION_ID',
-	'INTEGRATION_KEY'
+	'INTEGRATION_KEY',
+	'http://example.com/gateways/paynow/update',
+
+	// The return url can be set at later stages. You might want to do this if you want to pass data to the return url (like the reference of the transaction)
+	'http://example.com/return?gateway=paynow'
 );
-$paynow->setResultUrl('http://example.com/gateways/paynow/update');
-$paynow->setReturnUrl('http://example.com/return?gateway=paynow');
-// The return url can be set at later stages. You might want to do this if you want to pass data to the return url (like the reference of the transaction)
 ```
 
-Create a new payment passing in the reference for that payment (e.g invoice id, or anything that you can use to identify the transaction.
+Create a new payment passing in the reference for that payment (e.g invoice id, or anything that you can use to identify the transaction and the user's email address
 
 ```php
-$payment = $paynow->createPayment('Invoice 35');
+$payment = $paynow->createPayment('Invoice 35', 'user@example.com');
 ```
 
 You can then start adding items to the payment
@@ -59,7 +53,7 @@ When you're finally ready to send your payment to Paynow, you can use the `send`
 $response = $paynow->send($payment);
 ```
 
-The response from Paynow will have some useful information like whether the request was successful or not. If it was, for example, it contains the url to redirect the user so they can make the payment. You can view the full list of data contained in the response in our wiki
+The response from Paynow will b have some useful information like whether the request was successful or not. If it was, for example, it contains the url to redirect the user so they can make the payment. You can view the full list of data contained in the response in our wiki
 
 If request was successful, you should consider saving the poll url sent from Paynow in the database
 
@@ -69,31 +63,91 @@ if($response->success()) {
     $response->redirect();
 
     // Or if you prefer more control, get the link to redirect the user to, then use it as you see fit
-    $link = $response->redirectLink();
+	$link = $response->redirectLink();
+
+	// Get the poll url (used to check the status of a transaction). You might want to save this in your DB
+	$pollUrl = $response->pollUrl();
 }
 ```
 
-## Full Usage Example
+---
+
+> Mobile Transactions
+
+If you want to send an express (mobile) checkout request instead, the only thing that differs is the last step. You make a call to the `sendMobile` in the `$paynow` object
+instead of the `send` method.
+
+The `sendMobile` method unlike the `send` method takes in two additional arguments i.e The phone number to send the payment request to and the mobile money method to use for the request. **Note that currently only ecocash is supported**
 
 ```php
-require_once '/path/to/vendor/autoload.php';
+// Save the response from paynow in a variable
+$response = $paynow->sendMobile($payment, '077777777', 'ecocash');
+```
+
+The response object is almost identical to the one you get if you send a normal request. With a few differences, firstly, you don't get a url to redirect to. Instead you instructions (which ideally should be shown to the user instructing them how to make payment on their mobile phone)
+
+```php
+if($response->success()) {
+	// Get the poll url (used to check the status of a transaction). You might want to save this in your DB
+	$pollUrl = $response->pollUrl();
+
+	// Get the instructions
+	$instrutions = $response->instructions();
+}
+```
+
+# Checking transaction status
+
+The SDK exposes a handy method that you can use to check the status of a transaction. Once you have instantiated the Paynow class.
+
+```php
+// Check the status of the transaction with the specified pollUrl
+// Now you see why you need to save that url ;-)
+$status = $paynow->pollTransaction($pollUrl);
+
+if($status->paid()) {
+	// Yay! Transaction was paid for
+} else {
+	print("Why you no pay?");
+}
+```
+
+# Full Usage Example
+
+```php
+require_once('./paynow/vendor/autoload.php');
 
 $paynow = new Paynow\Payments\Paynow(
-	new Paynow\Http\Client(),
 	'INTEGRATION_ID',
-	'INTEGRATION_KEY'
+	'INTEGRATION_KEY',
+	'http://example.com/gateways/paynow/update',
+
+	// The return url can be set at later stages. You might want to do this if you want to pass data to the return url (like the reference of the transaction)
+	'http://example.com/return?gateway=paynow'
 );
-$paynow->setResultUrl('http://example.com/gateways/paynow/update');
-$paynow->setReturnUrl('http://example.com/return?gateway=paynow');
 
-$payment = $paynow->createPayment('Invoice 35');
+# $paynow->setResultUrl('');
+# $paynow->setReturnUrl('');
 
-$payment->add('Bananas', 2.50);
-$payment->add('Apples', 3.40);
+$payment = $paynow->createPayment('Invoice 35', 'melmups@outlook.com');
+
+$payment->add('Sadza and Beans', 1.25);
 
 $response = $paynow->send($payment);
 
+
 if($response->success()) {
-	echo $response->redirectLink();
+    // Redirect the user to Paynow
+    $response->redirect();
+
+    // Or if you prefer more control, get the link to redirect the user to, then use it as you see fit
+    $link = $response->redirectLink();
+
+	$pollUrl = $response->pollUrl();
+
+
+	// Check the status of the transaction
+	$status = $paynow->pollTransaction($pollUrl);
+
 }
 ```

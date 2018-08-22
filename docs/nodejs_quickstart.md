@@ -75,15 +75,60 @@ The send method will return a `Promise<InitResponse>`, the InitResponse object b
 If request was successful, you should consider saving the poll url sent from Paynow in your database
 
 ```javascript
-paynow.send(payment).then( (response) => {
-    
-    // Check if request was successful
-    if(response.success) {
-        // Get the link to redirect the user to, then use it as you see fit
-        let link = response->redirectUrl;
-    }
-    
+paynow.send(payment).then(response => {
+  // Check if request was successful
+  if (response.success) {
+    // Get the link to redirect the user to, then use it as you see fit
+    let link = response.redirectUrl;
+  }
 });
+```
+
+> Mobile Transactions
+
+If you want to send an express (mobile) checkout request instead, the only thing that differs is the last step. You make a call to the `sendMobile` in the `paynow` object
+instead of the `send` method.
+
+The `sendMobile` method unlike the `send` method takes in two additional arguments i.e The phone number to send the payment request to and the mobile money method to use for the request. **Note that currently only ecocash is supported**
+
+```javascript
+paynow.send(payment).then(response => {
+  // Handle response
+});
+```
+
+The response object is almost identical to the one you get if you send a normal request. With a few differences, firstly, you don't get a url to redirect to. Instead you instructions (which ideally should be shown to the user instructing them how to make payment on their mobile phone)
+
+```javascript
+paynow.send(payment).then(response => {
+  // Check if request was successful
+  if (response.success) {
+    // Get the poll url (used to check the status of a transaction). You might want to save this in your DB
+    let pollUrl = response.pollUrl;
+
+    // Get the instructions
+    let instructions = response.instructions;
+  } else {
+    // Ahhhhhhhhhhhhhhh
+    // *freak out*
+  }
+});
+```
+
+# Checking transaction status
+
+The SDK exposes a handy method that you can use to check the status of a transaction. Once you have instantiated the Paynow class.
+
+```javascript
+// Check the status of the transaction with the specified pollUrl
+// Now you see why you need to save that url ;-)
+let status = paynow.pollTransaction(pollUrl);
+
+if (status.paid()) {
+  // Yay! Transaction was paid for
+} else {
+  console.log("Why you no pay?");
+}
 ```
 
 ## Full Usage Example
@@ -108,7 +153,7 @@ payment.add("Apples", 3.4);
 
 // Send off the payment to Paynow
 paynow.send(payment).then( (response) => {
-    
+
     // Check if request was successful
     if(response.success) {
         // Get the link to redirect the user to, then use it as you see fit
@@ -117,7 +162,6 @@ paynow.send(payment).then( (response) => {
         // Save poll url, maybe (recommended)?
         let pollUrl = response.pollUrl;
     }
-    
-});
 
+});
 ```

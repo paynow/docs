@@ -55,16 +55,17 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'quickstart', label: 'Docs'},
-    // {doc: 'doc4', label: 'API'},
+    {doc: 'doc4', label: 'API'},
     {page: 'help', label: 'Help'},
     {blog: true, label: 'Blog'},
+    {href: 'https://forums.paynow.co.zw', label: 'Signup'},
   ],
 
   // If you have users set above, you add it here:
   users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/paynow.png',
+  headerIcon: 'img/paynow.logo.png',
   footerIcon: 'img/paynow.png',
   favicon: 'img/favicon.png',
 

@@ -22,12 +22,18 @@ h1, h2, h3, h4, h5, h6 {
          url('/fonts/worksans-thin-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
+
+
 
 .fixedHeaderContainer {
 	/*padding: 3rem 0;*/
     background-image: linear-gradient(to bottom, #185ff9, #99a2ff);
+}
+
+.homeSplashFade {
+    background: transparent url('/img/paynow-villain.png') right center no-repeat;
+    height: 606px;
 }
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {

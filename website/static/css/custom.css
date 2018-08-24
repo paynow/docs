@@ -59,6 +59,14 @@ body {
     justify-content: left;
 }
 
+/* Features, Callouts */
+
+.imageAlignTop .blockImage {
+    max-width: 100%;
+}
+
+/* Features, Callouts */
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 

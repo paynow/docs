@@ -97,42 +97,56 @@ const Block = props => (
   </Container>
 );
 
+const FeatureCallout = props => (
+  <div
+    className="productShowcaseSection paddingBottom"
+    style={{textAlign: 'center'}}>
+    <p>Create a free developer account </p>
+    <Button href={'https://forums.paynow.co.zw'}>SIGN UP</Button>
+    <hr/>
+    {/* <MarkdownBlock>These are features of this project</MarkdownBlock> */}
+  </div>
+);
+
 const Features = props => (
   <Block layout="fourColumn">
     {[
       {
-        content: 'This is the content of my feature',
-        image: imgUrl('docusaurus.svg'),
+        content: 'Access Developer Documentation and start transacting online.<br/><a href="#">View Documentation</a>',
+        image: imgUrl('docs.png'),
         imageAlign: 'top',
-        title: 'Feature One',
+        title: 'DOCUMENTATION',
       },
       {
-        content: 'The content of my second feature',
-        image: imgUrl('docusaurus.svg'),
+        content: 'Get started quickly. Use our SDKs PHP, .NET, PYTHON and more.<br/><a href="#">Get SDKs</a>',
+        image: imgUrl('sdks.png'),
         imageAlign: 'top',
-        title: 'Feature Two',
+        title: 'SDKs',
+      },      
+      {
+        content: 'Join our community and help each other integrate and #GetPaid.<br/><a href="#">Browse Forums</a>',
+        image: imgUrl('forums.png'),
+        imageAlign: 'top',
+        title: 'FORUM',
+      },      
+      {
+        content: 'Get the latest Fintech news, information and tips.<br/><a href="#">View Blog</a>',
+        image: imgUrl('blog.png'),
+        imageAlign: 'top',
+        title: 'BLOG',
       },
     ]}
   </Block>
 );
 
-const FeatureCallout = props => (
-  <div
-    className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
-    <h2>Feature Callout</h2>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
-  </div>
-);
-
-const LearnHow = props => (
+const GetStarted = props => (
   <Block background="light">
     {[
       {
-        content: 'Talk about learning how to use this',
-        image: imgUrl('docusaurus.svg'),
-        imageAlign: 'right',
-        title: 'Learn How',
+        content: '<ul><li>STEP 1</li><li>STEP 2</li><li>STEP 3</li></ul>',
+        image: imgUrl('dev.png'),
+        imageAlign: 'left',
+        title: 'GETTING STARTED',
       },
     ]}
   </Block>
@@ -202,9 +216,9 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-          <Features />
           <FeatureCallout />
-          <LearnHow />
+          <Features />
+          <GetStarted />
           <TryOut />
           <Description />
           <Showcase language={language} />

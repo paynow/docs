@@ -54,11 +54,12 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'quickstart', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
-    {href: 'https://forums.paynow.co.zw', label: 'Signup'},
+    {doc: 'quickstart', label: 'DOCUMENTATION'},
+    {doc: 'doc4', label: 'API REFERENCE'},
+    {page: 'help', label: 'HELP'},
+    {blog: true, label: 'BLOG'},
+    {href: 'https://forums.paynow.co.zw', label: 'FORUM'},
+    {href: 'https://forums.paynow.co.zw/', label: 'SIGN UP'},
   ],
 
   // If you have users set above, you add it here:
@@ -78,11 +79,11 @@ const siteConfig = {
   /* custom fonts for website */
   fonts: {
     bodyFont: [
-      "Work Sans Thin",
+      "SF Regular",
       "sans-serif"
     ],
     headerFont: [
-      "Work Sans Bold",
+      "SF Bold",
       "sans-serif"
     ]
   },
@@ -107,6 +108,9 @@ const siteConfig = {
   /* Open Graph and Twitter card images */
   ogImage: 'img/docusaurus.png',
   twitterImage: 'img/docusaurus.png',
+
+  // Disable Header Title
+  disableHeaderTitle: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...

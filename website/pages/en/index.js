@@ -29,7 +29,7 @@ function pageUrl(page, language) {
 class Button extends React.Component {
   render() {
     return (
-      <div className="pluginWrapper buttonWrapper">
+      <div id={this.props.id} className="pluginWrapper buttonWrapper">
         <a className="button" href={this.props.href} target={this.props.target}>
           {this.props.children}
         </a>
@@ -79,8 +79,8 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button href={docUrl('doc1.html', language)}>HOW TO GET STARTED</Button>
-            <Button href={docUrl('doc2.html', language)}>FAQs</Button>
+            <Button id="getStarted" href={docUrl('doc1.html', language)}>HOW TO GET STARTED</Button>
+            <Button id="faqs" href={docUrl('doc2.html', language)}>FAQs</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -102,7 +102,7 @@ const FeatureCallout = props => (
     className="productShowcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
     <p>Create a free developer account </p>
-    <Button href={'https://forums.paynow.co.zw'}>SIGN UP</Button>
+    <Button id="signup" href={'https://forums.paynow.co.zw'}>SIGN UP</Button>
     <hr/>
     {/* <MarkdownBlock>These are features of this project</MarkdownBlock> */}
   </div>

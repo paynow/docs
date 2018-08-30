@@ -131,12 +131,13 @@ body {
 .fixedHeaderContainer a[href="https://forums.paynow.co.zw/"] {
     font-size: 14px !important;
     background: #175ff8;
+    color: #ffffff !important;
     border-radius: 1.6px;
 }
 
 .homeContainer .homeWrapper {
-    background: transparent url('/img/paynow-villain.png') right top no-repeat;
-    height: 542px;
+    background: transparent url('/img/paynow-villain.png') right 35px no-repeat;
+    height: 478px;
 }
 
 .wrapper {
@@ -154,6 +155,35 @@ body {
 .promoSection .promoRow .pluginRowBlock {
     justify-content: left;
 }
+
+.projectTitle {
+    color: #000000;
+    margin-top: 48px;
+}
+
+.projectTitle > small {
+    font-family: 'SF Regular';
+}
+
+.projectTitle > small:after {
+    content: '#GetPaid';
+    color: #ff6619;
+}
+
+.buttonWrapper a {
+    color: #ffffff;
+}
+
+.promoSection #getStarted a {
+    background-color: #ff6619;
+    border-color: #ff6619;
+}
+
+.promoSection #faqs a, #signup a {
+    background-color: #175ff8;
+    border-color: #175ff8;
+}
+
 
 /* Features, Callouts */
 

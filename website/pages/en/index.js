@@ -99,11 +99,13 @@ const Block = props => (
 
 const FeatureCallout = props => (
   <div
+    id="signupCallToAction"
     className="productShowcaseSection paddingBottom"
     style={{textAlign: 'center'}}>
-    <p>Create a free developer account </p>
-    <Button id="signup" href={'https://forums.paynow.co.zw'}>SIGN UP</Button>
-    <hr/>
+    <div>
+      <p>Create a free developer account </p>
+      <Button id="signup" href={'https://forums.paynow.co.zw'}>SIGN UP</Button>
+    </div>
     {/* <MarkdownBlock>These are features of this project</MarkdownBlock> */}
   </div>
 );
@@ -140,16 +142,51 @@ const Features = props => (
 );
 
 const GetStarted = props => (
-  <Block background="light">
-    {[
-      {
-        content: '<ul><li>STEP 1</li><li>STEP 2</li><li>STEP 3</li></ul>',
-        image: imgUrl('dev.png'),
-        imageAlign: 'left',
-        title: 'GETTING STARTED',
-      },
-    ]}
-  </Block>
+  // <Block background="light">
+  //   {[
+  //     {
+  //       content: '',
+  //       image: imgUrl('dev.png'),
+  //       imageAlign: 'left',
+  //       title: 'GETTING STARTED',
+  //     },
+  //   ]}
+  // </Block>
+  <div  id="gettingStarted" className="container paddingBottom paddingTop">
+    <div className="wrapper">
+      <div className="gridBlock">
+        <div className="blockElement imageAlignSide imageAlignLeft twoByGridBlock">
+          <div className="blockImage">
+            <img src={imgUrl('dev.png')}></img>
+          </div>
+          <div className="blockContent">
+            <div className="tabs-container">
+              <ul className="tabs">
+                <li className="tab-link current" data-tab="tab-1">PHP</li>
+                <li className="tab-link" data-tab="tab-2">.NET</li>
+                <li className="tab-link" data-tab="tab-3">NodeJS</li>
+                <li className="tab-link" data-tab="tab-4">Python</li>
+                <li className="tab-link" data-tab="tab-4">Java</li>
+              </ul>
+
+              <div id="tab-1" className="tab-content current">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>
+              <div id="tab-2" className="tab-content">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </div>
+              <div id="tab-3" className="tab-content">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </div>
+              <div id="tab-4" className="tab-content">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 );
 
 const TryOut = props => (
@@ -196,8 +233,8 @@ const Showcase = props => {
 
   return (
     <div className="productShowcaseSection paddingBottom">
-      <h2>{"Who's Using This?"}</h2>
-      <p>This project is used by all these people</p>
+      <h2>{"You are in great company!"}</h2>
+      <p>See the awesome companies integrated with Paynow</p>
       <div className="logos">{showcase}</div>
       <div className="more-users">
         <a className="button" href={pageUrl('users.html', props.language)}>
@@ -219,9 +256,10 @@ class Index extends React.Component {
           <FeatureCallout />
           <Features />
           <GetStarted />
-          <TryOut />
-          <Description />
-          <Showcase language={language} />
+          {/* <TryOut /> */}
+          {/* <Description /> */}
+          {/* <Showcase language={language} /> */}
+          <FeatureCallout />
         </div>
       </div>
     );

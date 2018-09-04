@@ -184,6 +184,62 @@ body {
     border-color: #175ff8;
 }
 
+/* Signup CTA */
+#signupCallToAction {
+    display: table;
+    position: relative;
+    padding: 0;
+    margin: -100px auto 0;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    width: 750px;
+    padding-bottom: 15px;
+    z-index: 9;
+}
+
+#signupCallToAction > div {
+    display: table;
+    margin: auto;
+}
+
+#signupCallToAction > div > p,
+#signupCallToAction > div > div#signup {
+    display: block;
+    float: left;
+    margin: 0 10px;
+}
+
+/* Getting Started */
+
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+ul.tabs li{
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    max-width: none !important;
+    margin: 0 !important;
+}
+
+ul.tabs li.current{
+    background: #ededed;
+    color: #222;
+}
+
+.tab-content{
+    display: none;
+    background: #ededed;
+    padding: 15px;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+/* Getting Started */
 
 /* Features, Callouts */
 

@@ -36,6 +36,7 @@ const users = [
   },  
 ];
 
+
 const siteConfig = {
   title: 'Paynow Developer Hub' /* title for your website */,
   tagline: 'Integrate With Paynow & ',
@@ -96,7 +97,7 @@ const siteConfig = {
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'Solarized Dark',
+    theme: 'tomorrow-night-blue',
   },
 
   // Add custom scripts here that would be placed in <script> tags

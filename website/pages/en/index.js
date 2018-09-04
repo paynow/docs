@@ -162,25 +162,43 @@ const GetStarted = props => (
           <div className="blockContent">
             <div className="tabs-container">
               <ul className="tabs">
-                <li className="tab-link current" data-tab="tab-1">PHP</li>
-                <li className="tab-link" data-tab="tab-2">.NET</li>
-                <li className="tab-link" data-tab="tab-3">NodeJS</li>
-                <li className="tab-link" data-tab="tab-4">Python</li>
-                <li className="tab-link" data-tab="tab-4">Java</li>
+                <li className="tab-link current" data-tab="tab-php">PHP</li>
+                <li className="tab-link" data-tab="tab-dotnet">.NET</li>
+                <li className="tab-link" data-tab="tab-nodejs">NodeJS</li>
+                <li className="tab-link" data-tab="tab-python">Python</li>
+                <li className="tab-link" data-tab="tab-java">Java</li>
               </ul>
 
-              <div id="tab-1" className="tab-content current">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <div id="tab-php" className="tab-content current">
+              <p>The PHP library can be installed via Composer:</p>
+              <pre>
+              <MarkdownBlock>
+{`\`\`\`bash
+composer require paynow/paynow
+\`\`\``}
+              </MarkdownBlock>
+              </pre>
               </div>
-              <div id="tab-2" className="tab-content">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              <div id="tab-dotnet" className="tab-content">
+              <pre>
+              <MarkdownBlock>
+{`\`\`\`javascript
+document.querySelector('ul.tabs li').addEventListener('click',function(){
+  console.log('test');
+});
+\`\`\``}
+              </MarkdownBlock>
+              </pre>
               </div>
-              <div id="tab-3" className="tab-content">
+              <div id="tab-nodejs" className="tab-content">
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
               </div>
-              <div id="tab-4" className="tab-content">
+              <div id="tab-python" className="tab-content">
                 Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </div>
+              <div id="tab-java" className="tab-content">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </div>              
             </div>
           </div>
         </div>

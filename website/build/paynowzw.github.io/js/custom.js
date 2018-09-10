@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
             this.classList.add('current');
             document.querySelector("#"+tab_id).classList.add('current');
-            document.querySelector("[class^='"+tab_id+"']").classList.add('current');
         });
     }
 });

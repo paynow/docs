@@ -56,10 +56,10 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'quickstart', label: 'DOCUMENTATION'},
-    {doc: 'doc4', label: 'API REFERENCE'},
+    // {doc: 'doc4', label: 'API REFERENCE'},
     {page: 'help', label: 'HELP'},
     {blog: true, label: 'BLOG'},
-    {href: 'https://forums.paynow.co.zw', label: 'FORUM'},
+    // {href: 'https://forums.paynow.co.zw/', label: 'FORUM'},
     {href: 'https://forums.paynow.co.zw/', label: 'SIGN UP'},
   ],
 
@@ -97,18 +97,18 @@ const siteConfig = {
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'tomorrow-night-blue',
+    theme: 'mono-blue',//'tomorrow-night-blue',
   },
 
   // Add custom scripts here that would be placed in <script> tags
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: ['https://buttons.github.io/buttons.js','js/custom.js'],
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
 
   /* Open Graph and Twitter card images */
-  ogImage: 'img/docusaurus.png',
-  twitterImage: 'img/docusaurus.png',
+  ogImage: 'img/paynow.logo.png',
+  twitterImage: 'img/paynow.logo.png',
 
   // Disable Header Title
   disableHeaderTitle: true,

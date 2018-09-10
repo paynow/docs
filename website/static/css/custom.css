@@ -1,4 +1,8 @@
 /* your custom css */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: $bodyFont;
 }
@@ -138,6 +142,8 @@ body {
 .homeContainer .homeWrapper {
     background: transparent url('/img/paynow-villain.png') right 35px no-repeat;
     height: 478px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .wrapper {
@@ -189,7 +195,7 @@ body {
     display: table;
     position: relative;
     padding: 0;
-    margin: -100px auto 0;
+    margin: -70px auto 0;
     border-bottom: 1px solid rgba(0,0,0,0.25);
     width: 750px;
     padding-bottom: 15px;
@@ -226,19 +232,36 @@ ul.tabs li{
 }
 
 ul.tabs li.current{
-    background: #ededed;
+    background: #ededed66;
     color: #222;
 }
 
 .tab-content{
     display: none;
-    background: #ededed;
+    background: #ededed66;
     padding: 15px;
+}
+.tab-content p {
+    max-width: none !important;
 }
 
 .tab-content.current{
     display: inherit;
 }
+
+.tabs-container div.tabs-container > ul.tabs > li {
+    font-size: 13px;
+    background: #eee;
+    border-radius: 30px;
+    margin: 0 8px 0 0 important;
+    padding: 5px 15px;
+}
+
+.tabs-container div.tabs-container > ul.tabs > li.current {
+    background: #ff6619;
+    color: #fff;
+}
+
 /* Getting Started */
 
 /* Features, Callouts */

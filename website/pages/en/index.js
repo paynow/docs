@@ -79,8 +79,8 @@ class HomeSplash extends React.Component {
         <div className="inner">
           <ProjectTitle />
           <PromoSection>
-            <Button id="getStarted" href={docUrl('doc1.html', language)}>HOW TO GET STARTED</Button>
-            <Button id="faqs" href={docUrl('doc2.html', language)}>FAQs</Button>
+            <Button id="getStarted" href={docUrl('quickstart.html', language)}>HOW TO GET STARTED</Button>
+            <Button id="faqs" href="#">FAQs</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -114,25 +114,25 @@ const Features = props => (
   <Block layout="fourColumn">
     {[
       {
-        content: 'Access Developer Documentation and start transacting online.<br/><a href="#">View Documentation</a>',
+        content: 'Access Developer Documentation and start transacting online.<br/><a href="/docs/quickstart.html">View Documentation</a>',
         image: imgUrl('docs.png'),
         imageAlign: 'top',
         title: 'DOCUMENTATION',
       },
       {
-        content: 'Get started quickly. Use our SDKs PHP, .NET, PYTHON and more.<br/><a href="#">Get SDKs</a>',
+        content: 'Get started quickly. Use our SDKs PHP, .NET, PYTHON and more.<br/><a href="https://www.gitlab.com/paynow">Get SDKs</a>',
         image: imgUrl('sdks.png'),
         imageAlign: 'top',
         title: 'SDKs',
       },      
       {
-        content: 'Join our community and help each other integrate and #GetPaid.<br/><a href="#">Browse Forums</a>',
+        content: 'Join our community and help each other integrate and #GetPaid.<br/><a href="https://forums.paynow.co.zw/">Browse Forums</a>',
         image: imgUrl('forums.png'),
         imageAlign: 'top',
         title: 'FORUM',
       },      
       {
-        content: 'Get the latest Fintech news, information and tips.<br/><a href="#">View Blog</a>',
+        content: 'Get the latest Fintech news, information and tips.<br/><a href="/blog">View Blog</a>',
         image: imgUrl('blog.png'),
         imageAlign: 'top',
         title: 'BLOG',
@@ -160,6 +160,7 @@ const GetStarted = props => (
             <img src={imgUrl('dev.png')}></img>
           </div>
           <div className="blockContent">
+            <h2><p>Getting Started</p></h2>
             <div className="tabs-container">
               <ul className="tabs">
                 <li className="tab-link current" data-tab="tab-php">PHP</li>
@@ -170,7 +171,12 @@ const GetStarted = props => (
               </ul>
 
               <div id="tab-php" className="tab-content current">
-              <p>The PHP library can be installed via Composer:</p>
+              <p>This library has a set of prerequisites that must be met for it to work</p>
+              <ul>
+              <li>PHP version 5.6 or higher</li>
+              <li>Curl extension</li>
+              </ul>
+              <p>The library can be installed via Composer as shown below:</p>
               <pre>
               <MarkdownBlock>
 {`\`\`\`bash
@@ -180,24 +186,59 @@ composer require paynow/paynow
               </pre>
               </div>
               <div id="tab-dotnet" className="tab-content">
+              <p>This library has a set of prerequisites that must be met for it to work</p>
+              <ul>
+                <li>.NET 4.0 or later</li>
+              </ul>
+              <p>To install via the Nuget package manager console, run the following command</p>
               <pre>
               <MarkdownBlock>
-{`\`\`\`javascript
-document.querySelector('ul.tabs li').addEventListener('click',function(){
-  console.log('test');
-});
+{`\`\`\`bash
+PM> Install-Package PaynowZW
 \`\`\``}
               </MarkdownBlock>
               </pre>
               </div>
               <div id="tab-nodejs" className="tab-content">
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              <p>This library has a set of prerequisites that must be met for it to work</p>
+              <ul>
+              <li>Node version 0.6.0 and above</li>
+              <li>NPM (node's package manager, used to install the node library)</li>
+              </ul>
+              <p>Install the library using NPM or yarn</p>
+              <MarkdownBlock>
+{`\`\`\`bash
+$ npm install --save paynowzw/node-sdk
+\`\`\``}              
+              </MarkdownBlock>
+              <p>or</p>
+              <MarkdownBlock>
+{`\`\`\`bash
+$ yarn add paynowzw/node-sdk
+\`\`\``}              
+              </MarkdownBlock> 
               </div>
               <div id="tab-python" className="tab-content">
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <div className="tabs-container">
+              <ul className="tabs">
+                <li className="tab-link current" data-tab="tab-python" data-subtab="install">Obtain API Keys</li>
+                <li className="tab-link" data-tab="tab-python" data-subtab="usage">Install Library</li>
+                <li className="tab-link" data-tab="tab-python" data-subtab="something">Make test API request</li>
+                <li className="tab-link" data-tab="tab-python" data-subtab="else">Handle test API response</li>
+                <li className="tab-link" data-tab="tab-python" data-subtab="congratulations">Next Steps</li>
+              </ul>
+              </div>
               </div>
               <div id="tab-java" className="tab-content">
-                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <div className="tabs-container">
+              <ul className="tabs">
+                <li className="tab-link current" data-tab="tab-java" data-subtab="install">Obtain API Keys</li>
+                <li className="tab-link" data-tab="tab-java" data-subtab="usage">Install Library</li>
+                <li className="tab-link" data-tab="tab-java" data-subtab="something">Make test API request</li>
+                <li className="tab-link" data-tab="tab-java" data-subtab="else">Handle test API response</li>
+                <li className="tab-link" data-tab="tab-java" data-subtab="congratulations">Next Steps</li>
+              </ul>
+              </div>
               </div>              
             </div>
           </div>

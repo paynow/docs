@@ -39,89 +39,155 @@ PM> Install-Package PaynowZW
 
 ### Importing library
 
-```javascript
-const Paynow = require("paynow");
+```csharp
+using Webdev.Payments.Paynow;
 ```
 
 Create an instance of the Paynow class optionally setting the result and return url(s)
 
-```javascript
-let paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
+```cs
+var paynow = new Paynow('INTEGRATION_ID', 'INTEGRATION_KEY');
 
-paynow.resultUrl = "http://example.com/gateways/paynow/update";
-paynow.returnUrl = "http://example.com/return?gateway=paynow";
+paynow.ResultUrl = "http://example.com/gateways/paynow/update";
+paynow.ReturnUrl = "http://example.com/return?gateway=paynow";
 // The return url can be set at later stages. You might want to do this if you want to pass data to the return url (like the reference of the transaction)
 ```
 
 Create a new payment passing in the reference for that payment (e.g invoice id, or anything that you can use to identify the transaction.
 
-```javascript
-let payment = paynow.createPayment("Invoice 35");
+```cs
+var payment = paynow.CreatePayment("Invoice 35");
 ```
 
 You can then start adding items to the payment
 
-```javascript
+```cs
 // Passing in the name of the item and the price of the item
-payment.add("Bananas", 2.5);
-payment.add("Apples", 3.4);
+payment.add("Bananas", 2.5m);
+payment.add("Apples", 3.4m);
 ```
 
-Once you're done building up your cart and you're finally ready to send your payment to Paynow, you can use the `send` method in the `paynow` object.
+Once you're done building up your cart and you're finally ready to send your payment to Paynow, you can use the `Send` method in the `paynow` object.
 
-```javascript
+```cs
 // Save the response from paynow in a variable
-paynow.send(payment);
+paynow.Send(payment);
 ```
 
-The send method will return a `Promise<InitResponse>`, the InitResponse object being the response from Paynow and it will contain some useful information like whether the request was successful or not. If it was, for example, it contains the url to redirect the user so they can make the payment. You can view the full list of data contained in the response in our wiki
+The send method will return an instance of the `InitResponse` class, the InitResponse object being the response from Paynow and it will contain some useful information like whether the request was successful or not. If it was, for example, it contains the url to redirect the user so they can make the payment. You can view the full list of data contained in the response in our wiki
 
 If request was successful, you should consider saving the poll url sent from Paynow in your database
 
-```javascript
-paynow.send(payment).then( (response) => {
+```cs
+var response = paynow.Send(payment);
+
+if(response.Success()) 
+{   
+    // Get the url to redirect the user to so they can make payment
+    var link = response.RedirectLink();
     
-    // Check if request was successful
-    if(response.success) {
-        // Get the link to redirect the user to, then use it as you see fit
-        let link = response->redirectUrl;
-    }
+    // Get the poll url of the transaction
+    var pollUrl = response.PollUrl(); 
+}
+```
+
+# Mobile Transactions
+
+If you want to send an express (mobile) checkout request instead, when creating a payment you make a call to the `CreateMobilePayment` instead of the `CreatePayment` method. The `CreateMobilePayment` method unlike the `CreatePayment` method requires that you pass in the email address of the user making the payment. 
+
+Additionally, you send the payment to Paynow by making a call to the `SendMobile` in the `paynow` object
+instead of the `Send` method. The `SendMobile` method unlike the `Send` method takes in two additional arguments i.e The phone number to send the payment request to and the mobile money method to use for the request. **Note that currently only ecocash is supported**
+
+```cs
+// Create a mobile payment
+var payment = paynow.CreateMobilePayment('Invoice 32', 'user@example.com');
+
+// Add items to the payment
+payment.Add("Bananas", 2.5m);
+payment.Add("Apples", 3.4m);
+
+// Send the payment to paynow
+paynow.SendMobile(payment)
+```
+
+The response object is almost identical to the one you get if you send a normal request. With a few differences, firstly, you don't get a url to redirect to. Instead you instructions (which ideally should be shown to the user instructing them how to make payment on their mobile phone)
+
+```csharp
+var response = paynow.SendMobile(payment);
+
+// Check if request was successful
+if(response.Success()) 
+{   
+    // Get the url to redirect the user to so they can make payment
+    var link = response.RedirectLink();
     
-});
+    // Get the poll url (used to check the status of a transaction). You might want to save this in your DB
+    var pollUrl = response.PollUrl(); 
+    
+    // Get the instructions
+    var instructions =  response.Instructions();
+}
+else
+{
+    // Ahhhhhhhhhhhhhhh
+    // *freak out*
+}
+```
+
+# Checking transaction status
+
+The SDK exposes a handy method that you can use to check the status of a transaction. Once you have instantiated the Paynow class.
+
+```cs
+// Check the status of the transaction with the specified pollUrl
+// Now you see why you need to save that url ;-)
+var status = paynow.CheckTransactionStatus(pollUrl);
+
+if (status.Paid()) {
+  // Yay! Transaction was paid for
+} else {
+  Console.WriteLine("Why you no pay?");
+}
 ```
 
 ## Full Usage Example
 
-```javascript
+```cs
 // Require in the Paynow class
-const Paynow = require("paynow");
+using System;
+using Webdev.Payments.Paynow;
 
-// Create instance of Paynow class
-let paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
 
-// Set return and result urls
-paynow.resultUrl = "http://example.com/gateways/paynow/update";
-paynow.returnUrl = "http://example.com/return?gateway=paynow";
+class Program
+{
+    public static void Main(string[] args)
+    {
+        // Create an instance of the paynow class
+        var paynow = new Paynow('INTEGRATION_ID', 'INTEGRATION_KEY');
 
-// Create a new payment
-let payment = paynow.createPayment("Invoice 35");
-
-// Add items to the payment list passing in the name of the item and it's price
-payment.add("Bananas", 2.5);
-payment.add("Apples", 3.4);
-
-// Send off the payment to Paynow
-paynow.send(payment).then( (response) => {
+        paynow.ResultUrl = "http://example.com/gateways/paynow/update";
+        paynow.ReturnUrl = "http://example.com/return?gateway=paynow";
+        // The return url can be set at later stages. You might want to do this if you want to pass data to the return url (like the reference of the transaction)
+            
+        // Create a new payment 
+        var payment = paynow.CreatePayment("Invoice 35");
     
-    // Check if request was successful
-    if(response.success) {
-        // Get the link to redirect the user to, then use it as you see fit
-        let link = response->redirectUrl;
-
-        // Save poll url, maybe (recommended)?
-        let pollUrl = response.pollUrl;
+        // Send payment to paynow
+        var response = paynow.Send(payment);
+        
+        // Add items to the payment
+        payment.Add("Bananas", 2.5m);
+        payment.Add("Apples", 3.4m);
+    
+        // Check if payment was sent without error
+        if(response.Success())  
+        {   
+            // Get the url to redirect the user to so they can make payment
+            var link = response.RedirectLink();
+            
+            // Get the poll url of the transaction
+            var pollUrl = response.PollUrl(); 
+        }
     }
-    
-});
-
+}   
 ```

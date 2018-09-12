@@ -76,6 +76,11 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     background: transparent;
+    font-size: 14px;
+}
+
+.container .gridBlock .blockContent p {
+    padding-bottom: 10px;
 }
 
 .fixedHeaderContainer {
@@ -156,6 +161,7 @@ body {
 
 .mainContainer {
     background: #ffffff;
+    font-size: 14px;
 }
 
 .promoSection .promoRow .pluginRowBlock {
@@ -216,6 +222,15 @@ body {
 
 /* Getting Started */
 
+.imageAlignSide .blockImage {
+    max-width: 600px;
+    flex: 0 1 600px;
+}
+
+.tabs-container {
+    max-width: 666px;
+}
+
 ul.tabs{
     margin: 0px !important;
     padding: 0px !important;
@@ -232,13 +247,13 @@ ul.tabs li{
 }
 
 ul.tabs li.current{
-    background: #ededed66;
+    background: #e7eefe;
     color: #222;
 }
 
 .tab-content{
     display: none;
-    background: #ededed66;
+    background: #e7eefe;
     padding: 15px;
 }
 .tab-content p {
@@ -251,9 +266,9 @@ ul.tabs li.current{
 
 .tabs-container div.tabs-container > ul.tabs > li {
     font-size: 13px;
-    background: #eee;
+    background: #c2d5fc;
     border-radius: 30px;
-    margin: 0 8px 0 0 important;
+    margin: 0 8px 0 0 !important;
     padding: 5px 15px;
 }
 

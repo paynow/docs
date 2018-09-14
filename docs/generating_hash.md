@@ -1,7 +1,7 @@
 ---
 id: generating_hash
 title: Generating Hash
-sidebar_label: Complete transaction
+sidebar_label: Generating Hash
 ---
 
 Any message to or from Paynow must include a hash and the hash must be validated to ensure the authenticity of the message. To generate a hash value for the message follow the steps:

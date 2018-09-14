@@ -1,6 +1,6 @@
 ---
 id: generating_hash
-title: Gemerating Hash
+title: Generating Hash
 sidebar_label: Complete transaction
 ---
 

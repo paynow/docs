@@ -4,6 +4,7 @@ deploy:
   script: 
     - "apt-get update -qq && apt-get install -y -qq lftp"
     - "curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash"
+    - "bash"
     - "nvm install v5.3.0"
     - "cd website && npm install && npm run build"
     - "lftp -c \"set ftp:ssl-allow no; open -u $USERNAME,$PASSWORD $HOST; mirror -Rnev website/build/paynowzw.github.io/ ./public_html --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/\""

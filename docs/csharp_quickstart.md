@@ -100,7 +100,7 @@ instead of the `Send` method. The `SendMobile` method unlike the `Send` method t
 
 ```cs
 // Create a mobile payment
-var payment = paynow.CreateMobilePayment('Invoice 32', 'user@example.com');
+var payment = paynow.CreateMobilePayment("Invoice 32", "user@example.com");
 
 // Add items to the payment
 payment.Add("Bananas", 2.5m);

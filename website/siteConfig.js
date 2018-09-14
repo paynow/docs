@@ -36,9 +36,10 @@ const users = [
   },  
 ];
 
+
 const siteConfig = {
   title: 'Paynow Developer Hub' /* title for your website */,
-  tagline: 'Zimbabwe\'s Leading Online Payments Gateway',
+  tagline: 'Integrate With Paynow & ',
   url: 'https://paynowzw.github.io' /* your website url */,
   baseUrl: '/' /* base url for your project */,
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -54,11 +55,12 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'quickstart', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
-    {href: 'https://forums.paynow.co.zw', label: 'Signup'},
+    {doc: 'quickstart', label: 'DOCUMENTATION'},
+    // {doc: 'doc4', label: 'API REFERENCE'},
+    {page: 'help', label: 'HELP'},
+    {blog: true, label: 'BLOG'},
+    // {href: 'https://forums.paynow.co.zw/', label: 'FORUM'},
+    {href: 'https://forums.paynow.co.zw/', label: 'SIGN UP'},
   ],
 
   // If you have users set above, you add it here:
@@ -78,11 +80,11 @@ const siteConfig = {
   /* custom fonts for website */
   fonts: {
     bodyFont: [
-      "Work Sans Thin",
+      "SF Regular",
       "sans-serif"
     ],
     headerFont: [
-      "Work Sans Bold",
+      "SF Bold",
       "sans-serif"
     ]
   },
@@ -95,18 +97,21 @@ const siteConfig = {
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks
-    theme: 'Solarized Dark',
+    theme: 'tomorrow-night-blue',//'tomorrow-night-blue',
   },
 
   // Add custom scripts here that would be placed in <script> tags
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: ['https://buttons.github.io/buttons.js','js/custom.js'],
 
   /* On page navigation for the current documentation page */
   onPageNav: 'separate',
 
   /* Open Graph and Twitter card images */
-  ogImage: 'img/docusaurus.png',
-  twitterImage: 'img/docusaurus.png',
+  ogImage: 'img/paynow.logo.png',
+  twitterImage: 'img/paynow.logo.png',
+
+  // Disable Header Title
+  disableHeaderTitle: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...

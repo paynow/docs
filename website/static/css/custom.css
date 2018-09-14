@@ -1,4 +1,8 @@
 /* your custom css */
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: $bodyFont;
 }
@@ -7,6 +11,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: $headerFont;
 }
 
+/* 
 @font-face {
     font-family: 'Work Sans Bold';
     src: url('/fonts/worksans-bold-webfont.woff2') format('woff2'),
@@ -22,29 +27,128 @@ h1, h2, h3, h4, h5, h6 {
          url('/fonts/worksans-thin-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+} */
+
+@font-face {
+    font-family: 'SF Bold';
+    src: url('/fonts/sf/sfuidisplay-bold-webfont.woff2') format('woff2'),
+         url('/fonts/sf/sfuidisplay-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SF Medium';
+    src: url('/fonts/sf/sfuidisplay-medium-webfont.woff2') format('woff2'),
+         url('/fonts/sf/sfuidisplay-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SF Black';
+    src: url('/fonts/sf/sfuidisplay-black-webfont.woff2') format('woff2'),
+         url('/fonts/sf/sfuidisplay-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SF Light';
+    src: url('/fonts/sf/sfuidisplay-light-webfont.woff2') format('woff2'),
+         url('/fonts/sf/sfuidisplay-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'SF Regular';
+    src: url('/fonts/sf/sfuidisplay-regular-webfont.woff2') format('woff2'),
+         url('/fonts/sf/sfuidisplay-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 body {
     background: transparent;
+    font-size: 14px;
+}
+
+.container .gridBlock .blockContent p {
+    padding-bottom: 10px;
 }
 
 .fixedHeaderContainer {
-	padding: 15px 0;
+	padding: 30px 0;
     background: #fff;
+}
+
+.fixedHeaderContainer header > a {
+    position: relative;
+}
+
+.fixedHeaderContainer header img {
+    margin-right: 15px;
+    border-right: 1px solid #0000004d;
+    padding-right: 15px;
+}
+
+.fixedHeaderContainer header > a::before, .fixedHeaderContainer header > a::after {
+    font-family: 'SF Regular';
+    line-height: 35px;
+    text-transform: uppercase;
+    top: -1px;
+    font-size: 20px;
+    font-weight: 300 !important;
+    color: #000000;
+    position: relative;
+}
+
+.fixedHeaderContainer header > a::after {
+    content: "DEVELOPER "
+}
+
+.fixedHeaderContainer header > a::before {
+    content: "HUB";
+    position: absolute;
+    right: -49px;
+    color: #ff6619;
 }
 
 .fixedHeaderContainer a {
     height: auto;
 }
 
-.fixedHeaderContainer a[href="https://forums.paynow.co.zw"] {
+.navigationSlider .slidingNav ul li a {
+    color: #000000;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.9px;
+}
+
+.navigationSlider .slidingNav ul li a:focus, .navigationSlider .slidingNav ul li a:hover, .navigationSlider .slidingNav ul li.siteNavItemActive a, .navigationSlider .slidingNav ul li.siteNavGroupActive a {
+    color: #000000;
+    text-decoration: underline;
+    background: none;
+}
+
+.fixedHeaderContainer a[href="https://forums.paynow.co.zw/"] {
+    font-size: 14px !important;
     background: #175ff8;
+    color: #ffffff !important;
     border-radius: 1.6px;
 }
 
 .homeContainer .homeWrapper {
-    background: transparent url('/img/paynow-villain.png') right center no-repeat;
-    height: 542px;
+    background: transparent url('/img/paynow-villain.png') right 35px no-repeat;
+    height: 478px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .wrapper {
@@ -55,11 +159,141 @@ body {
     text-align: left;
 }
 
+.mainContainer {
+    background: #ffffff;
+    font-size: 14px;
+}
+
 .promoSection .promoRow .pluginRowBlock {
     justify-content: left;
 }
 
+.projectTitle {
+    color: #000000;
+    margin-top: 48px;
+}
+
+.projectTitle > small {
+    font-family: 'SF Regular';
+}
+
+.projectTitle > small:after {
+    content: '#GetPaid';
+    color: #ff6619;
+}
+
+.buttonWrapper a {
+    color: #ffffff;
+}
+
+.promoSection #getStarted a {
+    background-color: #ff6619;
+    border-color: #ff6619;
+}
+
+.promoSection #faqs a, #signup a {
+    background-color: #175ff8;
+    border-color: #175ff8;
+}
+
+/* Signup CTA */
+#signupCallToAction {
+    display: table;
+    position: relative;
+    padding: 0;
+    margin: -70px auto 0;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    width: 750px;
+    padding-bottom: 15px;
+    z-index: 9;
+}
+
+#signupCallToAction > div {
+    display: table;
+    margin: auto;
+}
+
+#signupCallToAction > div > p,
+#signupCallToAction > div > div#signup {
+    display: block;
+    float: left;
+    margin: 0 10px;
+}
+
+/* Getting Started */
+
+.imageAlignSide .blockImage {
+    max-width: 600px;
+    flex: 0 1 600px;
+}
+
+.tabs-container {
+    max-width: 666px;
+}
+
+ul.tabs{
+    margin: 0px !important;
+    padding: 0px !important;
+    list-style: none !important;
+}
+ul.tabs li{
+    background: none;
+    color: #222;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+    max-width: none !important;
+    margin: 0 !important;
+}
+
+ul.tabs li.current{
+    background: #e7eefe;
+    color: #222;
+}
+
+.tab-content{
+    display: none;
+    background: #e7eefe;
+    padding: 15px;
+}
+.tab-content p {
+    max-width: none !important;
+}
+
+.tab-content.current{
+    display: inherit;
+}
+
+.tabs-container div.tabs-container > ul.tabs > li {
+    font-size: 13px;
+    background: #c2d5fc;
+    border-radius: 30px;
+    margin: 0 8px 0 0 !important;
+    padding: 5px 15px;
+}
+
+.tabs-container div.tabs-container > ul.tabs > li.current {
+    background: #ff6619;
+    color: #fff;
+}
+
+/* Getting Started */
+
+/* Features, Callouts */
+
+.imageAlignTop .blockImage {
+    max-width: 100%;
+}
+
+/* Features, Callouts */
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
+}
+
+@media screen and (min-width: 736px) {
+    .navPusher {
+        padding-top: 95px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {

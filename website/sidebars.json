@@ -1,6 +1,9 @@
 {
   "docs": {
-    "Guides": ["quickstart"],
+    "Guides": [
+        "quickstart",
+        "integration_generation",
+        ],
     "Reference Docs": [
       "system_layout",
       "generating_hash",

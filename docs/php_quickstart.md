@@ -1,3 +1,9 @@
+---
+id: php_quickstart
+title: PHP Quickstart Guide
+sidebar_label: PHP Quickstart Guide
+---
+
 # Paynow Zimbabwe PHP SDK
 
 PHP SDK for Paynow Zimbabwe's API

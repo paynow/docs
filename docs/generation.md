@@ -3,7 +3,7 @@ id: integration_generation
 title: Generating Integration Keys
 ---
 
-# Signup and Key Generation
+## Signup and Key Generation
 
 Each integration needs its own ID and Integration Key to identify and secure all server to server
 messaging. In order to get your Paynow ID and Key follow these steps:

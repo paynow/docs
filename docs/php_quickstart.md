@@ -1,19 +1,19 @@
 ---
 id: php_quickstart
 title: PHP Quickstart Guide
-sidebar_label: PHP Quickstart Guide
+sidebar_label: PHP
 ---
 
 PHP SDK for Paynow Zimbabwe's API
 
-# Prerequisites
+## Prerequisites
 
 This library has a set of prerequisites that must be met for it to work
 
 1.  PHP version 5.6 or higher
 2.  Curl extension
 
-# Installation
+## Installation
 
 Install the library using composer
 
@@ -21,7 +21,7 @@ Install the library using composer
 $ composer require paynowzw/php-sdk
 ```
 
-# Usage example
+## Usage example
 
 Create an instance of the Paynow class optionally setting the result and return url(s)
 
@@ -100,7 +100,7 @@ if($response->success()) {
 }
 ```
 
-# Checking transaction status
+## Checking transaction status
 
 The SDK exposes a handy method that you can use to check the status of a transaction. Once you have instantiated the Paynow class.
 
@@ -116,7 +116,7 @@ if($status->paid()) {
 }
 ```
 
-# Full Usage Example
+## Full Usage Example
 
 ```php
 require_once('./paynow/vendor/autoload.php');

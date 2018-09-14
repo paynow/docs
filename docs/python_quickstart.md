@@ -1,18 +1,18 @@
 ---
 id: python_quickstart
 title: Python Quickstart Guide
-sidebar_label: Python Quickstart Guide
+sidebar_label: Python
 ---
 
 Python SDK for Paynow Zimbabwe's API
 
-# Prerequisites
+## Prerequisites
 
 This library has a set of prerequisites that must be met for it to work
 
 1.  requests 
 
-# Installation
+## Installation
 
 Install the library using pip
 
@@ -29,7 +29,7 @@ and import the Paynow class into your project
 ```
 ---
 
-# Usage example
+## Usage example
 
 Create an instance of the Paynow class optionally setting the result and return url(s)
 
@@ -103,7 +103,7 @@ if(response.success) :
     instructions = response.instructions
 ```
 
-# Checking transaction status
+## Checking transaction status
 
 The SDK exposes a handy method that you can use to check the status of a transaction. Once you have instantiated the Paynow class.
 
@@ -118,7 +118,7 @@ else :
 	# Handle that
 ```
 
-# Full Usage Example
+## Full Usage Example
 
 ```python
 from paynow_py import Paynow

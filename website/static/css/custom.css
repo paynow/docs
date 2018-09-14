@@ -287,6 +287,55 @@ ul.tabs li.current{
 
 /* Features, Callouts */
 
+
+/* Sidebar */
+
+#docsNav {
+    border-right: 1px solid #eeeeee;
+}
+
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(2)::after,
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(7)::after,
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(13)::after
+ {
+    opacity: 0.4;
+    font-size: 11px;
+    display: block;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(2)::after {
+    content: "Libraries";
+}
+
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(7)::after {
+    content: "Plugins & Extensions";
+}
+
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(13)::after {
+    content: "Developed by the Community";
+}
+
+/* Sidebar */
+
+/* Other Elements */
+
+.button {
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    background: #175ff8;
+    box-shadow: 0 5px 15px 0 #0003;
+}
+
+.button:hover {
+    background: #ff6619;
+    border-color: #ff6619;
+}
+
+/* Other Elements */
+
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
 

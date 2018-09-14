@@ -1,7 +1,7 @@
 ---
 id: java_quickstart
 title: Java Quickstart Guide
-sidebar_label: Java Quickstart Guide
+sidebar_label: Java
 ---
 
 ## Sign in to Paynow and get integration details
@@ -96,7 +96,7 @@ if(response.success())
 }
 ```
 
-# Mobile Transactions
+## Mobile Transactions
 
 If you want to send an express (mobile) checkout request instead, when creating a payment you make a call to the `CreateMobilePayment` instead of the `CreatePayment` method. The `CreateMobilePayment` method unlike the `CreatePayment` method requires that you pass in the email address of the user making the payment. 
 
@@ -139,7 +139,7 @@ else
 }
 ```
 
-# Checking transaction status
+## Checking transaction status
 
 The SDK exposes a handy method that you can use to check the status of a transaction. Once you have instantiated the Paynow class.
 

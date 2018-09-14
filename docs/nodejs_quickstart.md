@@ -1,7 +1,7 @@
 ---
 id: nodejs_quickstart
 title: Node.JS Quickstart Guide
-sidebar_label: Node.JS Quickstart Guide
+sidebar_label: Node.JS
 ---
 
 ## Sign in to Paynow and get integration details

@@ -28,37 +28,43 @@ class Footer extends React.Component {
               <img
                 src={this.props.config.baseUrl + this.props.config.footerIcon}
                 alt={this.props.config.title}
-                width="66"
+                width="61"
                 height="58"
               />
             )}
           </a>
           <div>
-            <h5>Docs</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
+            <h5>Documentation</h5>
+            <a href={this.docUrl('quickstart.html')}>
+              Getting Started
             </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
+            {/* <a href={this.docUrl('doc2.html')}>
               Guides (or other categories)
             </a>
-            <a href={this.docUrl('doc3.html', this.props.language)}>
+            <a href={this.docUrl('doc3.html')}>
               API Reference (or other categories)
-            </a>
+            </a> */}
           </div>
           <div>
             <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
+            {/* <a href={this.pageUrl('users.html')}>
               User Showcase
-            </a>
+            </a> */}
             <a
               href="http://stackoverflow.com/questions/tagged/"
               target="_blank"
               rel="noreferrer noopener">
               Stack Overflow
             </a>
-            <a href="https://discordapp.com/">Project Chat</a>
+            <a href="https://forums.paynow.co.zw/">Forums</a>
             <a
-              href="https://twitter.com/"
+              href="https://facebook.com/paynowzw"
+              target="_blank"
+              rel="noreferrer noopener">
+              Facebook
+            </a>
+            <a
+              href="https://twitter.com/paynowzw"
               target="_blank"
               rel="noreferrer noopener">
               Twitter
@@ -67,8 +73,8 @@ class Footer extends React.Component {
           <div>
             <h5>More</h5>
             <a href={this.props.config.baseUrl + 'blog'}>Blog</a>
-            <a href="https://github.com/">GitHub</a>
-            <a
+            <a href="https://gitlab.com/paynow">GitLab</a>
+            {/* <a
               className="github-button"
               href={this.props.config.repoUrl}
               data-icon="octicon-star"
@@ -77,18 +83,18 @@ class Footer extends React.Component {
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
               Star
-            </a>
+            </a> */}
           </div>
         </section>
 
         <a
-          href="https://code.facebook.com/projects/"
+          href="https://www.paynow.co.zw/"
           target="_blank"
           rel="noreferrer noopener"
           className="fbOpenSource">
           <img
             src={this.props.config.baseUrl + 'img/paynow.png'}
-            alt="Facebook Open Source"
+            alt="Paynow Zimbabwe"
             width="170"
             height="45"
           />

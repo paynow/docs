@@ -1,8 +1,20 @@
 {
   "docs": {
-    "Guides": [
+    "Getting Started": [
         "quickstart",
-        "integration_generation"
+        "integration_generation",
+        "php_quickstart",
+        "csharp_quickstart",
+        "nodejs_quickstart",
+        "python_quickstart",
+        "java_quickstart",
+        "woocommerce",
+        "gravity_forms",
+        "easy_digital_downloads",
+        "camptix",
+        "opencart",
+        "shopify",
+        "magento_prizeless"
         ],
     "Reference Docs": [
       "system_layout",
@@ -13,8 +25,5 @@
       "polling_status",
       "complete_transaction"
     ]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
   }
 }

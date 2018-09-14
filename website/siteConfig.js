@@ -68,12 +68,12 @@ const siteConfig = {
 
   /* path to images for header/footer */
   headerIcon: 'img/paynow.logo.png',
-  footerIcon: 'img/paynow.png',
+  footerIcon: 'img/paynow.p.emblem.png',
   favicon: 'img/favicon.png',
 
   /* colors for website */
   colors: {
-    primaryColor: '#006a94',
+    primaryColor: '#175ff8',
     secondaryColor: '#7dbeda',
   },
 

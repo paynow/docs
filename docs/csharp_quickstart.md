@@ -1,7 +1,7 @@
 ---
 id: csharp_quickstart
 title: C# / .NET Quickstart Guide
-sidebar_label: C# Quickstart Guide
+sidebar_label: .NET
 ---
 
 ## Sign in to Paynow and get integration details

@@ -3,7 +3,6 @@ id: python_quickstart
 title: Python Quickstart Guide
 sidebar_label: Python Quickstart Guide
 ---
-# Paynow Zimbabwe Python SDK
 
 Python SDK for Paynow Zimbabwe's API
 

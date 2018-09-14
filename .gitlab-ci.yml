@@ -4,5 +4,6 @@ deploy:
   script: 
     - "apt-get update -qq && apt-get install -y -qq lftp"
     - "apt-get install nodejs -y"
+    - "curl -L https://npmjs.org/install.sh | sudo sh"
     - "cd website && /usr/local/bin/npm install && /usr/local/bin/npm run build"
     - "lftp -c \"set ftp:ssl-allow no; open -u $USERNAME,$PASSWORD $HOST; mirror -Rnev website/build/paynowzw.github.io/ ./public_html --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/\""

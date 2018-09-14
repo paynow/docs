@@ -2,7 +2,7 @@
   "docs": {
     "Guides": [
         "quickstart",
-        "integration_generation",
+        "integration_generation"
         ],
     "Reference Docs": [
       "system_layout",

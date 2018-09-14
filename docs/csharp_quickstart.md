@@ -46,7 +46,7 @@ using Webdev.Payments.Paynow;
 Create an instance of the Paynow class optionally setting the result and return url(s)
 
 ```cs
-var paynow = new Paynow('INTEGRATION_ID', 'INTEGRATION_KEY');
+var paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
 
 paynow.ResultUrl = "http://example.com/gateways/paynow/update";
 paynow.ReturnUrl = "http://example.com/return?gateway=paynow";
@@ -100,7 +100,7 @@ instead of the `Send` method. The `SendMobile` method unlike the `Send` method t
 
 ```cs
 // Create a mobile payment
-var payment = paynow.CreateMobilePayment('Invoice 32', 'user@example.com');
+var payment = paynow.CreateMobilePayment("Invoice 32", "user@example.com");
 
 // Add items to the payment
 payment.Add("Bananas", 2.5m);
@@ -163,7 +163,7 @@ class Program
     public static void Main(string[] args)
     {
         // Create an instance of the paynow class
-        var paynow = new Paynow('INTEGRATION_ID', 'INTEGRATION_KEY');
+        var paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
 
         paynow.ResultUrl = "http://example.com/gateways/paynow/update";
         paynow.ReturnUrl = "http://example.com/return?gateway=paynow";

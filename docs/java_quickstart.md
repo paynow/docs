@@ -105,7 +105,7 @@ instead of the `Send` method. The `SendMobile` method unlike the `Send` method t
 
 ```java
 // Create a mobile payment
-Payment payment = paynow.createMobilePayment('Invoice 32', 'user@example.com');
+Payment payment = paynow.createMobilePayment("Invoice 32", "user@example.com");
 
 // Add items to the payment
 payment.add("Bananas", 2.5);

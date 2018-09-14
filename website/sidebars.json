@@ -3,12 +3,12 @@
     "Guides": ["quickstart"],
     "Reference Docs": [
       "system_layout",
+      "generating_hash",
       "initiate_transaction",
       "initiate_mobile_transaction",
-      "complete_transaction",
       "status_update",
       "polling_status",
-      "generating_hash"
+      "complete_transaction"
     ]
   },
   "docs-other": {

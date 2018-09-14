@@ -7,4 +7,4 @@ deploy:
     - "source ~/.bashrc"
     - "nvm install v8.12.0"
     - "cd website && npm install && npm run build"
-    - "lftp -c \"set ftp:ssl-allow no; open -u $USERNAME,$PASSWORD $HOST; mirror -Rnev website/build/paynowzw.github.io/ ./public_html --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/\""
+    - "lftp -c \"set ftp:ssl-allow no; open -u $USERNAME,$PASSWORD $HOST; mirror -Rnev build/paynowzw.github.io/ ./public_html --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/\""

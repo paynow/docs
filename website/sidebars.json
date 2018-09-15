@@ -17,7 +17,7 @@
         "magento_prizeless"
         ],
     "Reference Docs": [
-      "system_layout",
+      "paynow_api",
       "generating_hash",
       "initiate_transaction",
       "initiate_mobile_transaction",

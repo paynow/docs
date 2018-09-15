@@ -319,6 +319,16 @@ ul.tabs li.current{
 
 /* Sidebar */
 
+
+/* Footer */
+
+footer#footer {
+    background: #20232a;
+}
+
+/* Footer */
+
+
 /* Other Elements */
 
 .button {
@@ -349,6 +359,12 @@ ul.tabs li.current{
 }
 
 @media only screen and (max-width: 1023px) {
+}
+
+@media only screen and (max-width: 1366px) {
+    /* .wrapper {
+        max-width: 1120px !important;
+    } */
 }
 
 @media only screen and (min-width: 1400px) {

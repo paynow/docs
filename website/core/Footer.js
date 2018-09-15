@@ -23,7 +23,7 @@ class Footer extends React.Component {
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
-          <a href={this.props.config.baseUrl} className="nav-home">
+          {/* <a href={this.props.config.baseUrl} className="nav-home">
             {this.props.config.footerIcon && (
               <img
                 src={this.props.config.baseUrl + this.props.config.footerIcon}
@@ -32,11 +32,17 @@ class Footer extends React.Component {
                 height="58"
               />
             )}
-          </a>
+          </a> */}
           <div>
             <h5>Documentation</h5>
             <a href={this.docUrl('quickstart.html')}>
               Getting Started
+            </a>
+            <a href={this.docUrl('paynow_api.html')}>
+              API Reference
+            </a>
+            <a href={this.docUrl('#')}>
+              Frequently Asked Questions
             </a>
             {/* <a href={this.docUrl('doc2.html')}>
               Guides (or other categories)
@@ -46,17 +52,55 @@ class Footer extends React.Component {
             </a> */}
           </div>
           <div>
+          <h5>Libraries & Plugins</h5>
+            <a href={this.docUrl('quickstart.html')}>
+              PHP
+            </a>
+            <a href={this.docUrl('paynow_api.html')}>
+              .NET
+            </a>
+            <a href={this.docUrl('#')}>
+              Node.JS
+            </a>
+            <a href={this.docUrl('#')}>
+              Python
+            </a>
+            <a href={this.docUrl('#')}>
+              Java
+            </a>
+          </div>
+          <div>
+          <h5>Plugins</h5>
+            <a href={this.docUrl('woocommerce.html')}>
+              WooCommerce
+            </a>
+            <a href={this.docUrl('gravity_forms.html')}>
+              Gravity Forms
+            </a>
+            <a href={this.docUrl('easy_digital_downloads.html')}>
+              Easy Digital Downloads
+            </a>
+            <a href={this.docUrl('opencart.html')}>
+              OpenCart
+            </a>
+            <a href={this.docUrl('shopify.html')}>
+              Shopify
+            </a>
+          </div>          
+          <div>
             <h5>Community</h5>
             {/* <a href={this.pageUrl('users.html')}>
               User Showcase
             </a> */}
-            <a
+            <a href="https://forums.paynow.co.zw/">Discussion Forums</a>
+            <a href={this.props.config.baseUrl + 'blog'}>Blogs & Tutorials</a>
+            <a href="https://gitlab.com/paynow">GitLab</a>
+            {/* <a
               href="http://stackoverflow.com/questions/tagged/"
               target="_blank"
               rel="noreferrer noopener">
               Stack Overflow
-            </a>
-            <a href="https://forums.paynow.co.zw/">Forums</a>
+            </a> */}
             <a
               href="https://facebook.com/paynowzw"
               target="_blank"
@@ -70,11 +114,10 @@ class Footer extends React.Component {
               Twitter
             </a>
           </div>
-          <div>
+          {/* <div>
             <h5>More</h5>
-            <a href={this.props.config.baseUrl + 'blog'}>Blog</a>
-            <a href="https://gitlab.com/paynow">GitLab</a>
-            {/* <a
+
+            <a
               className="github-button"
               href={this.props.config.repoUrl}
               data-icon="octicon-star"
@@ -83,8 +126,8 @@ class Footer extends React.Component {
               data-count-aria-label="# stargazers on GitHub"
               aria-label="Star this project on GitHub">
               Star
-            </a> */}
-          </div>
+            </a>
+          </div> */}
         </section>
 
         <a

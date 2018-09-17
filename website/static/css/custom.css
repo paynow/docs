@@ -84,8 +84,9 @@ body {
 }
 
 .fixedHeaderContainer {
-	padding: 30px 0;
+    padding: 15px 0;
     background: #fff;
+    box-shadow: 0 1px 12px 0 #1919221a;
 }
 
 .fixedHeaderContainer header > a {
@@ -296,7 +297,7 @@ ul.tabs li.current{
 
 #docsNav .navGroups .navGroup:first-child ul > li:nth-child(2)::after,
 #docsNav .navGroups .navGroup:first-child ul > li:nth-child(7)::after,
-#docsNav .navGroups .navGroup:first-child ul > li:nth-child(13)::after
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(11)::after
  {
     opacity: 0.4;
     font-size: 11px;
@@ -313,8 +314,20 @@ ul.tabs li.current{
     content: "Plugins & Extensions";
 }
 
-#docsNav .navGroups .navGroup:first-child ul > li:nth-child(13)::after {
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(11)::after {
     content: "Developed by the Community";
+}
+
+#docsNav a[href="/docs/magento_prizeless.html"]::after {
+    content: " (by Prizeless Technologies)";
+    font-size: 11px;
+    opacity: 0.5;
+}
+
+#docsNav a[href="/docs/camptix_nigelrodgers.html"]::after {
+    content: " (by Nigel Rodgers)";
+    font-size: 11px;
+    opacity: 0.5;
 }
 
 /* Sidebar */
@@ -342,6 +355,16 @@ footer#footer {
 .button:hover {
     background: #ff6619;
     border-color: #ff6619;
+}
+
+#footer .sitemap a[href^="https://"]::after,
+#footer .sitemap a[href^="http://"]::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: transparent url('/img/externallink.svg') center no-repeat;
+    display: inline-block;
+    margin-left: 10px;
 }
 
 /* Other Elements */

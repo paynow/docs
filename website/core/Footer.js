@@ -53,19 +53,19 @@ class Footer extends React.Component {
           </div>
           <div>
           <h5>Libraries & Plugins</h5>
-            <a href={this.docUrl('quickstart.html')}>
+            <a href={this.docUrl('php_quickstart.html')}>
               PHP
             </a>
-            <a href={this.docUrl('paynow_api.html')}>
+            <a href={this.docUrl('csharp_quickstart.html')}>
               .NET
             </a>
-            <a href={this.docUrl('#')}>
+            <a href={this.docUrl('nodejs_quickstart.html')}>
               Node.JS
             </a>
-            <a href={this.docUrl('#')}>
+            <a href={this.docUrl('python_quickstart.html')}>
               Python
             </a>
-            <a href={this.docUrl('#')}>
+            <a href={this.docUrl('java_quickstart.html')}>
               Java
             </a>
           </div>
@@ -79,9 +79,6 @@ class Footer extends React.Component {
             </a>
             <a href={this.docUrl('easy_digital_downloads.html')}>
               Easy Digital Downloads
-            </a>
-            <a href={this.docUrl('opencart.html')}>
-              OpenCart
             </a>
             <a href={this.docUrl('shopify.html')}>
               Shopify

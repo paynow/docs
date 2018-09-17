@@ -11,12 +11,11 @@
         "woocommerce",
         "gravity_forms",
         "easy_digital_downloads",
-        "camptix",
-        "opencart",
         "shopify",
+        "camptix_nigelrodgers",
         "magento_prizeless"
         ],
-    "Reference Docs": [
+    "API Reference": [
       "paynow_api",
       "generating_hash",
       "initiate_transaction",
@@ -24,6 +23,11 @@
       "status_update",
       "polling_status",
       "complete_transaction"
-    ]
+    ],
+    "Library Source Docs": [
+      "sourcedocs_php",
+      "sourcedocs_dotnet",
+      "sourcedocs_nodejs"
+    ]    
   }
 }

@@ -17,13 +17,13 @@ This library has a set of prerequisites that must be met for it to work
 Install the library using pip
 
 ```sh
-$ pip install paynowzw-sdk
+$ pip install paynow
 ```
 
 and import the Paynow class into your project
 
 ```python
-	from paynowzw-sdk import Paynow
+	from paynow import Paynow
 
 	# Do stuff
 ```
@@ -121,7 +121,7 @@ else :
 ## Full Usage Example
 
 ```python
-from paynow_py import Paynow
+from paynow import Paynow
 
 
 paynow = Paynow(

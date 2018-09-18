@@ -36,4 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
     //         //console.log(tab_id);
     //     });
     // }
+
+    let gif = document.querySelector('img[src$=".gif"]:first-child');
+  
+    document.querySelector('#gifReplay').addEventListener('click', function(){
+      let src = gif.getAttribute('src');
+      gif.setAttribute('src', src);
+    });
 });

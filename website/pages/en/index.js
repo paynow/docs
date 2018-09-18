@@ -181,11 +181,6 @@ const GetStarted = props => (
                 <li className="tab-link" data-tab="tab-php" data-subtab="apiresponse">Handle API response</li>
                 <li className="tab-link" data-tab="tab-php" data-subtab="nextsteps">Next Steps</li>
               </ul>
-              <div id="tab-php-apikeys" className="tab-content current">
-
-
-
-              </div>
               <div id="tab-php-install" className="tab-content">
               <p>This library has a set of prerequisites that must be met for it to work</p>
               <ul>
@@ -195,7 +190,7 @@ const GetStarted = props => (
               <p>The library can be installed via Composer as shown below:</p>
 <MarkdownBlock>
 {`\`\`\`bash
-$ composer require paynowzw/php-sdk
+$ composer require paynow/php-sdk
 \`\`\``}
 </MarkdownBlock>
 <p>and include the composer autoloader</p>
@@ -258,9 +253,12 @@ if($response->success()) {
 </MarkdownBlock>              
               </div>
               <div id="tab-php-nextsteps" className="tab-content">
-              <p>Congrats! Read on to begin integrating Paynow: </p>
+              <p>Congratulations! Read on to begin integrating Paynow: <a href={docUrl('php_quickstart.html')}>Full Guide</a></p>
+              <p>Alternatively, you can use any of the following plugins written for:</p>
               <ul>
-                <li></li>
+                <li><a href={docUrl('woocommerce.html')}>WooCommerce</a></li>
+                <li><a href={docUrl('gravity_forms.html')}>Gravity Forms</a></li>
+                <li><a href={docUrl('easy_digital_downloads.html')}>Easy Digital Downloads</a></li>
               </ul>
               </div>
               </div>
@@ -284,14 +282,61 @@ if($response->success()) {
               <pre>
               <MarkdownBlock>
 {`\`\`\`bash
-PM> Install-Package PaynowZW
+PM> Install-Package Paynow
 \`\`\``}
               </MarkdownBlock>
-              </pre>           
+              </pre>
+              <p>and import the library as shown below: </p>
+              <pre>
+              <MarkdownBlock>
+{`\`\`\`csharp
+using Webdev.Payments.Paynow;
+\`\`\``}
+              </MarkdownBlock>
+              </pre>                    
               </div>
-              <div id="tab-dotnet-apirequest" className="tab-content">dotnet do api request</div>
-              <div id="tab-dotnet-apiresponse" className="tab-content">dotnet handle api response</div>
-              <div id="tab-dotnet-nextsteps" className="tab-content">dotnet next steps</div>
+              <div id="tab-dotnet-apirequest" className="tab-content">
+              <MarkdownBlock>
+{`\`\`\`csharp
+var paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
+
+paynow.ResultUrl = "http://example.com/gateways/paynow/update";
+paynow.ReturnUrl = "http://example.com/return?gateway=paynow";
+// The return url can be set at later stages. You might want to do 
+// this if you want to pass data to the return url (like the reference 
+// of the transaction)
+
+// Create new payment and pass in the reference and payer's email address
+var payment = paynow.CreatePayment("Invoice 35");
+
+// Passing in the name of the item and the price of the item
+payment.add("Bananas", 2.5m);
+payment.add("Apples", 3.4m);
+
+// Save the response from paynow in a variable
+var response = paynow.Send(payment);
+\`\`\``}
+              </MarkdownBlock>              
+              </div>
+              <div id="tab-dotnet-apiresponse" className="tab-content">
+              <MarkdownBlock>
+{`\`\`\`csharp
+var response = paynow.Send(payment);
+
+if(response.Success()) 
+{   
+    // Get the url to redirect the user to so they can make payment
+    var link = response.RedirectLink();
+    
+    // Get the poll url of the transaction
+    var pollUrl = response.PollUrl(); 
+}
+\`\`\``}
+              </MarkdownBlock>                  
+              </div>
+              <div id="tab-dotnet-nextsteps" className="tab-content">
+              <p>Congratulations! Read on to begin integrating Paynow: <a href={docUrl('csharp_quickstart.html')}>Full Guide</a></p>              
+              </div>
               </div>
               </div>
 
@@ -313,19 +358,66 @@ PM> Install-Package PaynowZW
               <p>Install the library using NPM or yarn</p>
               <MarkdownBlock>
 {`\`\`\`bash
-$ npm install --save paynowzw/node-sdk
+$ npm install --save paynow
 \`\`\``}              
               </MarkdownBlock>
               <p>or</p>
               <MarkdownBlock>
 {`\`\`\`bash
-$ yarn add paynowzw/node-sdk
+$ yarn add paynow
 \`\`\``}              
-              </MarkdownBlock>         
+              </MarkdownBlock>
+              <p>and import the library as shown below:</p>
+              <MarkdownBlock>
+{`\`\`\`nodejs
+const Paynow = require("paynow");
+\`\`\``}                    
+              </MarkdownBlock>
               </div>
-              <div id="tab-nodejs-apirequest" className="tab-content">nodejs do api request</div>
-              <div id="tab-nodejs-apiresponse" className="tab-content">nodejs handle api response</div>
-              <div id="tab-nodejs-nextsteps" className="tab-content">nodejs next steps</div>
+              <div id="tab-nodejs-apirequest" className="tab-content">
+              <MarkdownBlock>
+{`\`\`\`nodejs
+let paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
+
+paynow.resultUrl = "http://example.com/gateways/paynow/update";
+paynow.returnUrl = "http://example.com/return?gateway=paynow";
+// The return url can be set at later stages. You might want to do 
+// this if you want to pass data to the return url (like the reference 
+// of the transaction)
+
+// Create new payment and pass in the reference and payer's email address
+let payment = paynow.createPayment("Invoice 35");
+
+// Passing in the name of the item and the price of the item
+payment.add("Bananas", 2.5);
+payment.add("Apples", 3.4);
+
+// Save the response from paynow in a variable
+let response = paynow.send(payment);
+\`\`\``}                    
+              </MarkdownBlock>
+              </div>
+              <div id="tab-nodejs-apiresponse" className="tab-content">
+              <MarkdownBlock>
+{`\`\`\`nodejs                
+// Check if request was successful
+  if (response.success) {
+    // Get the poll url (used to check the status of a transaction). You might  
+    // want to save this in your DB
+    let pollUrl = response.pollUrl;
+
+    // Get the instructions
+    let instructions = response.instructions;
+  } else {
+    // Ahhhhhhhhhhhhhhh
+    // *freak out*
+  }
+  \`\`\``}          
+              </MarkdownBlock>
+              </div>
+              <div id="tab-nodejs-nextsteps" className="tab-content">
+              <p>Congratulations! Read on to begin integrating Paynow: <a href={docUrl('nodejs_quickstart.html')}>Full Guide</a></p>              
+              </div>
               </div>
               </div>
 
@@ -337,10 +429,65 @@ $ yarn add paynowzw/node-sdk
                 <li className="tab-link" data-tab="tab-python" data-subtab="apiresponse">Handle API response</li>
                 <li className="tab-link" data-tab="tab-python" data-subtab="nextsteps">Next Steps</li>
               </ul>
-              <div id="tab-python-install" className="tab-content">python lib install</div>
-              <div id="tab-python-apirequest" className="tab-content">python do api request</div>
-              <div id="tab-python-apiresponse" className="tab-content">python handle api response</div>
-              <div id="tab-python-nextsteps" className="tab-content">python next steps</div>
+              <div id="tab-python-install" className="tab-content">
+              <p>This library has a set of prerequisites that must be met for it to work</p>
+              <ul>
+                <li>Requests</li>
+                <li>pip - a package manager for Python packages</li>
+              </ul>
+              <MarkdownBlock>
+{`\`\`\`bash                
+$ pip install paynow
+  \`\`\``}          
+              </MarkdownBlock>
+              <p>and import the Paynow class into your project</p>
+              <MarkdownBlock>
+{`\`\`\`python                
+from paynow import Paynow
+
+# Do stuff
+  \`\`\``}          
+              </MarkdownBlock>              
+              </div>
+              <div id="tab-python-apirequest" className="tab-content">
+              <MarkdownBlock>
+{`\`\`\`python                
+paynow = Paynow(
+    'INTEGRATION_ID', 
+    'INTEGRATION_KEY',
+    'http://example.com/gateways/paynow/update', 
+    'http://example.com/return?gateway=paynow'
+)
+
+# Create new payment and pass in the reference and payer's email address
+payment = paynow.create_payment('Order #100', 'test@example.com')
+
+# Passing in the name of the item and the price of the item
+payment.add('Bananas', 2.50)
+payment.add('Apples', 3.40)
+
+# Save the response from paynow in a variable
+response = paynow.send(payment)
+\`\`\``}
+              </MarkdownBlock>
+              </div>
+              <div id="tab-python-apiresponse" className="tab-content">
+              <MarkdownBlock>
+{`\`\`\`python                
+if response.success:
+
+    # Get the link to redirect the user to, then use it as you see fit
+    link = response.redirect_url
+
+    # Get the poll url (used to check the status of a transaction). 
+    # You might want to save this in your DB
+    pollUrl = response.poll_url
+\`\`\``}                
+              </MarkdownBlock>
+              </div>
+              <div id="tab-python-nextsteps" className="tab-content">
+              <p>Congratulations! Read on to begin integrating Paynow: <a href={docUrl('python_quickstart.html')}>Full Guide</a></p> 
+              </div>
               </div>
               </div>
 
@@ -352,10 +499,83 @@ $ yarn add paynowzw/node-sdk
                 <li className="tab-link" data-tab="tab-java" data-subtab="apiresponse">Handle API response</li>
                 <li className="tab-link" data-tab="tab-java" data-subtab="nextsteps">Next Steps</li>
               </ul>
-              <div id="tab-java-install" className="tab-content">java lib install</div>
-              <div id="tab-java-apirequest" className="tab-content">java do api request</div>
-              <div id="tab-java-apiresponse" className="tab-content">java handle api response</div>
-              <div id="tab-java-nextsteps" className="tab-content">java next steps</div>
+              <div id="tab-java-install" className="tab-content">
+              <p>This library has a set of prerequisites that must be met for it to work</p>
+              <ul>
+                <li>Java JDK 6 or higher</li>
+              </ul>
+              <p>Install the library using either Gradle:</p>
+              <MarkdownBlock>
+{`\`\`\`gradle                
+repositories {
+  mavenCentral()
+}
+dependencies {
+  compile 'zw.paynow:java-sdk:+'
+}
+\`\`\``} 
+              </MarkdownBlock>
+              <p>OR using Maven:</p>
+              <MarkdownBlock>
+{`\`\`\`xml                
+<dependency>
+    <groupId>zw.paynow</groupId>
+    <artifactId>java-sdk</artifactId>
+    <version>LATEST</version>
+</dependency>
+\`\`\``} 
+              </MarkdownBlock>
+              <p>and import the library into your project using the code below:</p>
+              <MarkdownBlock>
+{`\`\`\`java                
+import webdev.core.*;
+import webdev.payments.Paynow;
+import webdev.payments.Payment;
+\`\`\``} 
+              </MarkdownBlock>                                
+              </div>
+              <div id="tab-java-apirequest" className="tab-content">
+              <MarkdownBlock>
+{`\`\`\`java
+Paynow paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
+
+paynow.setResultUrl("http://example.com/gateways/paynow/update");
+paynow.setReturnUrl("http://example.com/return?gateway=paynow");
+// The return url can be set at later stages. You might want to do 
+// this if you want to pass data to the return url (like the reference 
+// of the transaction)
+
+//
+Payment payment = paynow.createPayment("Invoice 35");
+
+// Passing in the name of the item and the price of the item
+payment.add("Bananas", 2.5);
+payment.add("Apples", 3.4);
+
+// Save the response from paynow in a variable
+InitResponse response = paynow.send(payment);
+\`\`\``} 
+              </MarkdownBlock>
+              </div>
+              <div id="tab-java-apiresponse" className="tab-content">
+              <MarkdownBlock>
+{`\`\`\`java
+InitResponse response = paynow.send(payment);
+
+if(response.success()) 
+{   
+    // Get the url to redirect the user to so they can make payment
+    String link = response.redirectLink();
+    
+    // Get the poll url of the transaction
+    String pollUrl = response.pollUrl(); 
+}
+\`\`\``}                
+              </MarkdownBlock>
+              </div>
+              <div id="tab-java-nextsteps" className="tab-content">
+              <p>Congratulations! Read on to begin integrating Paynow: <a href={docUrl('java_quickstart.html')}>Full Guide</a></p> 
+              </div>
               </div>
               </div>              
             </div>

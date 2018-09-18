@@ -37,8 +37,8 @@ Create an instance of the Paynow class optionally setting the result and return 
 paynow = Paynow(
 	'INTEGRATION_ID', 
 	'INTEGRATION_KEY',
-	'http:#google.com', 
-	'http:#google.com'
+	'http://google.com', 
+	'http://google.com'
 	)
 ```
 
@@ -127,8 +127,8 @@ from paynow import Paynow
 paynow = Paynow(
 	'INTEGRATION_ID', 
 	'INTEGRATION_KEY',
-	'http:#google.com', 
-	'http:#google.com'
+	'http://google.com', 
+	'http://google.com'
 	)
 
 payment = paynow.create_payment('Order', 'test@example.com')

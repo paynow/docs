@@ -27,7 +27,8 @@
     "Library Source Docs": [
       "sourcedocs_php",
       "sourcedocs_dotnet",
-      "sourcedocs_nodejs"
+      "sourcedocs_nodejs",
+      "sourcedocs_java"
     ]    
   }
 }

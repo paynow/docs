@@ -12,7 +12,7 @@ sidebar_label: .NET
 
 This library has a set of prerequisites that must be met for it to work
 
-1.  .NET 4.0 or later
+1.  .NET 4.5.2 or later
 
 ## Installation
 
@@ -26,12 +26,12 @@ If you prefer to not use NuGet, you can also download the SDK directly from this
 From the Nuget package manager console, enter the follwing command
 
 ```sh
-PM> Install-Package PaynowZW
+PM> Install-Package Paynow
 ```
 
 ### Downloading the SDK directly
 
-1. Navigate to the Paynow [.NET SDK Releases page](https://github.com/PaynowZW/Paynow-DotNet-SDK/releases)
+1. Navigate to the Paynow [.NET SDK Releases page](https://gitlab.com/paynow-developer-hub/Paynow-DotNet-SDK/-/archive/1.0.0/Paynow-DotNet-SDK-1.0.0.zip)
 2. Click the appropriate link to download a ZIP file containing the SDK files
 
 

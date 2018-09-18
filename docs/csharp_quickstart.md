@@ -26,7 +26,7 @@ If you prefer to not use NuGet, you can also download the SDK directly from this
 From the Nuget package manager console, enter the follwing command
 
 ```sh
-PM> Install-Package PaynowZW
+PM> Install-Package Paynow
 ```
 
 ### Downloading the SDK directly

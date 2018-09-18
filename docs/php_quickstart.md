@@ -18,7 +18,7 @@ This library has a set of prerequisites that must be met for it to work
 Install the library using composer
 
 ```sh
-$ composer require paynowzw/php-sdk
+$ composer require paynow/php-sdk
 ```
 
 ## Usage example

@@ -24,8 +24,8 @@ https://www.paynow.co.zw/Home/Receive
 11. Choose which Payment Methods you want this integration to use.
 12. Click Save
 
-![Generating Integration Keys on Paynow](/assets/integration_keys_generation.gif)
-<button id="gifRestart">Show me again!</button>
+![Generating Integration Keys on Paynow](assets/integration_keys_generation.gif)
+<button id="gifReplay">Show me again!</button>
 
 The integration will be created and you will be returned to the same page. In the Integration Keys
 section you will see Integration ID, this is the id you will use below when initiating a transaction, note

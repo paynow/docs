@@ -38,9 +38,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // }
 
     let gif = document.querySelector('img[src$=".gif"]:first-child');
-  
-    document.querySelector('#gifReplay').addEventListener('click', function(){
-      let src = gif.getAttribute('src');
-      gif.setAttribute('src', src);
-    });
+    try {
+        document.querySelector('#gifReplay').addEventListener('click', function(){
+        let src = gif.getAttribute('src');
+        gif.setAttribute('src', src);
+        });
+    }
+    catch(error){}
 });

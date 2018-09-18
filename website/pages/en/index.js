@@ -195,7 +195,7 @@ const GetStarted = props => (
               <p>The library can be installed via Composer as shown below:</p>
 <MarkdownBlock>
 {`\`\`\`bash
-$ composer require paynowzw/php-sdk
+$ composer require paynow/php-sdk
 \`\`\``}
 </MarkdownBlock>
 <p>and include the composer autoloader</p>

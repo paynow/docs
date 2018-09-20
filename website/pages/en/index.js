@@ -104,14 +104,14 @@ const FeatureCallout = props => (
     style={{textAlign: 'center'}}>
     <div>
       <p>Create a free developer account </p>
-      <Button id="signup" href={'https://forums.paynow.co.zw'}>SIGN UP</Button>
+      <Button id="signup" href={'https://forums.paynow.co.zw/signup'}>SIGN UP</Button>
     </div>
     {/* <MarkdownBlock>These are features of this project</MarkdownBlock> */}
   </div>
 );
 
 const Features = props => (
-  <Block layout="fourColumn">
+  <Block id="dsfb" layout="fourColumn">
     {[
       {
         content: 'Access Developer Documentation and start transacting online.<br/><a href="/docs/quickstart.html">View Documentation</a>',

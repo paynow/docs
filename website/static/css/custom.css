@@ -125,6 +125,21 @@ body {
     height: auto;
 }
 
+input#search_input_react {
+    background: #fbfbfb;
+    padding: 5px;
+}
+
+.navSearchWrapper::before {
+    border-color: #175ff8;
+    left: 20px;
+}
+
+.navSearchWrapper::after {
+    background: #175ff8;
+    left: 29px;
+}
+
 .navigationSlider .slidingNav ul li a {
     color: #000000;
     font-size: 10.5px;
@@ -138,12 +153,12 @@ body {
     background: none;
 }
 
-.fixedHeaderContainer a[href="https://forums.paynow.co.zw/"] {
+/* .fixedHeaderContainer a[href="https://forums.paynow.co.zw/"] {
     font-size: 14px !important;
     background: #175ff8;
     color: #ffffff !important;
     border-radius: 1.6px;
-}
+} */
 
 .homeContainer .homeWrapper {
     background: transparent url('/img/paynow-villain.png') right 35px no-repeat;
@@ -158,6 +173,7 @@ body {
 
 .homeContainer {
     text-align: left;
+    margin-bottom: -70px;
 }
 
 .mainContainer {
@@ -197,17 +213,32 @@ body {
     border-color: #175ff8;
 }
 
+#dsfb {
+    background-color: #fbfbfb;
+}
+
 /* Signup CTA */
 #signupCallToAction {
     display: table;
     position: relative;
     padding: 0;
-    margin: -70px auto 0;
-    border-bottom: 1px solid rgba(0,0,0,0.25);
-    width: 750px;
-    padding-bottom: 15px;
+    margin: 0px auto;
+    /* border-bottom: 1px solid rgba(0,0,0,0.25); */
+    width: 100%;
+    padding-bottom: 25px;
     z-index: 9;
 }
+
+
+/* #signupCallToAction::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 80%;
+    max-width: 600px;
+    background: rgba(0,0,0,0.25);
+    margin: 25px auto;
+} */
 
 #signupCallToAction > div {
     display: table;
@@ -220,6 +251,7 @@ body {
     float: left;
     margin: 0 10px;
 }
+
 
 /* Getting Started */
 
@@ -257,12 +289,25 @@ ul.tabs li.current{
     background: #e7eefe;
     padding: 15px;
 }
+
+.tab-content .tab-content {
+    padding: 15px 0 0 0;
+}
+
 .tab-content p {
     max-width: none !important;
 }
 
+.tab-content pre code {
+    margin: 0 0 0 0;
+}
+
 .tab-content.current{
     display: inherit;
+}
+
+.codeContainer + p {
+    padding-top: 10px !important; 
 }
 
 .tabs-container div.tabs-container > ul.tabs > li {
@@ -339,6 +384,14 @@ footer#footer {
     background: #20232a;
 }
 
+footer#footer .sitemap > div {
+    margin-bottom: 25px;
+}
+
+footer#footer .sitemap > div:last-child {
+    margin-bottom: 0px;
+}
+
 /* Footer */
 
 
@@ -396,3 +449,47 @@ footer#footer {
 @media only screen and (min-width: 1500px) {
 }
 
+@media only screen and (max-width: 735px) {
+
+    .navigationSlider nav.slidingNav {
+        box-shadow: 0 1px 12px 0 #1919221a;
+    }
+
+    .navigationSlider .slidingNav ul {
+        margin-top: 65px;;
+    }
+    
+    .homeContainer {
+        margin-bottom: 0;
+    }
+
+    .homeContainer .homeWrapper {
+        background: none;
+        height: auto;
+    }
+    
+    .imageAlignSide .blockContent{
+        flex: auto;
+        width: 100%;
+    }
+
+    .tabs-container ul.tabs > li {
+        font-size: 12px;
+        padding: 12px;
+    }
+    
+    .tabs-container div.tabs-container > ul.tabs > li {
+        display: block;
+        margin-right: 0 !important;
+    }
+
+    .tabs-container div.tabs-container > ul.tabs > li:not(:last-child) {
+        margin-bottom: 15px !important;
+    }
+
+    #signupCallToAction div > * {
+        display: block !important;
+        float: none !important;
+    }
+
+}

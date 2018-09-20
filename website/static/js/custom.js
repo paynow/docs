@@ -45,4 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     catch(error){}
+
+    [].forEach.call(document.querySelectorAll('code.hljs'), function(el){
+        el.parentNode.parentNode.parentNode.className = "codeContainer";
+    })
 });

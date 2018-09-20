@@ -59,8 +59,8 @@ const siteConfig = {
     // {doc: 'doc4', label: 'API REFERENCE'},
     {page: 'help', label: 'HELP'},
     {blog: true, label: 'BLOG'},
-    // {href: 'https://forums.paynow.co.zw/', label: 'FORUM'},
-    {href: 'https://forums.paynow.co.zw/', label: 'SIGN UP'},
+    {href: 'https://forums.paynow.co.zw/', label: 'FORUMS'},
+    {href: 'https://forums.paynow.co.zw/signup', label: 'SIGN UP'},
   ],
 
   // If you have users set above, you add it here:
@@ -74,7 +74,7 @@ const siteConfig = {
   /* colors for website */
   colors: {
     primaryColor: '#175ff8',
-    secondaryColor: '#7dbeda',
+    secondaryColor: '#ffffff',
   },
 
   /* custom fonts for website */
@@ -116,6 +116,12 @@ const siteConfig = {
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
   //   repoUrl: 'https://github.com/facebook/test-site',
+
+  algolia: {
+    apiKey: '55c352899c13135564189b48df25e3c8',
+    indexName: 'paynow_forums',
+    algoliaOptions: {} // Optional, if provided by Algolia
+  },
 };
 
 module.exports = siteConfig;

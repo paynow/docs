@@ -122,6 +122,11 @@ const siteConfig = {
     indexName: 'paynow_forums',
     algoliaOptions: {} // Optional, if provided by Algolia
   },
+  gaTrackingId: 'UA-126207230-1',
+  scrollToTop: true,
+  scrollToTopOptions: {
+    zIndex: 100,
+  },
 };
 
 module.exports = siteConfig;

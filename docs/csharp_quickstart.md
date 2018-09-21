@@ -63,8 +63,8 @@ You can then start adding items to the payment
 
 ```cs
 // Passing in the name of the item and the price of the item
-payment.add("Bananas", 2.5m);
-payment.add("Apples", 3.4m);
+payment.add("Bananas", 2.5);
+payment.add("Apples", 3.4);
 ```
 
 Once you're done building up your cart and you're finally ready to send your payment to Paynow, you can use the `Send` method in the `paynow` object.
@@ -93,18 +93,20 @@ if(response.Success())
 
 # Mobile Transactions
 
-If you want to send an express (mobile) checkout request instead, when creating a payment you make a call to the `CreateMobilePayment` instead of the `CreatePayment` method. The `CreateMobilePayment` method unlike the `CreatePayment` method requires that you pass in the email address of the user making the payment. 
+If you want to send an express (mobile) checkout request instead, when creating a payment you make a call to an overload of the `CreatePayment` method.This overload takes in two arguments, the reference of the transaction followed by the payer's email address. **Mobile transactions** require that you pass in the email address of the user making the payment. The email address is used by Paynow to email a payment summary and reference to the person who has made payment. Its specifically for the customer, not the merchant. However, there’s nothing stopping you using your own email address if you don’t mind the customer not getting a copy of the payment.
 
 Additionally, you send the payment to Paynow by making a call to the `SendMobile` in the `paynow` object
 instead of the `Send` method. The `SendMobile` method unlike the `Send` method takes in two additional arguments i.e The phone number to send the payment request to and the mobile money method to use for the request. **Note that currently only ecocash is supported**
 
+**Note: The payer's email address is required for mobile transactions**
+
 ```cs
-// Create a mobile payment
-var payment = paynow.CreateMobilePayment("Invoice 32", "user@example.com");
+// Create a mobile payment, passing the payer's email address. 
+var payment = paynow.CreatePayment("Invoice 32", "user@example.com");
 
 // Add items to the payment
-payment.Add("Bananas", 2.5m);
-payment.Add("Apples", 3.4m);
+payment.Add("Bananas", 2.5);
+payment.Add("Apples", 3.4);
 
 // Send the payment to paynow
 paynow.SendMobile(payment)
@@ -176,8 +178,8 @@ class Program
         var response = paynow.Send(payment);
         
         // Add items to the payment
-        payment.Add("Bananas", 2.5m);
-        payment.Add("Apples", 3.4m);
+        payment.Add("Bananas", 2.5);
+        payment.Add("Apples", 3.4);
     
         // Check if payment was sent without error
         if(response.Success())  

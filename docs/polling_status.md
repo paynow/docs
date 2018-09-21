@@ -9,7 +9,7 @@ The merchant site can poll for a current transaction status to Paynow at any poi
 Paynow to confirm the status.
 - The merchant site is going to delete old or unpaid transactions, before doing this the merchant site should poll Paynow and confirm the transaction status before deleting it from their system.
 
-To poll for a transaction status the merchant site should perform an empty HTTP POST to the pollurl sent by Paynow in transaction initiation or status update. 
+To poll for a transaction status the merchant site should perform an HTTP GET request to the pollurl sent by Paynow in transaction initiation or status update. 
 
 Paynow will reply with a string formatted as
 an HTTP POST, i.e. each field separated by a & and Key Value pairs separated by an = and all Values URL Encoded, with the same fields as if it were posting a result to the merchant site.

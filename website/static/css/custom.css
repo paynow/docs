@@ -270,7 +270,7 @@ input#search_input_react::placeholder {
 }
 
 .tabs-container {
-    max-width: 666px;
+    /* max-width: 666px; */
 }
 
 ul.tabs{

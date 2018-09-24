@@ -11,7 +11,7 @@ class MyPage extends React.Component {
     // ... your rendering code
 
     return (
-        <div className="docMainWrapper wrapper">
+        <div className="docMainWrapper wrapper try">
         <Container className="mainContainer documentContainer postContainer">
           <div className="post">
             <header className="postHeader">
@@ -19,15 +19,13 @@ class MyPage extends React.Component {
             </header>
             <div className="tabs-container">
               <ul className="tabs">
+                <li className="tab-link current" data-tab="tab-nodejs">NodeJS</li>
                 <li className="tab-link" data-tab="tab-php">PHP</li>
                 <li className="tab-link" data-tab="tab-dotnet">.NET</li>
-                <li className="tab-link current" data-tab="tab-nodejs">NodeJS</li>
                 <li className="tab-link" data-tab="tab-python">Python</li>
                 <li className="tab-link" data-tab="tab-java">Java</li>
               </ul>
-              <div id="tab-nodejs" className="tab-content current">
-              <div id="nodejs-runkit"></div>
-              </div>
+              <div id="tab-nodejs" className="tab-content current"><div id="nodejs-runkit"></div></div>
               <div id="tab-php" className="tab-content">php</div>
               <div id="tab-dotnet" className="tab-content">dotnet</div>
               <div id="tab-python" className="tab-content"><a class="button" href="https://mybinder.org/v2/gh/spaghettiwews/paynow-demo-python/master?filepath=index.ipynb">Launch demo</a></div>

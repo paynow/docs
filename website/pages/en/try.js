@@ -28,7 +28,7 @@ class MyPage extends React.Component {
               <div id="tab-nodejs" className="tab-content current"><div id="nodejs-runkit"></div></div>
               <div id="tab-php" className="tab-content">php</div>
               <div id="tab-dotnet" className="tab-content">dotnet</div>
-              <div id="tab-python" className="tab-content"><a class="button" href="https://mybinder.org/v2/gh/spaghettiwews/paynow-demo-python/master?filepath=index.ipynb">Launch demo</a></div>
+              <div id="tab-python" className="tab-content"><a className="button" href="https://mybinder.org/v2/gh/spaghettiwews/paynow-demo-python/master?filepath=index.ipynb">Launch demo</a></div>
               <div id="tab-java" className="tab-content">java</div>
           </div>
           </div>

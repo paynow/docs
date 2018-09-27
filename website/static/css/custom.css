@@ -203,8 +203,7 @@ input#search_input_react::placeholder {
     font-family: 'SF Regular';
 }
 
-.projectTitle > small:after {
-    content: '#GetPaid';
+.projectTitle > small > span {
     color: #ff6619;
 }
 

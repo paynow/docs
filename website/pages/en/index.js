@@ -165,7 +165,7 @@ const GetStarted = props => (
             <p>PaynowZW authenticates all API requests using your integration's API keys. You will need the API keys to successfully make requests to the API request.</p>
             <p>You can create integrations and keys via the Dashboard as described <a href={docUrl('integration_generation.html')}>here</a></p>
             <div className="tabs-container">
-              <ul className="tabs">
+              <ul className="tabs parents">
                 <li className="tab-link current" data-tab="tab-php">PHP</li>
                 <li className="tab-link" data-tab="tab-dotnet">.NET</li>
                 <li className="tab-link" data-tab="tab-nodejs">NodeJS</li>

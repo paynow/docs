@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
+
+    var subTitle = document.querySelector('.projectTitle > small').innerText;
+    var subSegments = subTitle.split(' ');
+    var newSub = '';
+
+    subSegments.forEach(function(i){
+    if (i === '#GetPaid') {
+        newSub += '<span>' + i + '</span>';
+    }
+    else {
+        newSub += i + ' ';
+    }
+    });
+
+    document.querySelector('.projectTitle > small').innerHTML = newSub;
+
+
+    [].forEach.call(document.querySelectorAll('.tabs.parents > li'), function(i){
+        i.addEventListener('click', function(){
+            clicked = this.getAttribute('data-tab');
+            statikSelektah = "#" + clicked + " .tabs > li:first-child";
+            console.log(statikSelektah);
+            document.querySelector(statikSelektah).classList.add('current');
+        });
+    });
+
+
     let parentTabLinks = document.querySelectorAll('ul.tabs > li');
     let tabLinks = document.querySelectorAll('ul.tabs li');
     let tabs = document.querySelectorAll('.tab-content');

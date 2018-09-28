@@ -181,7 +181,7 @@ const GetStarted = props => (
                 <li className="tab-link" data-tab="tab-php" data-subtab="apiresponse">Handle API response</li>
                 <li className="tab-link" data-tab="tab-php" data-subtab="nextsteps">Next Steps</li>
               </ul>
-              <div id="tab-php-install" className="tab-content">
+              <div id="tab-php-install" className="tab-content current">
               <p>This library has a set of prerequisites that must be met for it to work</p>
               <ul>
               <li>PHP version 5.6 or higher</li>

@@ -15,17 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     document.querySelector('.projectTitle > small').innerHTML = newSub;
 
-
-    [].forEach.call(document.querySelectorAll('.tabs.parents > li'), function(i){
-        i.addEventListener('click', function(){
-            clicked = this.getAttribute('data-tab');
-            statikSelektah = "#" + clicked + " .tabs > li:first-child";
-            console.log(statikSelektah);
-            document.querySelector(statikSelektah).classList.add('current');
-        });
-    });
-
-
+    // TODO: Refactor this vomit of tabs code. Can definitely be better written, this shyte
     let parentTabLinks = document.querySelectorAll('ul.tabs > li');
     let tabLinks = document.querySelectorAll('ul.tabs li');
     let tabs = document.querySelectorAll('.tab-content');
@@ -52,17 +42,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // for(parentTabLink of parentTabLinks) {
-    //     parentTabLink.addEventListener('click',function(){
-    //         var tab_id = this.getAttribute('data-tab');
-    //         var firstTabContent = document.querySelector("#" + tab_id + " .tabs > li:first-child").getAttribute('data-subtab');
-
-
-    //         document.querySelector("#" + tab_id + " .tabs > li:first-child").classList.add('current');
-    //         document.querySelector("#" + tab_id + " #" + tab_id +"-"+ firstTabContent).classList.add('current');
-    //         //console.log(tab_id);
-    //     });
-    // }
+    [].forEach.call(document.querySelectorAll('.tabs.parents > li'), function(i){
+        i.addEventListener('click', function(){
+            clicked = this.getAttribute('data-tab');
+            statikSelektah = "#" + clicked + " .tabs > li:first-child";
+            installTabContentId = '#' + clicked + '-install';
+            //console.log(statikSelektah);
+            document.querySelector(statikSelektah).classList.add('current');
+            document.querySelector(installTabContentId).classList.add('current');
+        });
+    });
+    // TODO: Refactor this vomit of tabs code. Can definitely be better written, this shyte
 
     let gif = document.querySelector('img[src$=".gif"]:first-child');
     try {
@@ -76,30 +66,35 @@ document.addEventListener('DOMContentLoaded', function() {
     [].forEach.call(document.querySelectorAll('code.hljs'), function(el){
         el.parentNode.parentNode.parentNode.className = "codeContainer";
     });
+    
+    try {
+            var notebook = RunKit.createNotebook({
+                element: document.getElementById("nodejs-runkit"),
+                source: 
+                `
+        const Paynow = require("paynow");
+        let testIntegrationId = '4198';
+        let testIntegrationKey = '5c74798d-f9b0-42e0-9a61-a48138a7189c';
+        let paynow = new Paynow(testIntegrationId, testIntegrationKey);
+        paynow.resultUrl = "https://www.example.com/gateways/paynow/update";
+        paynow.returnUrl = "httpw://www.example.com/return?gateway=paynow";
+        let payment = paynow.createPayment("Invoice 007", "james@mailinator.com");
+        payment.add("Laser Guided Missile", 11.99);
+        payment.add("Glock 19", 5.49);
 
-    var notebook = RunKit.createNotebook({
-        element: document.getElementById("nodejs-runkit"),
-        source: 
+        paynow.send(payment).then(response => {
+            if (response.success) {
+                let link = response.redirectUrl;
+                console.log('Go to ' + link + ' to complete the transaction.');
+        }
+        else {
+            console.log(response.error);
+        }
+        });
         `
-const Paynow = require("paynow");
-let testIntegrationId = '4198';
-let testIntegrationKey = '5c74798d-f9b0-42e0-9a61-a48138a7189c';
-let paynow = new Paynow(testIntegrationId, testIntegrationKey);
-paynow.resultUrl = "https://www.example.com/gateways/paynow/update";
-paynow.returnUrl = "httpw://www.example.com/return?gateway=paynow";
-let payment = paynow.createPayment("Invoice 007", "james@mailinator.com");
-payment.add("Laser Guided Missile", 11.99);
-payment.add("Glock 19", 5.49);
-
-paynow.send(payment).then(response => {
-    if (response.success) {
-        let link = response.redirectUrl;
-        console.log('Go to ' + link + ' to complete the transaction.');
-}
-else {
-    console.log(response.error);
-}
-});
-`
-    });
+            });
+        }
+    catch(error){
+        //do nothing
+    }
 });

@@ -42,16 +42,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    [].forEach.call(document.querySelectorAll('.tabs.parents > li'), function(i){
-        i.addEventListener('click', function(){
-            clicked = this.getAttribute('data-tab');
-            statikSelektah = "#" + clicked + " .tabs > li:first-child";
-            installTabContentId = '#' + clicked + '-install';
-            //console.log(statikSelektah);
-            document.querySelector(statikSelektah).classList.add('current');
-            document.querySelector(installTabContentId).classList.add('current');
+    try {
+        [].forEach.call(document.querySelectorAll('.tabs.parents > li'), function(i){
+            i.addEventListener('click', function(){
+                clicked = this.getAttribute('data-tab');
+                statikSelektah = "#" + clicked + " .tabs > li:first-child";
+                installTabContentId = '#' + clicked + '-install';
+                //console.log(statikSelektah);
+                document.querySelector(statikSelektah).classList.add('current');
+                document.querySelector(installTabContentId).classList.add('current');
+            });
         });
-    });
+    } catch (error) {
+        
+    }
     // TODO: Refactor this vomit of tabs code. Can definitely be better written, this shyte
 
     let gif = document.querySelector('img[src$=".gif"]:first-child');

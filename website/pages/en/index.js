@@ -202,8 +202,10 @@ require_once 'path/to/vendor/autoload.php';
 // Do stuff
 \`\`\``}
 </MarkdownBlock>
-<p>Alternatively, if you do not have composer installed, use the autoloader file included with the library</p>
+<p>Alternatively, if you do not have composer installed, <a href="https://gitlab.com/paynow-developer-hub/Paynow-PHP-SDK/-/archive/master/Paynow-PHP-SDK-master.zip">first download the library here</a>. And include the autoloader file included with the library
+</p>
 <MarkdownBlock>
+
 {`\`\`\`php
 <?php
 require_once 'path/to/library/autoloader.php';

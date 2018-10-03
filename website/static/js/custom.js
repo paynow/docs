@@ -1,19 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    var subTitle = document.querySelector('.projectTitle > small').innerText;
-    var subSegments = subTitle.split(' ');
-    var newSub = '';
+    try {
+        var subTitle = document.querySelector('.projectTitle > small').innerText;
+        var subSegments = subTitle.split(' ');
+        var newSub = '';
 
-    subSegments.forEach(function(i){
-    if (i === '#GetPaid') {
-        newSub += '<span>' + i + '</span>';
-    }
-    else {
-        newSub += i + ' ';
-    }
-    });
+        subSegments.forEach(function(i){
+        if (i === '#GetPaid') {
+            newSub += '<span>' + i + '</span>';
+        }
+        else {
+            newSub += i + ' ';
+        }
+        });
 
-    document.querySelector('.projectTitle > small').innerHTML = newSub;
+        document.querySelector('.projectTitle > small').innerHTML = newSub;
+    }
+    catch (error) {
+
+    }
 
     // TODO: Refactor this vomit of tabs code. Can definitely be better written, this shyte
     let parentTabLinks = document.querySelectorAll('ul.tabs > li');

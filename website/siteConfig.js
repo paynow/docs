@@ -56,7 +56,8 @@ const siteConfig = {
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
     {doc: 'quickstart', label: 'DOCUMENTATION'},
-    // {doc: 'doc4', label: 'API REFERENCE'},
+    // {page: 'try', label: 'TRY NOW'},
+    {page: 'about', label: 'ABOUT'},
     {page: 'help', label: 'HELP'},
     {blog: true, label: 'BLOG'},
     {href: 'https://forums.paynow.co.zw/', label: 'FORUMS'},

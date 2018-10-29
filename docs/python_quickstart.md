@@ -4,7 +4,10 @@ title: Python Quickstart Guide
 sidebar_label: Python
 ---
 
-Python SDK for Paynow Zimbabwe's API
+
+## Sign in to Paynow and get integration details
+
+> Before you can start making requests to Paynow's API, you need to get an integration ID and integration Key from Paynow. Details about how you can retrieve the ID and key are explained in detail on [this page](generation.md)
 
 ## Prerequisites
 
@@ -27,7 +30,6 @@ and import the Paynow class into your project
 
 	# Do stuff
 ```
----
 
 ## Usage example
 
@@ -79,9 +81,8 @@ if response.success:
 
 ```
 
----
 
-> Mobile Transactions
+## Mobile Transactions
 
 If you want to send an express (mobile) checkout request instead, the only thing that differs is the last step. You make a call to the `send_mobile` in the `paynow` object
 instead of the `send` method.

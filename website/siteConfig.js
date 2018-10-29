@@ -119,8 +119,8 @@ const siteConfig = {
   //   repoUrl: 'https://github.com/facebook/test-site',
 
   algolia: {
-    apiKey: '55c352899c13135564189b48df25e3c8',
-    indexName: 'paynow_forums',
+    apiKey: '8345ef0af3e205a03fa7f5950b33935b',
+    indexName: 'paynow',
     algoliaOptions: {} // Optional, if provided by Algolia
   },
   gaTrackingId: 'UA-126207230-1',

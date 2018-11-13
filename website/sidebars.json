@@ -15,6 +15,12 @@
         "camptix_nigelrodgers",
         "magento_prizeless"
         ],
+    "Links & Buttons": [
+      "simple_paynow_request_button",
+      "advanced_paynow_request_button",
+      "notification_success_cancel_urls",
+      "url_safe_base64_encoding"
+    ],
     "API Reference": [
       "paynow_api",
       "generating_hash",

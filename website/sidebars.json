@@ -23,8 +23,8 @@
     ],
     "API Reference": [
       "paynow_api",
-      "generating_hash",
       "initiate_transaction",
+      "generating_hash",
       "initiate_mobile_transaction",
       "status_update",
       "polling_status",

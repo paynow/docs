@@ -1,37 +1,19 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
-      - image: circleci/node:7.10
-
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
+      - image: circleci/node:8.12.0
     steps:
+      - run:
+          name: Install dependencies
+          command: |
+            sudo apt-get install -y -qq lftp
+
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: yarn install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      # run tests!
-      - run: yarn test
+      - run: 
+          name: Build website and deploy output via FTP
+          command: |
+            cd website
+            npm install
+            npm run build
+            lftp -c "set ftp:ssl-allow no; open -u $USERNAME,$PASSWORD $HOST; mirror -Rnv build/paynow-docs/ ./public_html --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"

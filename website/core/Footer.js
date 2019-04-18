@@ -91,7 +91,7 @@ class Footer extends React.Component {
             </a> */}
             <a href="https://forums.paynow.co.zw/">Discussion Forums</a>
             <a href={this.props.config.baseUrl + 'blog'}>Blogs & Tutorials</a>
-            <a href="https://gitlab.com/paynow">GitLab</a>
+            <a href="https://github.com/paynow">Github</a>
             {/* <a
               href="http://stackoverflow.com/questions/tagged/"
               target="_blank"

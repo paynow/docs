@@ -2,6 +2,9 @@
 
 node_modules
 
+.idea
+*.iml
+
 lib/core/metadata.js
 lib/core/MetadataBlog.js
 

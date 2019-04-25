@@ -31,7 +31,7 @@ PM> Install-Package Paynow
 
 ### Downloading the SDK directly
 
-1. Navigate to the Paynow [.NET SDK Releases page](https://gitlab.com/paynow-developer-hub/Paynow-DotNet-SDK/-/archive/1.0.0/Paynow-DotNet-SDK-1.0.0.zip)
+1. Navigate to the Paynow [.NET SDK Releases page](https://github.com/paynow/Paynow-DotNet-SDK/archive/master.zip)
 2. Click the appropriate link to download a ZIP file containing the SDK files
 
 

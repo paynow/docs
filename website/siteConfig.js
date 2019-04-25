@@ -61,7 +61,7 @@ const siteConfig = {
     {page: 'help', label: 'HELP'},
     {blog: true, label: 'BLOG'},
     {href: 'https://forums.paynow.co.zw/', label: 'FORUMS'},
-    {href: 'https://forums.paynow.co.zw/signup', label: 'SIGN UP'},
+    {href: 'https://forums.paynow.co.zw/signup', label: 'SIGN UP / SIGN IN'},
   ],
 
   // If you have users set above, you add it here:

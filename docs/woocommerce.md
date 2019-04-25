@@ -14,7 +14,7 @@ sidebar_label: WooCommerce
 
 ## Installation
 
-1. Download and install the [Paynow for WooCommerce](https://gitlab.com/paynow-developer-hub/paynow-for-woocommerce/-/archive/master/paynow-for-woocommerce-master.zip) plugin just like any other WordPress plugin. Go to **`Dashboard > Plugins > Add New > Upload Plugin`**
+1. Download and install the [Paynow for WooCommerce](https://github.com/paynow/Paynow-for-WooCommerce/archive/master.zip) plugin just like any other WordPress plugin. Go to **`Dashboard > Plugins > Add New > Upload Plugin`**
 1. Navigate to the Plugins page and activate the plugin.
 
 ## Configuration

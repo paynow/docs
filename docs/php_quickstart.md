@@ -37,7 +37,7 @@ and include the composer autoloader
 Or
 </p>
 
-Alternatively, if you do not have composer installed, [first download the library here](https://gitlab.com/paynow-developer-hub/Paynow-PHP-SDK/-/archive/master/Paynow-PHP-SDK-master.zip). And include the autoloader file included with the library
+Alternatively, if you do not have composer installed, [first download the library here](https://github.com/paynow/Paynow-PHP-SDK/archive/master.zip). And include the autoloader file included with the library
 
 ```php
 <?php

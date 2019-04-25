@@ -104,7 +104,7 @@ const FeatureCallout = props => (
     style={{textAlign: 'center'}}>
     <div>
       <p>Create a free developer account </p>
-      <Button id="signup" href={'https://forums.paynow.co.zw/signup'}>SIGN UP</Button>
+      <Button id="signup" href={'https://forums.paynow.co.zw/signup'}>Sign up / Sign in</Button>
     </div>
     {/* <MarkdownBlock>These are features of this project</MarkdownBlock> */}
   </div>
@@ -120,7 +120,7 @@ const Features = props => (
         title: 'DOCUMENTATION',
       },
       {
-        content: 'Get started quickly. Use our SDKs PHP, .NET, PYTHON and more.<br/><a href="https://www.gitlab.com/paynow">Get SDKs</a>',
+        content: 'Get started quickly. Use our SDKs PHP, .NET, PYTHON and more.<br/><a href="https://www.github.com/paynow">Get SDKs</a>',
         image: imgUrl('sdks.png'),
         imageAlign: 'top',
         title: 'SDKs',
@@ -202,7 +202,7 @@ require_once 'path/to/vendor/autoload.php';
 // Do stuff
 \`\`\``}
 </MarkdownBlock>
-<p>Alternatively, if you do not have composer installed, <a href="https://gitlab.com/paynow-developer-hub/Paynow-PHP-SDK/-/archive/master/Paynow-PHP-SDK-master.zip">first download the library here</a>. And include the autoloader file included with the library
+<p>Alternatively, if you do not have composer installed, <a href="https://github.com/paynow/Paynow-PHP-SDK/archive/master.zip">first download the library here</a>. And include the autoloader file included with the library
 </p>
 <MarkdownBlock>
 

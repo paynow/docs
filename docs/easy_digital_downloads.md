@@ -14,7 +14,7 @@ sidebar_label: Easy Digital Downloads
 
 ## Installation
 
-1. Download and install the [Paynow for Easy Digital Downloads](https://gitlab.com/paynow-developer-hub/paynow-for-easy-digital-downloads/-/archive/master/paynow-for-easy-digital-downloads-master.zip) plugin just like any other WordPress plugin. Go to **`Dashboard > Plugins > Add New > Upload Plugin`**
+1. Download and install the [Paynow for Easy Digital Downloads](https://github.com/paynow/Paynow-for-Easy-Digital-Downloads/archive/master.zip) plugin just like any other WordPress plugin. Go to **`Dashboard > Plugins > Add New > Upload Plugin`**
 1. Navigate to the Plugins page and activate the plugin.
 
 ## Configuration

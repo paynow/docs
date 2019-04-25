@@ -237,6 +237,9 @@ input#search_input_react::placeholder {
     z-index: 9;
 }
 
+#signupCallToAction .button {
+    text-transform: none;
+}
 
 /* #signupCallToAction::after {
     content: "";

@@ -12,7 +12,7 @@ sidebar_label: Gravity Forms
 
 ## Installation
 
-1. Download and install the [Paynow for Gravity Forms](https://gitlab.com/paynow-developer-hub/paynow-for-gravity-forms/-/archive/master/paynow-for-gravity-forms-master.zip) plugin just like any other WordPress plugin. Go to **`Dashboard > Plugins > Add New > Upload Plugin`**
+1. Download and install the [Paynow for Gravity Forms](https://github.com/paynow/Paynow-for-Gravity-Forms/archive/master.zip) plugin just like any other WordPress plugin. Go to **`Dashboard > Plugins > Add New > Upload Plugin`**
 1. Navigate to the Plugins page and activate the plugin.
 
 ## Configuration

@@ -29,6 +29,7 @@ $ git clone https://github.com/paynow/docs.git
 ```
 
 #### Install and run
+
 ```bash
 $ cd docs/website
 $ npm install #to install all required dependencies
@@ -36,6 +37,8 @@ $ npm start #to start the development server & watcher
 ```
 
 ## Contributing
+
+We welcome contributions to this and the SDKs repositories of any kind including documentation, suggestions, bug reports, pull requests etc. Do check out our [contribution guide][contribution_guide]. We would love to hear from you.
 
 ## Building and Deploying
 
@@ -45,3 +48,4 @@ Changes that are merged into `master` branch are automatically built and deploye
 <!-- LINKS -->
 [source_url]: https://github.com/paynow/docs.git
 [docusaurus]: https://docusaurus.io
+[contribution_guide]: https://github.com/paynow/docs/blob/master/CONTRIBUTING.md

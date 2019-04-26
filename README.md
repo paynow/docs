@@ -4,19 +4,44 @@ Documentation outlining merchant integration into Paynow for externally hosted s
 
 ## Getting Started
 
+This code is what's used to generate https://developers.paynow.co.zw. The HTML files served on the website are generated from the files in `docs/` and `website/`.
+
+The `docs/` folder contains all the markdown files that make up the entire documentation on the website while `website/` contains the JS, CSS, images and other files (as well as the blog).
+
+To make significant changes to the site you should familiarise yourself with [docusaurus][docusaurus]. If you only want to make content changes (*fix errors, typos, or add new sections to the exisiting documentation*) you just need to know about markdown and make your edits to the files in `docs/`.
+
+Two special files:
+
+- `sidebars.json`: lists the sections.
+- `siteConfig.json`: some header and i18n configs.
+
+During your development, most changes will be picked up at each browser refresh. If you touch these two files or blog/, however, you'll have to restart the server to see the changes.
+
+To download and run the website locally please follow the steps described below:
+
 ### Prerequisites
+1. Git
+1. NodeJS >=8.x and npm
 
 #### Download
+```bash
+$ git clone https://github.com/paynow/docs.git
+```
 
-#### Install
+#### Install and run
+```bash
+$ cd docs/website
+$ npm install #to install all required dependencies
+$ npm start #to start the development server & watcher
+```
 
+## Contributing
 
-## License
+## Building and Deploying
 
-
-## Code of Conduct
-
+Changes that are merged into `master` branch are automatically built and deployed by CI.
 
 
 <!-- LINKS -->
-[variable]: https://www.example.org/
+[source_url]: https://github.com/paynow/docs.git
+[docusaurus]: https://docusaurus.io

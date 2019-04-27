@@ -10,158 +10,160 @@ sidebar_label: Java
 
 ## Prerequisites
 
-This library has a set of prerequisites that must be met for it to work
+In order to make use of this project, the following prerequisites must be met for it to work.
 
-1.  Java JDK 6 or higher
+1. Java JDK 7 or higher
 
 ## Installation
+To use the Java Paynow SDK, you need to add the latest release as a dependency to your project. The latest release will be in the [Maven Central Repository](https://mvnrepository.com/artifact/zw.co.paynow/java-sdk).
 
-There are multiple ways to download PayPal Java SDK dependency, based on your dependency manager. Here are the most popular ones:
-
-### Installing using [Gradle](https://gradle.org/install/)
+#### Gradle
 ```gradle
 repositories {
 	mavenCentral()
 }
 dependencies {
-	compile 'zw.paynow:java-sdk:+'
+	implementation 'zw.co.paynow:java-sdk:1.1.0'
 }
 ```
 
-### Installing using [Maven](https://maven.apache.org/)
+#### Maven
 ```xml
 <dependency>
-	<groupId>zw.paynow</groupId>
-	<artifactId>java-sdk</artifactId>
-	<version>LATEST</version>
+    <groupId>zw.co.paynow</groupId>
+    <artifactId>java-sdk</artifactId>
+    <version>1.1.0</version>
 </dependency>
 ```
 
-
-## Usage example
-
-### Importing library
-
-```java
-import webdev.core.*;
-import webdev.payments.Paynow;
-import webdev.payments.Payment;
-```
-
-Create an instance of the Paynow class optionally setting the result and return url(s)
+## Getting started
+Create an instance of `Paynow` associated with your integration ID and integration key as supplied by Paynow. 
 
 ```java
 Paynow paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
-
-paynow.setResultUrl("http://example.com/gateways/paynow/update");
-paynow.setReturnUrl("http://example.com/return?gateway=paynow");
-// The return url can be set at later stages. You might want to do this if you want to pass data to the return url (like the reference of the transaction)
 ```
 
-Create a new payment passing in the reference for that payment (e.g invoice id, or anything that you can use to identify the transaction.
+## Initiating a web based transaction
+A web based transaction is made over the web, via the Paynow website.
+
+You can optionally set the result and return URLs. 
+
+* Result URL is the URL on the merchant website where Paynow will post transaction results to.
+* Return URL is the URL where the customer will be redirected to after the transaction has been processed. If you do not specify a return URL, you will have to rely solely on polling status updates to determine if the transaction has been paid.
+
+```java
+paynow.setResultUrl("http://example.com/gateways/paynow/update");
+paynow.setReturnUrl("http://example.com/return?gateway=paynow&merchantReference=1234");
+```
+
+Create a new payment using any of the `createPayment(...)` methods, ensuring you pass your own unique reference for that payment (e.g invoice id). If you also pass in the email address, Paynow will attempt to auto login the customer at the Paynow website using this email address if it is associated with a registered account.
 
 ```java
 Payment payment = paynow.createPayment("Invoice 35");
 ```
 
-You can then start adding items to the payment
+You can then start adding items to the payment cart.
 
 ```java
 // Passing in the name of the item and the price of the item
 payment.add("Bananas", 2.5);
-payment.add("Apples", 3.4);
+payment.add("Apples", 1.0);
 ```
 
-Once you're done building up your cart and you're finally ready to send your payment to Paynow, you can use the `Send` method in the `paynow` object.
+When you are ready to submit the payment request, initiate the transaction by calling the `send(...)` method. You can optionally set the description of the cart which will be shown to the user at the Paynow website, otherwise a default description will be generated. 
 
 ```java
+payment.setCartDescription("Some custom description");//this is optional
+
 // Save the response from paynow in a variable
-InitResponse response = paynow.send(payment);
+WebInitResponse response = paynow.send(payment);
 ```
 
-The send method will return an instance of the `InitResponse` class, the InitResponse object being the response from Paynow and it will contain some useful information like whether the request was successful or not. If it was, for example, it contains the url to redirect the user so they can make the payment. You can view the full list of data contained in the response in our wiki
+The `WebInitResponse` response from Paynow will contain various information including:
+* redirect URL where you should redirect the customer to make the payment
+* poll URL to check if the transaction has been paid
 
-If request was successful, you should consider saving the poll url sent from Paynow in your database
+If the request was successful, you should consider saving the poll URL sent from Paynow in your database so that you can use it later to check if the transaction has been paid.
 
 ```java
-InitResponse response = paynow.send(payment);
-
-if(response.success()) 
-{   
+if (response.success()) {   
     // Get the url to redirect the user to so they can make payment
-    String link = response.redirectLink();
+    String redirectUrl = response.redirectURL();
     
-    // Get the poll url of the transaction
-    String pollUrl = response.pollUrl(); 
-}
-```
-
-## Mobile Transactions
-
-If you want to send an express (mobile) checkout request instead, when creating a payment you make a call to the `CreateMobilePayment` instead of the `CreatePayment` method. The `CreateMobilePayment` method unlike the `CreatePayment` method requires that you pass in the email address of the user making the payment. 
-
-Additionally, you send the payment to Paynow by making a call to the `SendMobile` in the `paynow` object
-instead of the `Send` method. The `SendMobile` method unlike the `Send` method takes in two additional arguments i.e The phone number to send the payment request to and the mobile money method to use for the request. **Note that currently only ecocash is supported**
-
-```java
-// Create a mobile payment
-Payment payment = paynow.createMobilePayment("Invoice 32", "user@example.com");
-
-// Add items to the payment
-payment.add("Bananas", 2.5);
-payment.add("Apples", 3.4);
-
-// Send the payment to paynow
-paynow.sendMobile(payment)
-```
-
-The response object is almost identical to the one you get if you send a normal request. With a few differences, firstly, you don't get a url to redirect to. Instead you instructions (which ideally should be shown to the user instructing them how to make payment on their mobile phone)
-
-```java
-InitResponse response = paynow.sendMobile(payment);
-
-// Check if request was successful
-if(response.success()) 
-{   
-    // Get the url to redirect the user to so they can make payment
-    String link = response.redirectLink();
-    
-    // Get the poll url (used to check the status of a transaction). You might want to save this in your DB
-    String pollUrl = response.pollUrl(); 
-    
-    // Get the instructions
-    String instructions =  response.instructions();
-}
-else
-{
+    // Get the poll URL of the transaction
+    String pollUrl = response.pollUrl();
+} else {
     // Ahhhhhhhhhhhhhhh
     // *freak out*
 }
 ```
 
-## Checking transaction status
+## Initiating a mobile based transaction
+A mobile transaction is a transaction made using mobile money e.g. using Ecocash
 
-The SDK exposes a handy method that you can use to check the status of a transaction. Once you have instantiated the Paynow class.
+> Note: Mobile based transactions currently only work for Ecocash with Econet numbers
+
+Create a new payment using the `createPayment(...)` method that requires a unique merchant reference and the email address of the user making the payment.
+ 
+```java
+Payment payment = paynow.createPayment("Invoice 32", "user@example.com");
+```
+
+Adding items to the cart is the same as in web based transactions.
+
+```java
+// Passing in the name of the item and the price of the item
+payment.add("Bananas", 2.5);
+payment.add("Apples", 1.0);
+```
+
+When you are ready to submit the payment request, initiate the transaction by calling the `sendMobile(...)` method. 
+```java
+MobileInitResponse response = paynow.sendMobile(payment, "0771234567", MobileMoneyMethod.ECOCASH);
+```
+
+
+The `MobileInitResponse` response from Paynow will contain various information including:
+* instructions for your customer on how to make the payment on their mobile phone
+* poll URL to check if the transaction has been paid
+
+If the request was successful, you should consider saving the poll URL sent from Paynow in your database so that you can use it later to check if the transaction has been paid.
+
+```java
+if (response.success()) {   
+    // Get the instructions to show to the user
+    String instructions  = response.instructions();
+
+    // Get the poll URL of the transaction
+    String pollUrl = response.pollUrl();
+} else {
+    // Ahhhhhhhhhhhhhhh
+    // *freak out*
+}
+```
+
+## Poll the transaction to check for the payment status
+It is possible to check the status of a transaction i.e. if the payment has been paid. To do this, make sure after initiating the transaction, you take note of the poll URL in the response. With this URL, call the `pollTransaction(...)` method of the `Paynow` object you created as follows. Note that checking transaction status is the same for web and mobile based transasctions.
 
 ```java
 // Check the status of the transaction with the specified pollUrl
-// Now you see why you need to save that url ;-)
-StatusResponse status = paynow.CheckTransactionStatus(pollUrl);
+StatusResponse status = paynow.pollTransaction(pollUrl);
 
-if (status.paid()) {
+if (status.isPaid()) {
   // Yay! Transaction was paid for
 } else {
   System.out.println("Why you no pay?");
 }
 ```
 
-## Full Usage Example
+## Full usage example
+The following is a full usage example for web based transactions. 
 
 ```java
 // MakingFirstPayment.java
-import webdev.core.*;
-import webdev.payments.Paynow;
-import webdev.payments.Payment;
+import zw.co.paynow.core.*;
+import zw.co.paynow.core.Paynow;
+import zw.co.paynow.core.Payment;
 
 public class MakingFirstPayment {
 
@@ -169,25 +171,36 @@ public class MakingFirstPayment {
         Paynow paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
 
         Payment payment = paynow.createPayment("Invoice 35");
-    
+
         // Passing in the name of the item and the price of the item
         payment.add("Bananas", 2.5);
         payment.add("Apples", 3.4);
-        
-        InitResponse response = paynow.send(payment);
 
-        if(response.success()) 
-        {   
+        //Initiating the transaction
+        WebInitResponse response = paynow.send(payment);
+        
+        //If a mobile transaction,
+        //MobileInitResponse response = paynow.sendMobile(payment, "0771234567", MobileMoneyMethod.ECOCASH);
+
+        if (response.isRequestSuccess()) {
             // Get the url to redirect the user to so they can make payment
-            String link = response.redirectLink();
-            
+            String redirectURL = response.redirectURL();
+
             // Get the poll url of the transaction
-            String pollUrl = response.pollUrl(); 
-        }
-        else
-        {
+            String pollUrl = response.pollUrl();
+
+            //checking if the payment has been paid
+            StatusResponse status = paynow.pollTransaction(pollUrl);
+
+            if (status.paid()) {
+                // Yay! Transaction was paid for
+            } else {
+                System.out.println("Why you no pay?");
+            }
+
+        } else {
             // Something went wrong
-              System.out.println(response.error());
+            System.out.println(response.errors());
         }
     }
 

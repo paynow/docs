@@ -20,7 +20,7 @@ This library has a set of prerequisites that must be met for it to work
 Install the library using NPM or yarn
 
 ```sh
-$ npm install --save paynoy
+$ npm install --save paynow
 ```
 
 <p align="center">

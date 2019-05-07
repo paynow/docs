@@ -20,7 +20,7 @@ This library has a set of prerequisites that must be met for it to work
 Install the library using NPM or yarn
 
 ```sh
-$ npm install --save paynow/node-sdk
+$ npm install --save paynow
 ```
 
 <p align="center">
@@ -28,7 +28,7 @@ Or
 </p>
 
 ```sh
-$ yarn add paynow/node-sdk
+$ yarn add paynow
 ```
 
 ## Usage example
@@ -36,7 +36,7 @@ $ yarn add paynow/node-sdk
 ### Importing library
 
 ```javascript
-const Paynow = require("paynow");
+const { Paynow } = require("paynow");
 ```
 
 Create an instance of the Paynow class optionally setting the result and return url(s)
@@ -153,7 +153,7 @@ if (status.paid()) {
 
 ```javascript
 // Require in the Paynow class
-const Paynow = require("paynow");
+const { Paynow } = require("paynow");
 
 // Create instance of Paynow class
 let paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");

@@ -1,7 +1,7 @@
 ---
 id: paynow_api
-title: Paynow API
-sidebar_label: API Reference
+title: System Layout
+sidebar_label: System Layout
 ---
 
 The Paynow interface relies on HTTP POSTs to exchange data between the merchant site and the Paynow server and HTTP GETs to redirect the customer.

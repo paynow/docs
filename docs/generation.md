@@ -38,21 +38,3 @@ You can now begin integration in test mode. It is recommended you [Generate New 
 moving your site from a development environment to live, this will stop you generating test
 transactions on the live account and that any other developers will no longer know the Integration
 Key.
-
-## Test Mode
-When you first create an integration it is in test mode. Test mode allows you to create, cancel and pay
-a transaction to test all possible scenarios with your system. However no actual money is moved and
-you do not need access to Visa/MasterCard/Vpayments/EcoCash/TeleCash to do a test transaction.
-
-After creating a transaction ONLY THE MERCHANT ACCOUNT USED TO CREATE THE INTEGRATION
-can login and Fake a Payment. Any other users will get a message saying the merchant is in testing
-and they cannot proceed with payment.
-
-When making payment in test mode select [TESTING: Faked Success] and click [Make Payment],
-Paynow will reply to your site as if payment has been made.
-When you are happy that you have completed integration go back to the Integration Keys section and
-click [Request to be Set Live]. 
-
-Paynow support will check you have performed at least one successful
-test transaction and set you to live. Once you are set live you will begin receive payment from your
-select Payment Methods.

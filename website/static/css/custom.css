@@ -355,9 +355,9 @@ ul.tabs li.current{
     border-right: 1px solid #eeeeee;
 }
 
-#docsNav .navGroups .navGroup:first-child ul > li:nth-child(2)::after,
-#docsNav .navGroups .navGroup:first-child ul > li:nth-child(7)::after,
-#docsNav .navGroups .navGroup:first-child ul > li:nth-child(11)::after
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(3)::after,
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(8)::after,
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(12)::after
  {
     opacity: 0.4;
     font-size: 11px;
@@ -366,15 +366,15 @@ ul.tabs li.current{
     text-transform: uppercase;
 }
 
-#docsNav .navGroups .navGroup:first-child ul > li:nth-child(2)::after {
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(3)::after {
     content: "Libraries";
 }
 
-#docsNav .navGroups .navGroup:first-child ul > li:nth-child(7)::after {
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(8)::after {
     content: "Plugins & Extensions";
 }
 
-#docsNav .navGroups .navGroup:first-child ul > li:nth-child(11)::after {
+#docsNav .navGroups .navGroup:first-child ul > li:nth-child(12)::after {
     content: "Developed by the Community";
 }
 

@@ -3,6 +3,7 @@
     "Getting Started": [
         "quickstart",
         "integration_generation",
+        "test_mode",
         "php_quickstart",
         "csharp_quickstart",
         "nodejs_quickstart",
@@ -24,11 +25,13 @@
     "API Reference": [
       "paynow_api",
       "initiate_transaction",
-      "generating_hash",
-      "initiate_mobile_transaction",
+      "express_checkout_transactions",
+      "complete_transaction",
       "status_update",
       "polling_status",
-      "complete_transaction"
+      "generating_hash",
+      "validating_hash",
+      "initiate_ticket_transaction"
     ],
     "Library Source Docs": [
       "sourcedocs_php",

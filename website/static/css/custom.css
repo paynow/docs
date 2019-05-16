@@ -390,6 +390,12 @@ ul.tabs li.current{
     opacity: 0.5;
 }
 
+#docsNav a[href="/docs/springboot_bmukorera_tzifudzi.html"]::after {
+    content: " (by B. Mukorera & T. Zifudzi)";
+    font-size: 11px;
+    opacity: 0.5;
+}
+
 /* Sidebar */
 
 

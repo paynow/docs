@@ -4,77 +4,153 @@
     "next": "Next",
     "previous": "Previous",
     "tagline": "Integrate With Paynow & #GetPaid",
-    "advanced_paynow_request_button": "Advanced Payment Request Button",
-    "Advanced Payment Request Button": "Advanced Payment Request Button",
-    "camptix_nigelrodgers": "Paynow for Camptix (by Nigel Rodgers)",
-    "Camptix": "Camptix",
-    "complete_transaction": "Complete a Transaction",
-    "Complete a Transaction": "Complete a Transaction",
-    "csharp_quickstart": "C# / .NET Quickstart Guide",
-    ".NET": ".NET",
-    "easy_digital_downloads": "Paynow for Easy Digital Downloads",
-    "Easy Digital Downloads": "Easy Digital Downloads",
-    "express_checkout_transactions": "Express Checkout Transactions",
-    "Express Checkout Transactions": "Express Checkout Transactions",
-    "generating_hash": "Generating Hash",
-    "Generating Hash": "Generating Hash",
-    "integration_generation": "Generating Integration Keys",
-    "gravity_forms": "Paynow for Gravity Forms",
-    "Gravity Forms": "Gravity Forms",
-    "initiate_ticket_transaction": "Initiate a Passenger Ticket Transaction",
-    "Initiate a Passenger Ticket Transaction": "Initiate a Passenger Ticket Transaction",
-    "initiate_transaction": "Initiate a transaction",
-    "Initiate a transaction": "Initiate a transaction",
-    "initiate_mobile_transaction": "Initiate a mobile money transaction",
-    "Initiate a mobile money transaction": "Initiate a mobile money transaction",
-    "java_quickstart": "Java Quickstart Guide",
-    "Java": "Java",
-    "magento_prizeless": "Paynow for Magento (by Prizeless Technologies)",
-    "Magento": "Magento",
-    "nodejs_quickstart": "Node.JS Quickstart Guide",
-    "Node.JS": "Node.JS",
-    "notification_success_cancel_urls": "Notification, Success & Cancel URLs",
-    "Notification, Success & Cancel URLs": "Notification, Success & Cancel URLs",
-    "paynow_api": "System Layout",
-    "System Layout": "System Layout",
-    "php_quickstart": "PHP Quickstart Guide",
-    "PHP": "PHP",
-    "polling_status": "Polling for a Status Update",
-    "Polling for a Status Update": "Polling for a Status Update",
-    "python_quickstart": "Python Quickstart Guide",
-    "Python": "Python",
-    "quickstart": "Getting Started",
-    "Getting started": "Getting started",
-    "shopify": "Paynow for Shopify",
-    "Shopify": "Shopify",
-    "simple_paynow_request_button": "Simple Payment Request Button",
-    "Simple Payment Request Button": "Simple Payment Request Button",
-    "sourcedocs_dotnet": "Source Docs for .NET Library",
-    "sourcedocs_java": "Source Docs for Java Library",
-    "sourcedocs_nodejs": "Source Docs for Node.js Library",
-    "sourcedocs_php": "Source Docs for PHP Library",
-    "springboot_bmukorera_tzifudzi": "Spring Boot Project QuickStart for Paynow",
-    "Spring Boot": "Spring Boot",
-    "status_update": "Status Update",
-    "Status Update": "Status Update",
-    "test_mode": "Test Mode",
-    "Test Mode": "Test Mode",
-    "url_safe_base64_encoding": "URL Safe Base 64 Encoding",
-    "URL Safe Base 64 Encoding": "URL Safe Base 64 Encoding",
-    "validating_hash": "Validating a hash on an inbound message",
-    "Validating Hash": "Validating Hash",
-    "woocommerce": "Paynow for WooCommerce",
-    "WooCommerce": "WooCommerce",
-    "DOCUMENTATION": "DOCUMENTATION",
-    "ABOUT": "ABOUT",
-    "HELP": "HELP",
-    "BLOG": "BLOG",
-    "FORUMS": "FORUMS",
-    "SIGN UP / SIGN IN": "SIGN UP / SIGN IN",
-    "Getting Started": "Getting Started",
-    "Links & Buttons": "Links & Buttons",
-    "API Reference": "API Reference",
-    "Library Source Docs": "Library Source Docs"
+    "docs": {
+      "advanced_paynow_request_button": {
+        "title": "Advanced Payment Request Button",
+        "sidebar_label": "Advanced Payment Request Button"
+      },
+      "camptix_nigelrodgers": {
+        "title": "Paynow for Camptix (by Nigel Rodgers)",
+        "sidebar_label": "Camptix"
+      },
+      "complete_transaction": {
+        "title": "Complete a Transaction",
+        "sidebar_label": "Complete a Transaction"
+      },
+      "csharp_quickstart": {
+        "title": "C# / .NET Quickstart Guide",
+        "sidebar_label": ".NET"
+      },
+      "easy_digital_downloads": {
+        "title": "Paynow for Easy Digital Downloads",
+        "sidebar_label": "Easy Digital Downloads"
+      },
+      "express_checkout_transactions": {
+        "title": "Express Checkout Transactions",
+        "sidebar_label": "Express Checkout Transactions"
+      },
+      "generating_hash": {
+        "title": "Generating Hash",
+        "sidebar_label": "Generating Hash"
+      },
+      "integration_generation": {
+        "title": "Generating Integration Keys"
+      },
+      "gravity_forms": {
+        "title": "Paynow for Gravity Forms",
+        "sidebar_label": "Gravity Forms"
+      },
+      "initiate_ticket_transaction": {
+        "title": "Initiate a Passenger Ticket Transaction",
+        "sidebar_label": "Initiate a Passenger Ticket Transaction"
+      },
+      "initiate_transaction": {
+        "title": "Initiate a transaction",
+        "sidebar_label": "Initiate a transaction"
+      },
+      "initiate_mobile_transaction": {
+        "title": "Initiate a mobile money transaction",
+        "sidebar_label": "Initiate a mobile money transaction"
+      },
+      "java_quickstart": {
+        "title": "Java Quickstart Guide",
+        "sidebar_label": "Java"
+      },
+      "magento_prizeless": {
+        "title": "Paynow for Magento (by Prizeless Technologies)",
+        "sidebar_label": "Magento"
+      },
+      "nodejs_quickstart": {
+        "title": "Node.JS Quickstart Guide",
+        "sidebar_label": "Node.JS"
+      },
+      "notification_success_cancel_urls": {
+        "title": "Notification, Success & Cancel URLs",
+        "sidebar_label": "Notification, Success & Cancel URLs"
+      },
+      "paynow_api": {
+        "title": "System Layout",
+        "sidebar_label": "System Layout"
+      },
+      "php_quickstart": {
+        "title": "PHP Quickstart Guide",
+        "sidebar_label": "PHP"
+      },
+      "polling_status": {
+        "title": "Polling for a Status Update",
+        "sidebar_label": "Polling for a Status Update"
+      },
+      "python_quickstart": {
+        "title": "Python Quickstart Guide",
+        "sidebar_label": "Python"
+      },
+      "quickstart": {
+        "title": "Getting Started",
+        "sidebar_label": "Getting started"
+      },
+      "shopify": {
+        "title": "Paynow for Shopify",
+        "sidebar_label": "Shopify"
+      },
+      "simple_paynow_request_button": {
+        "title": "Simple Payment Request Button",
+        "sidebar_label": "Simple Payment Request Button"
+      },
+      "sourcedocs_dotnet": {
+        "title": "Source Docs for .NET Library",
+        "sidebar_label": ".NET"
+      },
+      "sourcedocs_java": {
+        "title": "Source Docs for Java Library",
+        "sidebar_label": "Java"
+      },
+      "sourcedocs_nodejs": {
+        "title": "Source Docs for Node.js Library",
+        "sidebar_label": "Node.JS"
+      },
+      "sourcedocs_php": {
+        "title": "Source Docs for PHP Library",
+        "sidebar_label": "PHP"
+      },
+      "springboot_bmukorera_tzifudzi": {
+        "title": "Spring Boot Project QuickStart for Paynow",
+        "sidebar_label": "Spring Boot"
+      },
+      "status_update": {
+        "title": "Status Update",
+        "sidebar_label": "Status Update"
+      },
+      "test_mode": {
+        "title": "Test Mode",
+        "sidebar_label": "Test Mode"
+      },
+      "url_safe_base64_encoding": {
+        "title": "URL Safe Base 64 Encoding",
+        "sidebar_label": "URL Safe Base 64 Encoding"
+      },
+      "validating_hash": {
+        "title": "Validating a hash on an inbound message",
+        "sidebar_label": "Validating Hash"
+      },
+      "woocommerce": {
+        "title": "Paynow for WooCommerce",
+        "sidebar_label": "WooCommerce"
+      }
+    },
+    "links": {
+      "DOCUMENTATION": "DOCUMENTATION",
+      "ABOUT": "ABOUT",
+      "HELP": "HELP",
+      "BLOG": "BLOG",
+      "FORUMS": "FORUMS",
+      "SIGN UP / SIGN IN": "SIGN UP / SIGN IN"
+    },
+    "categories": {
+      "Getting Started": "Getting Started",
+      "Links & Buttons": "Links & Buttons",
+      "API Reference": "API Reference",
+      "Library Source Docs": "Library Source Docs"
+    }
   },
   "pages-strings": {
     "Help Translate|recruit community translators for your project": "Help Translate",

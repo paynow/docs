@@ -240,12 +240,8 @@ $response = $paynow->send($payment);
 <MarkdownBlock>
 {`\`\`\`php  
 if($response->success()) {
-    // Redirect the user to Paynow
-    $response->redirect();
-
-    // Or if you prefer more control, get the link to 
-    // redirect the user to, then use it as you see fit
-    $link = $response->redirectLink();
+    // Get the link to redirect the user to, then use it as you see fit
+    $link = $response->redirectUrl();
 
     // Get the poll url (used to check the status of a transaction). 
     // You might want to save this in your DB
@@ -504,7 +500,7 @@ if response.success:
               <div id="tab-java-install" className="tab-content">
               <p>This library has a set of prerequisites that must be met for it to work</p>
               <ul>
-                <li>Java JDK 6 or higher</li>
+                <li>Java JDK 7 or higher</li>
               </ul>
               <p>Install the library using either Gradle:</p>
               <MarkdownBlock>
@@ -513,7 +509,7 @@ repositories {
   mavenCentral()
 }
 dependencies {
-  compile 'zw.paynow:java-sdk:+'
+  compile 'zw.co.paynow:java-sdk:1.1.1'
 }
 \`\`\``} 
               </MarkdownBlock>
@@ -521,9 +517,9 @@ dependencies {
               <MarkdownBlock>
 {`\`\`\`xml                
 <dependency>
-    <groupId>zw.paynow</groupId>
+    <groupId>zw.co.paynow</groupId>
     <artifactId>java-sdk</artifactId>
-    <version>LATEST</version>
+    <version>1.1.1</version>
 </dependency>
 \`\`\``} 
               </MarkdownBlock>
@@ -555,19 +551,19 @@ payment.add("Bananas", 2.5);
 payment.add("Apples", 3.4);
 
 // Save the response from paynow in a variable
-InitResponse response = paynow.send(payment);
+WebInitResponse response = paynow.send(payment);
 \`\`\``} 
               </MarkdownBlock>
               </div>
               <div id="tab-java-apiresponse" className="tab-content">
               <MarkdownBlock>
 {`\`\`\`java
-InitResponse response = paynow.send(payment);
+WebInitResponse response = paynow.send(payment);
 
 if(response.success()) 
 {   
     // Get the url to redirect the user to so they can make payment
-    String link = response.redirectLink();
+    String redirectUrl = response.redirectURL();
     
     // Get the poll url of the transaction
     String pollUrl = response.pollUrl(); 

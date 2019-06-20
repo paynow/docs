@@ -17,3 +17,4 @@ jobs:
             npm install
             npm run build
             lftp -c "set ftp:ssl-allow no; open -u $USERNAME,$PASSWORD $HOST; mirror -Rnv build/paynow-docs/ ./public_html --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"
+            #lftp -c "set ftp:ssl-allow no; open -u $LIVE_USERNAME,$LIVE_PASSWORD $LIVE_HOST; mirror -Rnv build/paynow-docs/ ./public_html --ignore-time --parallel=10 --exclude-glob .git* --exclude .git/"            

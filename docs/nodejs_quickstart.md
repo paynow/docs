@@ -10,7 +10,7 @@ sidebar_label: Node.JS
 
 ## Prerequisites
 
-This library has a set of prerequisites that must be met for it to work
+In order to make use of this project, the following prerequisites must be met for it to work.
 
 1.  Node version 0.6.0 and above
 1.  NPM (node's package manager, used to install the node library)
@@ -19,37 +19,49 @@ This library has a set of prerequisites that must be met for it to work
 
 Install the library using NPM or yarn
 
-```sh
-$ npm install --save paynow/node-sdk
-```
-
-<p align="center">
-Or
-</p>
+### npm
 
 ```sh
-$ yarn add paynow/node-sdk
+$ npm install --save paynow
 ```
 
-## Usage example
+### yarn
 
-### Importing library
+```sh
+$ yarn add paynow
+```
+
+## Getting started
+
+Import the library into your project/application.
 
 ```javascript
-const Paynow = require("paynow");
+const { Paynow } = require("paynow");
 ```
 
-Create an instance of the Paynow class optionally setting the result and return url(s)
+Create an instance of the `Paynow` class using your integration ID and integration key as supplied by Paynow.
 
 ```javascript
 let paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
+```
 
+## Initiating a web based transaction
+
+A web based transaction is made over the web, via the Paynow website.
+
+You can optionally set the result and return URLs.
+
+- Result URL is the URL on the merchant website where Paynow will post transaction results to.
+- Return URL is the URL where the customer will be redirected to after the transaction has been processed. If you do not specify a return URL, you will have to rely solely on polling status updates to determine if the transaction has been paid.
+
+
+```javascript
 paynow.resultUrl = "http://example.com/gateways/paynow/update";
-paynow.returnUrl = "http://example.com/return?gateway=paynow";
+paynow.returnUrl = "http://example.com/return?gateway=paynow&merchantReference=1234";
 // The return url can be set at later stages. You might want to do this if you want to pass data to the return url (like the reference of the transaction)
 ```
 
-Create a new payment passing in the reference for that payment (e.g invoice id, or anything that you can use to identify the transaction.
+Create a new payment using any of the `createPayment(...)` methods, ensuring you pass your own unique reference for that payment (e.g invoice id). If you also pass in the email address, Paynow will attempt to auto login the customer at the Paynow website using this email address if it is associated with a registered account.
 
 ```javascript
 let payment = paynow.createPayment("Invoice 35");
@@ -84,12 +96,26 @@ paynow.send(payment).then(response => {
 });
 ```
 
-> Mobile Transactions
+## Initiating a mobile based transaction
+A mobile transaction is a transaction made using mobile money e.g. using Ecocash
 
-If you want to send an express (mobile) checkout request instead, the only thing that differs is the last step. You make a call to the `sendMobile` in the `paynow` object
-instead of the `send` method.
+> Note: Mobile based transactions currently only work for Ecocash with Econet numbers
 
-The `sendMobile` method unlike the `send` method takes in two additional arguments i.e The phone number to send the payment request to and the mobile money method to use for the request. **Note that currently only ecocash is supported**
+Create a new payment using the `createPayment(...)` method that requires a unique merchant reference and the email address of the user making the payment.
+
+```javascript
+let payment = paynow.createPayment("Invoice 37", "user@example.com");
+```
+
+Adding items to the cart is the same as in web based transactions.
+
+```javascript
+// Passing in the name of the item and the price of the item
+payment.add("Bananas", 2.5);
+payment.add("Apples", 1.0);
+```
+
+When you are ready to submit the payment request, initiate the transaction by calling the sendMobile(...) method. The `sendMobile` method unlike the `send` method takes in two additional arguments i.e. The phone number to send the payment request to and the mobile money method to use for the request. **Note that currently only ecocash is supported**
 
 ```javascript
 paynow.sendMobile(payment, '0777000000', 'ecocash').then(response => {
@@ -133,9 +159,9 @@ paynow.sendMobile(
 });
 ```
 
-# Checking transaction status
+## Poll the transaction to check for the payment status
 
-The SDK exposes a handy method that you can use to check the status of a transaction. Once you have instantiated the Paynow class.
+It is possible to check the status of a transaction i.e. if the payment has been paid. To do this, make sure after initiating the transaction, you take note of the poll URL in the response. With this URL, call the `pollTransaction(...)` method of the `paynow` object you created as follows. Note that checking transaction status is the same for web and mobile based transasctions.
 
 ```javascript
 // Check the status of the transaction with the specified pollUrl
@@ -153,14 +179,14 @@ if (status.paid()) {
 
 ```javascript
 // Require in the Paynow class
-const Paynow = require("paynow");
+const { Paynow } = require("paynow");
 
 // Create instance of Paynow class
 let paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
 
 // Set return and result urls
 paynow.resultUrl = "http://example.com/gateways/paynow/update";
-paynow.returnUrl = "http://example.com/return?gateway=paynow";
+paynow.returnUrl = "http://example.com/return?gateway=paynow&merchantReference=1234";
 
 // Create a new payment
 let payment = paynow.createPayment("Invoice 35");

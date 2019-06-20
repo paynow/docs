@@ -9,6 +9,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: $headerFont;
+    color: $primaryColor;
+    font-weight: 300;
 }
 
 /* 
@@ -127,7 +129,7 @@ body {
 
 input#search_input_react {
     background: #f5f1f1;  /* #f2c4b24d; */
-    padding: 5px 5px 5px 35px;
+    padding: 5px 5px 5px 35px !important;
     color: #454647;
 }
 
@@ -266,6 +268,10 @@ input#search_input_react::placeholder {
 
 /* Getting Started */
 
+.container .wrapper .imageAlignSide p {
+    margin-bottom: 0;
+}
+
 .imageAlignSide .blockImage {
     max-width: 600px;
     flex: 0 1 600px;
@@ -279,6 +285,7 @@ ul.tabs{
     margin: 0px !important;
     padding: 0px !important;
     list-style: none !important;
+    border: none;
 }
 ul.tabs li{
     background: none;
@@ -351,6 +358,10 @@ ul.tabs li.current{
 
 /* Sidebar */
 
+.docsNavContainer {
+    height: auto;
+}
+
 #docsNav {
     border-right: 1px solid #eeeeee;
 }
@@ -390,6 +401,12 @@ ul.tabs li.current{
     opacity: 0.5;
 }
 
+#docsNav a[href="/docs/springboot_bmukorera_tzifudzi.html"]::after {
+    content: " (by B. Mukorera & T. Zifudzi)";
+    font-size: 11px;
+    opacity: 0.5;
+}
+
 /* Sidebar */
 
 
@@ -412,6 +429,11 @@ footer#footer .sitemap > div:last-child {
 
 /* Other Elements */
 
+.onPageNav .toc-headings > li > a.active {
+    font-weight: 300;
+    color: $primaryColor;
+}
+
 .button {
     border-radius: 5px;
     border: none;
@@ -423,6 +445,10 @@ footer#footer .sitemap > div:last-child {
 .button:hover {
     background: #ff6619;
     border-color: #ff6619;
+}
+
+#badges table tbody tr td:first-child{
+    background-color:#212b35;
 }
 
 #footer .sitemap a[href^="https://"]::after,

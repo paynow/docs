@@ -38,6 +38,6 @@ class MyPage extends React.Component {
   };
 }
 
-MyPage.title = 'My Custom Title';
+MyPage.title = 'Playground';
 
 module.exports = MyPage;

@@ -4,6 +4,7 @@
         "quickstart",
         "integration_generation",
         "test_mode",
+        "artwork",
         "php_quickstart",
         "csharp_quickstart",
         "nodejs_quickstart",

@@ -44,6 +44,9 @@ class Footer extends React.Component {
             <a href={this.docUrl('#')}>
               Frequently Asked Questions
             </a>
+            <a href={this.docUrl('artwork.html')}>
+              Artwork &amp; Buttons
+            </a>            
             {/* <a href={this.docUrl('doc2.html')}>
               Guides (or other categories)
             </a>
@@ -135,8 +138,8 @@ class Footer extends React.Component {
           <img
             src={this.props.config.baseUrl + 'img/paynow.png'}
             alt="Paynow Zimbabwe"
-            width="170"
-            height="45"
+            width="190"
+            height="41"
           />
         </a>
         <section className="copyright">{this.props.config.copyright}</section>

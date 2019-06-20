@@ -59,7 +59,7 @@ const siteConfig = {
     // {page: 'try', label: 'TRY NOW'},
     {page: 'about', label: 'ABOUT'},
     {page: 'help', label: 'HELP'},
-    {blog: true, label: 'BLOG'},
+    // {blog: false, label: 'BLOG'},
     {href: 'https://forums.paynow.co.zw/', label: 'FORUMS'},
     {href: 'https://forums.paynow.co.zw/signup', label: 'SIGN UP / SIGN IN'},
   ],
@@ -128,6 +128,8 @@ const siteConfig = {
   scrollToTopOptions: {
     zIndex: 100,
   },
+  enableUpdateBy: false,
+  enableUpdateTime: true,
 };
 
 module.exports = siteConfig;

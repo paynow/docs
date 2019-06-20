@@ -9,6 +9,10 @@
         "title": "Advanced Payment Request Button",
         "sidebar_label": "Advanced Payment Request Button"
       },
+      "artwork": {
+        "title": "Artwork and Buttons",
+        "sidebar_label": "Artwork and Buttons"
+      },
       "camptix_nigelrodgers": {
         "title": "Paynow for Camptix (by Nigel Rodgers)",
         "sidebar_label": "Camptix"

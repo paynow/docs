@@ -14,7 +14,6 @@ For Visa/Mastercard payment method, the user may be required to complete a 3D Se
 
 ## Initiate an Express Checkout Transaction
 
-Initiate an Express Checkout Transaction
 To initiate an express checkout transaction, an HTTP POST request should be made to the URL:
 
 https://www.paynow.co.zw/interface/remotetransaction

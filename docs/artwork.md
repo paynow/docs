@@ -39,3 +39,4 @@ Buy Now|Pay Now
 ## Download
 
 <a class="button" href="/docs/assets/PAYNOW_BUTTONS_AND_BADGES_2019_06.zip">Download assets</a>
+

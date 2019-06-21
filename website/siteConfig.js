@@ -130,6 +130,7 @@ const siteConfig = {
   },
   enableUpdateBy: false,
   enableUpdateTime: true,
+  docsSideNavCollapsible: true
 };
 
 module.exports = siteConfig;

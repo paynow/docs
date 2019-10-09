@@ -8,7 +8,7 @@ An express checkout transaction allows the integrator to capture the customers p
 
 Express checkout transactions currently support mobile money and Visa/Mastercard payment methods.
 
-For mobile money payment method (at the time of writing this document, only Ecocash supported) the mobile subscriber specified in the initiate message will have a USSD session pushed to their handset prompting them to enter their mobile wallet PIN number to authorize the transaction (or to cancel the transaction).
+For mobile money payment method (Ecocash and OneMoney are currently supported) the mobile subscriber specified in the initiate message will have a USSD session pushed to their handset prompting them to enter their mobile wallet PIN number to authorize the transaction (or to cancel the transaction).
 
 For Visa/Mastercard payment method, the user may be required to complete a 3D Secure/SecureCode challenge in the source application. More details on this in the [3D Secure/SecureCode Challenge](#3d-secure-securecode-challenge) are below.
 
@@ -22,7 +22,7 @@ The fields below are required in addition to those specified in the [Initiate a 
 
 **Required For**|**Field**|**Data Type**|**Description**
 -----|-----|-----|-----
-All|method|String|ecocash = Ecocash mobile money **OR** vmc = Visa/Mastercard
+All|method|String|ecocash = Ecocash mobile money **OR** onemoney = OneMoney mobile money **OR** vmc = Visa/Mastercard
 Mobile Money|phone|String|The subscriber number of the mobile money wallet to be debited
 Visa/Mastercard|cardnumber|Numeric|The Visa/Mastercard PAN
 Visa/Mastercard|cardname|String|Name printed on front of card
@@ -34,7 +34,7 @@ Visa/Mastercard|billingcity|String|Customer’s billing address city
 Visa/Mastercard|billingprovince|String|Not required but will assist with fraud detection
 Visa/Mastercard|billingcountry|String|Customer’s billing address country
 
->**N.B.** The integration ID must have an Ecocash/Visa/Mastercard payment method selected for use in the Paynow setup area.
+>**N.B.** The integration ID must have an Ecocash/OneMoney/Visa/Mastercard payment method selected for use in the Paynow setup area.
 
 >**N.B.** In the case of Visa/Mastercard, the response to the above request should be inspected to check if a 3D Secure challenge is required to be completed by the card holder. This will be indicated by Status=Pending3ds. See [3D Secure/SecureCode Challenge](#3d-secure-securecode-challenge) below.
 

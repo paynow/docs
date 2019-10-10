@@ -99,7 +99,7 @@ paynow.send(payment).then(response => {
 ## Initiating a mobile based transaction
 A mobile transaction is a transaction made using mobile money e.g. using Ecocash
 
-> Note: Mobile based transactions currently only work for Ecocash with Econet numbers
+> Note: Mobile based transactions currently only work for Ecocash with Econet numbers and OneMoney with Netone numbers
 
 Create a new payment using the `createPayment(...)` method that requires a unique merchant reference and the email address of the user making the payment.
 
@@ -115,7 +115,7 @@ payment.add("Bananas", 2.5);
 payment.add("Apples", 1.0);
 ```
 
-When you are ready to submit the payment request, initiate the transaction by calling the sendMobile(...) method. The `sendMobile` method unlike the `send` method takes in two additional arguments i.e. The phone number to send the payment request to and the mobile money method to use for the request. **Note that currently only ecocash is supported**
+When you are ready to submit the payment request, initiate the transaction by calling the sendMobile(...) method. The `sendMobile` method unlike the `send` method takes in two additional arguments i.e. The phone number to send the payment request to and the mobile money method to use for the request. **Note that currently only ecocash and onemoney are supported**
 
 ```javascript
 paynow.sendMobile(payment, '0777000000', 'ecocash').then(response => {

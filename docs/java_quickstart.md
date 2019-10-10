@@ -101,7 +101,7 @@ if (response.success()) {
 ## Initiating a mobile based transaction
 A mobile transaction is a transaction made using mobile money e.g. using Ecocash
 
-> Note: Mobile based transactions currently only work for Ecocash with Econet numbers
+> Note: Mobile based transactions currently only work for Ecocash with Econet numbers and OneMoney with Netone numbers
 
 Create a new payment using the `createPayment(...)` method that requires a unique merchant reference and the email address of the user making the payment.
  

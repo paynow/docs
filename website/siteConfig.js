@@ -108,7 +108,7 @@ const siteConfig = {
   onPageNav: 'separate',
 
   /* Open Graph and Twitter card images */
-  ogImage: 'img/paynow.logo.png',
+  ogImage: 'img/Paynow-Dev-Hub-Sharer-Image.png',
   twitterImage: 'img/paynow.logo.png',
 
   // Disable Header Title

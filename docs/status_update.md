@@ -64,10 +64,8 @@ The merchant server is not expected to reply to this message, however, if the re
 ## The Status Update “Token” Field
 The token can be used to carry out recurring payments for customers of merchants who have recurring payments enabled, without exposing the customer’s sensitive payment instrument information to the merchant.
 
-If *tokenize=true* is specified by the merchant in the initiate transaction message, then a token of the payment instrument account number will be returned in the [Status Update](#status-update-from-paynow) message
+If *tokenize=true* is specified by the merchant in the initiate transaction message, then a token of the payment instrument will be returned in the [Status Update](#status-update-from-paynow) message along with its expiry date.
 
-The token is returned in a format that is very similar to the card number or mobile wallet account number that the customer used to complete the transaction -  it has the same length, 4 starting and 4 ending digits but the middle data is tokenized.
+Tokens are valid for up to six (6) months from the date of issue, dependent upon the expiry date of the tokenized payment instrument.
 
-e.g. if the customer’s card number is 1234-5678-9098-7654 then the returned token would be something like 1234-4788-3349-7654 which can be displayed to the customer (if ever necessary) as 1234-****-****-7654
-
-e.g. if the customer’s mobile wallet account is 263772123456 then the returned token would be something like 263755833456, which can be displayed to the customer (if ever necessary) as 2637****3456
+>**N.B.** If a token is issued on 3 March 2019 for a credit card that expires at the end of April 2019, the token expiry date will be 30 April 2019, and not 3 September 2019 as one might otherwise expect.

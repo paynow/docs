@@ -33,10 +33,13 @@ Visa/Mastercard|billingline2|String|Not required but will assist with fraud dete
 Visa/Mastercard|billingcity|String|Customer’s billing address city
 Visa/Mastercard|billingprovince|String|Not required but will assist with fraud detection
 Visa/Mastercard|billingcountry|String|Customer’s billing address country
+Visa/Mastercard|token|String|A token returned by a previous **tokenized** transaction. Used to carry out recurring payments without requiring further input from the card holder
 
 >**N.B.** The integration ID must have an Ecocash/OneMoney/Visa/Mastercard payment method selected for use in the Paynow setup area.
 
 >**N.B.** In the case of Visa/Mastercard, the response to the above request should be inspected to check if a 3D Secure challenge is required to be completed by the card holder. This will be indicated by Status=Pending3ds. See [3D Secure/SecureCode Challenge](#3d-secure-securecode-challenge) below.
+
+>**N.B.** For Visa/Mastercard **token** transactions, the **merchanttrace** field is required. These transactions will be automatically re-tokenized during the payment and the updated token will be returned in the **status update** callback message
 
 ## 3D Secure/SecureCode Challenge
 

@@ -29,7 +29,8 @@ The HTTP POST should include the following fields:
 **Field**|**Data Type**|**Description**
 -----|-----|-----
 id|Integer|Integration ID shown to the merchant in the “3rd Party Site or Link Profile” area of “Receive Payment Links” section of “Sell or Receive” on Paynow.
-merchanttrace|String|The original merchanttrace that was specified when the merchant initiated the transaction being traced
+merchanttrace|String|The original merchanttrace that was specified when the merchant initiated the transaction being traced.
+status|String|Should be set to “Message”.
 hash|String|Details of Hash generation are provided in the [Generating Hash](generating_hash.md) section.
 
 ### Transaction Found

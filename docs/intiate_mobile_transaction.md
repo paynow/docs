@@ -4,7 +4,7 @@ title: Initiate a mobile money transaction
 sidebar_label: Initiate a mobile money transaction
 ---
 
-**Mobile money transactions are currently supported on the Ecocash and OneMoney platform.** 
+**Mobile money transactions are currently supported on the EcoCash and OneMoney platforms.** 
 
 The mobile subscriber specified in the initiate message will have a USSD session pushed to their handset prompting them to enter their mobile wallet PIN number to authorize the transaction (or to cancel the transaction)
 
@@ -18,7 +18,7 @@ phone|String|The subscriber number of the mobile money wallet to be debited
 method|String|Limited to only ecocash and onemoney
 
 
-> **NOTE:** The integration ID being used for a mobile money transaction cannot be in test mode. The integration ID must also have an Ecocash and OneMoney payment method selected for use in the Paynow setup area. 
+> **NOTE:** The integration ID must have an Ecocash and/or OneMoney payment method selected for use in the Paynow setup area. 
 
 Failure to conform to these requirements will result in an error being returned during the initiate mobile money transaction request with an error description relating to this fact
 

@@ -1,5 +1,6 @@
 .DS_Store
 .idea
+.vs
 *.iml
 node_modules
 

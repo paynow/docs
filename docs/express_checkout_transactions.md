@@ -6,9 +6,9 @@ sidebar_label: Express Checkout Transactions
 
 An express checkout transaction allows the integrator to capture the customers payment method and details inside their application and initiate payment without redirecting the user to Paynow. This is ideal for mobile applications; however, integrators should be aware of PCI DSS requirements for capturing Visa/Mastercard details within their applications.
 
-Express checkout transactions currently support mobile money and Visa/Mastercard payment methods.
+Express checkout transactions currently support EcoCash, OneMoney, InnBucks, PayGo and Visa/Mastercard payment methods.
 
-For mobile money payment method (Ecocash and OneMoney are currently supported) the mobile subscriber specified in the initiate message will have a USSD session pushed to their handset prompting them to enter their mobile wallet PIN number to authorize the transaction (or to cancel the transaction).
+For EcoCash and OneMoney, the mobile subscriber specified in the initiate message will have a USSD session pushed to their handset prompting them to enter their mobile wallet PIN number to authorize the transaction (or to cancel the transaction).
 
 ## Initiate an Express Checkout Transaction
 
@@ -28,18 +28,24 @@ The fields below are required in addition to those specified in the [Initiate a 
 ## Important Notes
 ### Integration
 
-The integration ID must have an Ecocash/OneMoney/Visa/Mastercard/InnBucks payment method selected for use in the Paynow setup area.
-
-### Visa/Mastercard
-
-For Visa/Mastercard token transactions, the **merchanttrace** field is required. These transactions will be automatically re-tokenized during the payment and the updated token will be returned in the status update callback message
+The integration ID you use must be configured in Paynow to include the selected payment method e.g. if you use `method=ecocash` then the integration ID must be configured to include an EcoCash payment method
 
 ### InnBucks
-An express checkout request for InnBucks will return values for **authorizationcode** and **authorizationexpires** in the response. **authorizationcode** should be presented to the customer (optionally as a QR code which can be used by the InnBucks mobile app, see https://developers.google.com/chart/infographics/docs/qr_codes for more details) whilst **authorizationexpires** (formatted as d-MMM-yyyy HH:mm) indicates the date and time at which the given authorization code will expire.<br>A customer can be presented with a deep link schinn.wbpycode://innbucks.co.zw?pymInnCode=authorizationcode which can be used to initiate a transaction in the InnBucks mobile app
+An express checkout request for InnBucks will return the following additional values:
+- **authorizationcode** - the authorization code for the InnBucks transaction (display to customer)
+- **authorizationexpires** - the date and time at which the given authorization code will expire, in the format d-MMM-yyyy HH:mm (display to customer)
+
+The authorization code can also be displayed as a QR code to be scanned by the InnBucks mobile app. See [https://developers.google.com/chart/infographics/docs/qr_codes](https://developers.google.com/chart/infographics/docs/qr_codes) for more details on generating a QR code
+
+You should also present the customer with a deep link [schinn.wbpycode://innbucks.co.zw?pymInnCode=xxxxxx](schinn.wbpycode://innbucks.co.zw?pymInnCode=xxxxxx) where `xxxxxx` is replaced with the authorization code, which can be used to initiate a transaction in the InnBucks mobile app
 
 ### PayGo
 
-An express checkout request for PayGo will return the following values:
+An express checkout request for PayGo will return the following additional values:
 - **authorizationcode** - the authorization code for the PayGo transaction (display to customer)
 - **authorizationqr** - a URL to the QR code for the PayGo transaction (display to customer)
 - **authorizationexpires** - the date and time at which the authorization code will expire in the format d-MMM-yyyy HH:mm (display to customer)
+
+### Visa/Mastercard
+
+For Visa/Mastercard **token** transactions, the **merchanttrace** field is required. These transactions will be automatically re-tokenized during the payment and the new token returned in the status update callback message

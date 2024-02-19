@@ -1,0 +1,28 @@
+{
+  "id": "java_quickstart",
+  "title": "Java Quickstart Guide",
+  "description": "Sign in to Paynow and get integration details",
+  "source": "@site/docs/java_quickstart.md",
+  "sourceDirName": ".",
+  "slug": "/java_quickstart",
+  "permalink": "/docs/java_quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/java_quickstart.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "java_quickstart",
+    "title": "Java Quickstart Guide",
+    "sidebar_label": "Java"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Python",
+    "permalink": "/docs/python_quickstart"
+  },
+  "next": {
+    "title": "WooCommerce",
+    "permalink": "/docs/woocommerce"
+  }
+}

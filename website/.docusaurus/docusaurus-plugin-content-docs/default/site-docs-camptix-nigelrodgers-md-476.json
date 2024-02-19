@@ -1,0 +1,28 @@
+{
+  "id": "camptix_nigelrodgers",
+  "title": "Paynow for Camptix (by Nigel Rodgers)",
+  "description": "Prerequisites",
+  "source": "@site/docs/camptix_nigelrodgers.md",
+  "sourceDirName": ".",
+  "slug": "/camptix_nigelrodgers",
+  "permalink": "/docs/camptix_nigelrodgers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/camptix_nigelrodgers.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "camptix_nigelrodgers",
+    "title": "Paynow for Camptix (by Nigel Rodgers)",
+    "sidebar_label": "Camptix"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Shopify",
+    "permalink": "/docs/shopify"
+  },
+  "next": {
+    "title": "Magento",
+    "permalink": "/docs/magento_prizeless"
+  }
+}

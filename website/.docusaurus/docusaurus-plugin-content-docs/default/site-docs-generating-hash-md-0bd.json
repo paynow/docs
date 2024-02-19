@@ -1,0 +1,28 @@
+{
+  "id": "generating_hash",
+  "title": "Generating Hash",
+  "description": "Any message to or from Paynow must include a hash and the hash must be validated to ensure the authenticity of the message. To generate a hash value for the message follow the steps:",
+  "source": "@site/docs/generating_hash.md",
+  "sourceDirName": ".",
+  "slug": "/generating_hash",
+  "permalink": "/docs/generating_hash",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/generating_hash.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "generating_hash",
+    "title": "Generating Hash",
+    "sidebar_label": "Generating Hash"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Polling for a Status Update",
+    "permalink": "/docs/polling_status"
+  },
+  "next": {
+    "title": "Validating Hash",
+    "permalink": "/docs/validating_hash"
+  }
+}

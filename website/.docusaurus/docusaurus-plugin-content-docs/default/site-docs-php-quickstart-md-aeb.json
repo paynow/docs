@@ -1,0 +1,28 @@
+{
+  "id": "php_quickstart",
+  "title": "PHP Quickstart Guide",
+  "description": "Sign in to Paynow and get integration details",
+  "source": "@site/docs/php_quickstart.md",
+  "sourceDirName": ".",
+  "slug": "/php_quickstart",
+  "permalink": "/docs/php_quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/php_quickstart.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "php_quickstart",
+    "title": "PHP Quickstart Guide",
+    "sidebar_label": "PHP"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Artwork and Buttons",
+    "permalink": "/docs/artwork"
+  },
+  "next": {
+    "title": ".NET",
+    "permalink": "/docs/csharp_quickstart"
+  }
+}

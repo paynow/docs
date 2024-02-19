@@ -1,0 +1,28 @@
+{
+  "id": "url_safe_base64_encoding",
+  "title": "URL Safe Base 64 Encoding",
+  "description": "Base64 encoding of strings can result in characters like +, = and / which are not URL safe i.e. if included in a URL they would change the meaning/path of the URL.",
+  "source": "@site/docs/url_safe_base64_encoding.md",
+  "sourceDirName": ".",
+  "slug": "/url_safe_base64_encoding",
+  "permalink": "/docs/url_safe_base64_encoding",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/url_safe_base64_encoding.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "url_safe_base64_encoding",
+    "title": "URL Safe Base 64 Encoding",
+    "sidebar_label": "URL Safe Base 64 Encoding"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Notification, Success & Cancel URLs",
+    "permalink": "/docs/notification_success_cancel_urls"
+  },
+  "next": {
+    "title": "System Layout",
+    "permalink": "/docs/paynow_api"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "nodejs_quickstart",
+  "title": "Node.JS Quickstart Guide",
+  "description": "Sign in to Paynow and get integration details",
+  "source": "@site/docs/nodejs_quickstart.md",
+  "sourceDirName": ".",
+  "slug": "/nodejs_quickstart",
+  "permalink": "/docs/nodejs_quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/nodejs_quickstart.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "nodejs_quickstart",
+    "title": "Node.JS Quickstart Guide",
+    "sidebar_label": "Node.JS"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": ".NET",
+    "permalink": "/docs/csharp_quickstart"
+  },
+  "next": {
+    "title": "Python",
+    "permalink": "/docs/python_quickstart"
+  }
+}

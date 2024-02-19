@@ -1,0 +1,28 @@
+{
+  "id": "test_mode",
+  "title": "Test Mode",
+  "description": "When you first create an integration it is in test mode.  Test mode allows you to create, cancel and pay a transaction to test all possible scenarios with your system.  However no actual money is moved and you do not need access to Visa/MasterCard/Vpayments/EcoCash/TeleCash/OneMoney to do a test transaction.",
+  "source": "@site/docs/test_mode.md",
+  "sourceDirName": ".",
+  "slug": "/test_mode",
+  "permalink": "/docs/test_mode",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/test_mode.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "test_mode",
+    "title": "Test Mode",
+    "sidebar_label": "Test Mode"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "paynow_overview",
+    "permalink": "/docs/paynow_overview"
+  },
+  "next": {
+    "title": "Artwork and Buttons",
+    "permalink": "/docs/artwork"
+  }
+}

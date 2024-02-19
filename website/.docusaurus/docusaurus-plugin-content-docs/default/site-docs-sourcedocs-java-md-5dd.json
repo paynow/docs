@@ -1,0 +1,19 @@
+{
+  "id": "sourcedocs_java",
+  "title": "Source Docs for Java Library",
+  "description": "Class: webdev.core.CanFail",
+  "source": "@site/docs/sourcedocs_java.md",
+  "sourceDirName": ".",
+  "slug": "/sourcedocs_java",
+  "permalink": "/docs/sourcedocs_java",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/your-username/your-project/edit/main/website/docs/sourcedocs_java.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "sourcedocs_java",
+    "title": "Source Docs for Java Library",
+    "sidebar_label": "Java"
+  }
+}

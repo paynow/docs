@@ -1,0 +1,28 @@
+{
+  "id": "sourcedocs_dotnet",
+  "title": "Source Docs for .NET Library",
+  "description": "Class: Webdev.Core.CanFail",
+  "source": "@site/docs/sourcedocs_dotnet.md",
+  "sourceDirName": ".",
+  "slug": "/sourcedocs_dotnet",
+  "permalink": "/docs/sourcedocs_dotnet",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/sourcedocs_dotnet.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "sourcedocs_dotnet",
+    "title": "Source Docs for .NET Library",
+    "sidebar_label": ".NET"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Initiate a Passenger Ticket Transaction",
+    "permalink": "/docs/initiate_ticket_transaction"
+  },
+  "next": {
+    "title": "Node.JS",
+    "permalink": "/docs/sourcedocs_nodejs"
+  }
+}

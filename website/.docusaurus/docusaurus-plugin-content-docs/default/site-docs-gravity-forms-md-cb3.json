@@ -1,0 +1,28 @@
+{
+  "id": "gravity_forms",
+  "title": "Paynow for Gravity Forms",
+  "description": "Prerequisites",
+  "source": "@site/docs/gravity_forms.md",
+  "sourceDirName": ".",
+  "slug": "/gravity_forms",
+  "permalink": "/docs/gravity_forms",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/gravity_forms.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "gravity_forms",
+    "title": "Paynow for Gravity Forms",
+    "sidebar_label": "Gravity Forms"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "WooCommerce",
+    "permalink": "/docs/woocommerce"
+  },
+  "next": {
+    "title": "Easy Digital Downloads",
+    "permalink": "/docs/easy_digital_downloads"
+  }
+}

@@ -5,13 +5,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-const React = require('react');
+import React from 'react'
+import Container from '../../core/Container';
+import MarkdownBlock from '../../core/MarkdownBlock';
+import GridBlock from '../../core/GridBlock';
+import Layout from '@theme/Layout';
 
-const CompLibrary = require('../../core/CompLibrary.js');
-const Container = CompLibrary.Container;
-const GridBlock = CompLibrary.GridBlock;
+import siteConfig from '../../docusaurus.config';
 
-const siteConfig = require(process.cwd() + '/siteConfig.js');
 
 function docUrl(doc, language) {
   return siteConfig.baseUrl + 'docs/' + (language ? language + '/' : '') + doc;
@@ -39,6 +40,7 @@ class Help extends React.Component {
     ];
 
     return (
+      <Layout>
       <div className="docMainWrapper wrapper">
         <Container className="mainContainer documentContainer postContainer">
           <div className="post">
@@ -50,8 +52,9 @@ class Help extends React.Component {
           </div>
         </Container>
       </div>
+      </Layout>
     );
   }
 }
 
-module.exports = Help;
+export default Help;

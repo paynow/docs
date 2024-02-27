@@ -1,10 +1,9 @@
-const React = require('react');
-const CompLibrary = require('../../core/CompLibrary.js');
-
-const Container = CompLibrary.Container;
-const GridBlock = CompLibrary.GridBlock;
-const siteConfig = require(process.cwd() + '/siteConfig.js');
-
+import React from 'react'
+import Container from '../../core/Container';
+import MarkdownBlock from '../../core/MarkdownBlock';
+import GridBlock from '../../core/GridBlock';
+import siteConfig from '../../docusaurus.config';
+import { defaultUrlTransform } from 'react-markdown';
 
 class MyPage extends React.Component {
   render() {
@@ -40,4 +39,4 @@ class MyPage extends React.Component {
 
 MyPage.title = 'Playground';
 
-module.exports = MyPage;
+export default MyPage;

@@ -4,13 +4,11 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
-const React = require('react');
-
-const CompLibrary = require('../../core/CompLibrary.js');
-const Container = CompLibrary.Container;
-
-const siteConfig = require(process.cwd() + '/siteConfig.js');
+import React from 'react'
+import Container from '../../core/Container';
+import MarkdownBlock from '../../core/MarkdownBlock';
+import GridBlock from '../../core/GridBlock';
+import siteConfig from '../../docusaurus.config';
 
 class Users extends React.Component {
   render() {
@@ -46,4 +44,4 @@ class Users extends React.Component {
   }
 }
 
-module.exports = Users;
+export default Users;

@@ -1,18 +1,17 @@
-/**
- * Copyright (c) 2017-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
 
-const React = require('react');
 
-const CompLibrary = require('../../core/CompLibrary.js');
-const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
-const Container = CompLibrary.Container;
-const GridBlock = CompLibrary.GridBlock;
+import React from 'react'
+import Container from '../components/core/Container';
+import MarkdownBlock from '../components/core/MarkdownBlock';
+import GridBlock from '../components/core/GridBlock';
+import siteConfig from '../../docusaurus.config';
+import Layout from '@theme/Layout';
+import { Link } from 'react-router-dom';
 
-const siteConfig = require(process.cwd() + '/siteConfig.js');
+import '../css/custom.css';
+import '../components/core/legacyCSS.css';
+import CustomScriptComponent from '../components/CustomScriptComponent';
+
 
 function imgUrl(img) {
   return siteConfig.baseUrl + 'img/' + img;
@@ -59,7 +58,7 @@ const Logo = props => (
 const ProjectTitle = props => (
   <h2 className="projectTitle">
     {siteConfig.title}
-    <small>{siteConfig.tagline}</small>
+    <small> {siteConfig.tagline}</small>
   </h2>
 );
 
@@ -105,7 +104,7 @@ const FeatureCallout = props => (
       <p>Create a free developer account </p>
       <Button id="signup" href={'https://forums.paynow.co.zw/signup'}>Sign up / Sign in</Button>
     </div>
-    {/* <MarkdownBlock>These are features of this project</MarkdownBlock> */}
+    <MarkdownBlock>These are features of this project</MarkdownBlock>
   </div>
 );
 
@@ -113,25 +112,27 @@ const Features = props => (
   <Block id="dsfb" layout="fourColumn">
     {[
       {
-        content: 'Access Developer Documentation and start transacting online.<br/><a href="/docs/quickstart.html">View Documentation</a>',
+        content: 'Access Developer Documentation and start transacting online.\n \n[View Documentation](/docs/quickstart.html)',
         image: imgUrl('docs.png'),
         imageAlign: 'top',
+        link: '/docs/quickstart.html',
+        linkText: 'View Documentation',
         title: 'DOCUMENTATION',
       },
       {
-        content: 'Get started quickly. Use our SDKs PHP, .NET, PYTHON and more.<br/><a href="https://www.github.com/paynow">Get SDKs</a>',
+        content: 'Get started quickly. Use our SDKs PHP, .NET, PYTHON and more.\n\n [Get SDKs](https://www.github.com/paynow)',
         image: imgUrl('sdks.png'),
         imageAlign: 'top',
         title: 'SDKs',
       },      
       {
-        content: 'Join our community and help each other integrate and #GetPaid.<br/><a href="https://forums.paynow.co.zw/">Browse Forums</a>',
+        content: 'Join our community and help each other integrate and #GetPaid.\n\n[Browse Forums](https://forums.paynow.co.zw/)',
         image: imgUrl('forums.png'),
         imageAlign: 'top',
         title: 'FORUM',
       },      
       {
-        content: 'Get the latest Fintech news, information and tips.<br/><a href="/blog">View Blog</a>',
+        content: 'Get the latest Fintech news, information and tips.\n\n[View Blog](/blog)',
         image: imgUrl('blog.png'),
         imageAlign: 'top',
         title: 'BLOG',
@@ -141,16 +142,7 @@ const Features = props => (
 );
 
 const GetStarted = props => (
-  // <Block background="light">
-  //   {[
-  //     {
-  //       content: '',
-  //       image: imgUrl('dev.png'),
-  //       imageAlign: 'left',
-  //       title: 'GETTING STARTED',
-  //     },
-  //   ]}
-  // </Block>
+
   <div  id="gettingStarted" className="container paddingBottom paddingTop">
     <div className="wrapper">
       <div className="gridBlock">
@@ -644,9 +636,12 @@ class Index extends React.Component {
     let language = this.props.language || '';
 
     return (
+      <Layout>
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
+        <CustomScriptComponent />
+
           <FeatureCallout />
           <Features />
           <GetStarted />
@@ -656,8 +651,9 @@ class Index extends React.Component {
           <FeatureCallout />
         </div>
       </div>
+      </Layout>
     );
   }
 }
 
-module.exports = Index;
+export default Index

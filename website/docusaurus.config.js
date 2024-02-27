@@ -5,10 +5,12 @@ module.exports = {
   baseUrl: '/', // Base URL for your project
   onBrokenLinks: 'warn', // throw an error if a broken link is detected during build
   onBrokenMarkdownLinks: 'warn', // warn if a broken markdown link is detected during build
-
+  favicon: '/img/favicon.png',
   projectName: 'paynow-docs',
   organizationName: 'PaynowZW',
- 
+  scripts: [
+        '/js/custom.js',
+  ],
  
  
   themeConfig: {
@@ -164,7 +166,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/paynow/docs/edit/main/website/',
+          // editUrl: 'https://github.com/paynow/docs/edit/main/website/',
         },
         theme: {
           customCss: './src/css/custom.css',

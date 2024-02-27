@@ -18,11 +18,11 @@
   },
   "sidebar": "docs",
   "previous": {
-    "title": "Status Update",
+    "title": "Payment Status Update",
     "permalink": "/docs/status_update"
   },
   "next": {
-    "title": "Generating Hash",
-    "permalink": "/docs/generating_hash"
+    "title": "Complete a Transaction",
+    "permalink": "/docs/complete_transaction"
   }
 }

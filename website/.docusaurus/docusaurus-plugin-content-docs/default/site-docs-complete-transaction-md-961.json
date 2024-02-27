@@ -18,11 +18,11 @@
   },
   "sidebar": "docs",
   "previous": {
-    "title": "Express Checkout Transactions",
-    "permalink": "/docs/express_checkout_transactions"
+    "title": "Polling for a Status Update",
+    "permalink": "/docs/polling_status"
   },
   "next": {
-    "title": "Status Update",
-    "permalink": "/docs/status_update"
+    "title": "Generating Hash",
+    "permalink": "/docs/generating_hash"
   }
 }

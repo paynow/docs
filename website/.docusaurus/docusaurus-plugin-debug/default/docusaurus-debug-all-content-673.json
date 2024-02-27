@@ -123,12 +123,12 @@
               },
               "sidebar": "docs",
               "previous": {
-                "title": "Express Checkout Transactions",
-                "permalink": "/docs/express_checkout_transactions"
+                "title": "Polling for a Status Update",
+                "permalink": "/docs/polling_status"
               },
               "next": {
-                "title": "Status Update",
-                "permalink": "/docs/status_update"
+                "title": "Generating Hash",
+                "permalink": "/docs/generating_hash"
               }
             },
             {
@@ -190,14 +190,14 @@
             {
               "id": "express_checkout_transactions",
               "title": "Express Checkout Transactions",
-              "description": "An express checkout transaction allows the integrator to capture the customers payment method and details inside their application and initiate payment without redirecting the user to Paynow. This is ideal for mobile applications; however, integrators should be aware of PCI DSS requirements for capturing Visa/Mastercard details within their applications.",
-              "source": "@site/docs/express_checkout_transactions.md",
+              "description": "Please note that you have to do atleast two test transanctions before you can move on to  a live integrations.",
+              "source": "@site/docs/express_checkout_transactions.mdx",
               "sourceDirName": ".",
               "slug": "/express_checkout_transactions",
               "permalink": "/docs/express_checkout_transactions",
               "draft": false,
               "unlisted": false,
-              "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/express_checkout_transactions.md",
+              "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/express_checkout_transactions.mdx",
               "tags": [],
               "version": "current",
               "frontMatter": {
@@ -208,11 +208,11 @@
               "sidebar": "docs",
               "previous": {
                 "title": "Initiate a transaction",
-                "permalink": "/docs/initiate_transaction"
+                "permalink": "/docs/paynow_initiate"
               },
               "next": {
-                "title": "Complete a Transaction",
-                "permalink": "/docs/complete_transaction"
+                "title": "Payment Status Update",
+                "permalink": "/docs/status_update"
               }
             },
             {
@@ -235,13 +235,28 @@
               },
               "sidebar": "docs",
               "previous": {
-                "title": "Polling for a Status Update",
-                "permalink": "/docs/polling_status"
+                "title": "Complete a Transaction",
+                "permalink": "/docs/complete_transaction"
               },
               "next": {
                 "title": "Validating Hash",
                 "permalink": "/docs/validating_hash"
               }
+            },
+            {
+              "id": "generation_hash",
+              "title": "generation_hash",
+              "description": "",
+              "source": "@site/docs/generation_hash.md",
+              "sourceDirName": ".",
+              "slug": "/generation_hash",
+              "permalink": "/docs/generation_hash",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/generation_hash.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {}
             },
             {
               "id": "gravity_forms",
@@ -314,8 +329,8 @@
                 "permalink": "/docs/validating_hash"
               },
               "next": {
-                "title": ".NET",
-                "permalink": "/docs/sourcedocs_dotnet"
+                "title": "PHP",
+                "permalink": "/docs/sourcedocs_php"
               }
             },
             {
@@ -335,15 +350,6 @@
                 "id": "initiate_transaction",
                 "title": "Initiate a transaction",
                 "sidebar_label": "Initiate a transaction"
-              },
-              "sidebar": "docs",
-              "previous": {
-                "title": "System Layout",
-                "permalink": "/docs/paynow_api"
-              },
-              "next": {
-                "title": "Express Checkout Transactions",
-                "permalink": "/docs/express_checkout_transactions"
               }
             },
             {
@@ -369,7 +375,7 @@
                 "permalink": "/docs/quickstart"
               },
               "next": {
-                "title": "paynow_overview",
+                "title": "How it works",
                 "permalink": "/docs/paynow_overview"
               }
             },
@@ -510,13 +516,42 @@
               },
               "next": {
                 "title": "Initiate a transaction",
-                "permalink": "/docs/initiate_transaction"
+                "permalink": "/docs/paynow_initiate"
+              }
+            },
+            {
+              "id": "paynow_initiate",
+              "title": "Initiate Transaction",
+              "description": "This page outlines the process for initiating a transaction. Here, you will submit your payment details to Paynow. In response, Paynow will provide a link from which you can complete your payment.",
+              "source": "@site/docs/initiate.mdx",
+              "sourceDirName": ".",
+              "slug": "/paynow_initiate",
+              "permalink": "/docs/paynow_initiate",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/initiate.mdx",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "paynow_initiate",
+                "title": "Initiate Transaction",
+                "sidebar_label": "Initiate a transaction",
+                "hide_table_of_contents": true
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "System Layout",
+                "permalink": "/docs/paynow_api"
+              },
+              "next": {
+                "title": "Express Checkout Transactions",
+                "permalink": "/docs/express_checkout_transactions"
               }
             },
             {
               "id": "paynow_overview",
-              "title": "paynow_overview",
-              "description": "",
+              "title": "How it works",
+              "description": "How Paynow Works - Request flow",
               "source": "@site/docs/paynow_overview.md",
               "sourceDirName": ".",
               "slug": "/paynow_overview",
@@ -526,7 +561,11 @@
               "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/paynow_overview.md",
               "tags": [],
               "version": "current",
-              "frontMatter": {},
+              "frontMatter": {
+                "id": "paynow_overview",
+                "title": "How it works",
+                "sidebar_label": "How it works"
+              },
               "sidebar": "docs",
               "previous": {
                 "title": "Generating Integration Keys",
@@ -585,12 +624,12 @@
               },
               "sidebar": "docs",
               "previous": {
-                "title": "Status Update",
+                "title": "Payment Status Update",
                 "permalink": "/docs/status_update"
               },
               "next": {
-                "title": "Generating Hash",
-                "permalink": "/docs/generating_hash"
+                "title": "Complete a Transaction",
+                "permalink": "/docs/complete_transaction"
               }
             },
             {
@@ -721,8 +760,8 @@
               },
               "sidebar": "docs",
               "previous": {
-                "title": "Initiate a Passenger Ticket Transaction",
-                "permalink": "/docs/initiate_ticket_transaction"
+                "title": "PHP",
+                "permalink": "/docs/sourcedocs_php"
               },
               "next": {
                 "title": "Node.JS",
@@ -749,6 +788,34 @@
               },
               "sidebar": "docs",
               "previous": {
+                "title": ".NET",
+                "permalink": "/docs/sourcedocs_dotnet"
+              }
+            },
+            {
+              "id": "sourcedocs_php",
+              "title": "Source Docs for PHP Library",
+              "description": "Class: \\Paynow\\Core\\Constants",
+              "source": "@site/docs/sourcedocs_php.md",
+              "sourceDirName": ".",
+              "slug": "/sourcedocs_php",
+              "permalink": "/docs/sourcedocs_php",
+              "draft": false,
+              "unlisted": false,
+              "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/sourcedocs_php.md",
+              "tags": [],
+              "version": "current",
+              "frontMatter": {
+                "id": "sourcedocs_php",
+                "title": "Source Docs for PHP Library",
+                "sidebar_label": "PHP"
+              },
+              "sidebar": "docs",
+              "previous": {
+                "title": "Initiate a Passenger Ticket Transaction",
+                "permalink": "/docs/initiate_ticket_transaction"
+              },
+              "next": {
                 "title": ".NET",
                 "permalink": "/docs/sourcedocs_dotnet"
               }
@@ -797,12 +864,12 @@
               "frontMatter": {
                 "id": "status_update",
                 "title": "Status Update",
-                "sidebar_label": "Status Update"
+                "sidebar_label": "Payment Status Update"
               },
               "sidebar": "docs",
               "previous": {
-                "title": "Complete a Transaction",
-                "permalink": "/docs/complete_transaction"
+                "title": "Express Checkout Transactions",
+                "permalink": "/docs/express_checkout_transactions"
               },
               "next": {
                 "title": "Polling for a Status Update",
@@ -829,7 +896,7 @@
               },
               "sidebar": "docs",
               "previous": {
-                "title": "paynow_overview",
+                "title": "How it works",
                 "permalink": "/docs/paynow_overview"
               },
               "next": {
@@ -1043,15 +1110,11 @@
                   },
                   {
                     "type": "doc",
-                    "id": "initiate_transaction"
+                    "id": "paynow_initiate"
                   },
                   {
                     "type": "doc",
                     "id": "express_checkout_transactions"
-                  },
-                  {
-                    "type": "doc",
-                    "id": "complete_transaction"
                   },
                   {
                     "type": "doc",
@@ -1060,6 +1123,10 @@
                   {
                     "type": "doc",
                     "id": "polling_status"
+                  },
+                  {
+                    "type": "doc",
+                    "id": "complete_transaction"
                   },
                   {
                     "type": "doc",
@@ -1081,6 +1148,10 @@
                 "type": "category",
                 "label": "Library Source Docs",
                 "items": [
+                  {
+                    "type": "doc",
+                    "id": "sourcedocs_php"
+                  },
                   {
                     "type": "doc",
                     "id": "sourcedocs_dotnet"
@@ -1141,6 +1212,7 @@
   "docusaurus-plugin-debug": {},
   "docusaurus-plugin-google-gtag": {},
   "docusaurus-theme-classic": {},
+  "docusaurus-theme-search-algolia": {},
   "docusaurus-bootstrap-plugin": {},
   "docusaurus-mdx-fallback-plugin": {}
 }

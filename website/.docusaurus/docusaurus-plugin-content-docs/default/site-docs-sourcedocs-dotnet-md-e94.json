@@ -18,8 +18,8 @@
   },
   "sidebar": "docs",
   "previous": {
-    "title": "Initiate a Passenger Ticket Transaction",
-    "permalink": "/docs/initiate_ticket_transaction"
+    "title": "PHP",
+    "permalink": "/docs/sourcedocs_php"
   },
   "next": {
     "title": "Node.JS",

@@ -15,14 +15,5 @@
     "id": "initiate_transaction",
     "title": "Initiate a transaction",
     "sidebar_label": "Initiate a transaction"
-  },
-  "sidebar": "docs",
-  "previous": {
-    "title": "System Layout",
-    "permalink": "/docs/paynow_api"
-  },
-  "next": {
-    "title": "Express Checkout Transactions",
-    "permalink": "/docs/express_checkout_transactions"
   }
 }

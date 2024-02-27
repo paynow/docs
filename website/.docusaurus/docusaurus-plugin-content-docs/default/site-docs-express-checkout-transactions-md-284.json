@@ -19,7 +19,7 @@
   "sidebar": "docs",
   "previous": {
     "title": "Initiate a transaction",
-    "permalink": "/docs/initiate_transaction"
+    "permalink": "/docs/paynow_initiate"
   },
   "next": {
     "title": "Complete a Transaction",

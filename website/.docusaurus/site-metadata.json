@@ -30,6 +30,11 @@
       "type": "package",
       "name": "@docusaurus/theme-classic",
       "version": "3.1.1"
+    },
+    "docusaurus-theme-search-algolia": {
+      "type": "package",
+      "name": "@docusaurus/theme-search-algolia",
+      "version": "3.1.1"
     }
   }
 }

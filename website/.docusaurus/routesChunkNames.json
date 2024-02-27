@@ -56,6 +56,12 @@
     },
     "config": "config---about-5-e-9-bcb"
   },
+  "/search-3e0": {
+    "__comp": "__comp---theme-search-page-1-a-4-d6f",
+    "__context": {
+      "plugin": "plugin---search-86-f-b99"
+    }
+  },
   "/try-873": {
     "__comp": "__comp---site-src-pages-try-jsf-89-c25",
     "__context": {
@@ -70,17 +76,17 @@
     },
     "config": "config---about-5-e-9-bcb"
   },
-  "/docs-dfb": {
+  "/docs-d27": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docseac-fcb"
     }
   },
-  "/docs-074": {
+  "/docs-b6d": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "version": "version---docs-935-398"
   },
-  "/docs-86b": {
+  "/docs-71a": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/docs/advanced_paynow_request_button-0d0": {
@@ -107,13 +113,17 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-easy-digital-downloads-916-996"
   },
-  "/docs/express_checkout_transactions-e51": {
+  "/docs/express_checkout_transactions-82d": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-express-checkout-transactions-284-45b"
+    "content": "content---docs-express-checkout-transactions-7-fb-fb4"
   },
   "/docs/generating_hash-0f8": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-generating-hash-0-bd-912"
+  },
+  "/docs/generation_hash-c4a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-generation-hashbff-b46"
   },
   "/docs/gravity_forms-fb8": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -127,7 +137,7 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-initiate-ticket-transactionf-8-e-a06"
   },
-  "/docs/initiate_transaction-1fa": {
+  "/docs/initiate_transaction-fc3": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-initiate-transaction-66-b-380"
   },
@@ -154,6 +164,10 @@
   "/docs/paynow_api-f42": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-paynow-apibd-8-563"
+  },
+  "/docs/paynow_initiate-660": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-paynow-initiate-44-d-710"
   },
   "/docs/paynow_overview-028": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -190,6 +204,10 @@
   "/docs/sourcedocs_nodejs-eb9": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-sourcedocs-nodejsd-2-c-c7e"
+  },
+  "/docs/sourcedocs_php-7cb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-sourcedocs-php-1-a-0-fb0"
   },
   "/docs/springboot_bmukorera_tzifudzi-926": {
     "__comp": "__comp---theme-doc-item-178-a40",

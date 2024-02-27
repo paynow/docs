@@ -18,8 +18,8 @@
   },
   "sidebar": "docs",
   "previous": {
-    "title": "Polling for a Status Update",
-    "permalink": "/docs/polling_status"
+    "title": "Complete a Transaction",
+    "permalink": "/docs/complete_transaction"
   },
   "next": {
     "title": "Validating Hash",

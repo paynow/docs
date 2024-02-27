@@ -48,6 +48,11 @@ export default [
     exact: true
   },
   {
+    path: '/search',
+    component: ComponentCreator('/search', '3e0'),
+    exact: true
+  },
+  {
     path: '/try',
     component: ComponentCreator('/try', '873'),
     exact: true
@@ -59,15 +64,15 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'dfb'),
+    component: ComponentCreator('/docs', 'd27'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', '074'),
+        component: ComponentCreator('/docs', 'b6d'),
         routes: [
           {
             path: '/docs',
-            component: ComponentCreator('/docs', '86b'),
+            component: ComponentCreator('/docs', '71a'),
             routes: [
               {
                 path: '/docs/advanced_paynow_request_button',
@@ -107,7 +112,7 @@ export default [
               },
               {
                 path: '/docs/express_checkout_transactions',
-                component: ComponentCreator('/docs/express_checkout_transactions', 'e51'),
+                component: ComponentCreator('/docs/express_checkout_transactions', '82d'),
                 exact: true,
                 sidebar: "docs"
               },
@@ -116,6 +121,11 @@ export default [
                 component: ComponentCreator('/docs/generating_hash', '0f8'),
                 exact: true,
                 sidebar: "docs"
+              },
+              {
+                path: '/docs/generation_hash',
+                component: ComponentCreator('/docs/generation_hash', 'c4a'),
+                exact: true
               },
               {
                 path: '/docs/gravity_forms',
@@ -136,9 +146,8 @@ export default [
               },
               {
                 path: '/docs/initiate_transaction',
-                component: ComponentCreator('/docs/initiate_transaction', '1fa'),
-                exact: true,
-                sidebar: "docs"
+                component: ComponentCreator('/docs/initiate_transaction', 'fc3'),
+                exact: true
               },
               {
                 path: '/docs/integration_generation',
@@ -173,6 +182,12 @@ export default [
               {
                 path: '/docs/paynow_api',
                 component: ComponentCreator('/docs/paynow_api', 'f42'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/paynow_initiate',
+                component: ComponentCreator('/docs/paynow_initiate', '660'),
                 exact: true,
                 sidebar: "docs"
               },
@@ -227,6 +242,12 @@ export default [
               {
                 path: '/docs/sourcedocs_nodejs',
                 component: ComponentCreator('/docs/sourcedocs_nodejs', 'eb9'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/docs/sourcedocs_php',
+                component: ComponentCreator('/docs/sourcedocs_php', '7cb'),
                 exact: true,
                 sidebar: "docs"
               },

@@ -14,12 +14,12 @@
   "frontMatter": {
     "id": "status_update",
     "title": "Status Update",
-    "sidebar_label": "Status Update"
+    "sidebar_label": "Payment Status Update"
   },
   "sidebar": "docs",
   "previous": {
-    "title": "Complete a Transaction",
-    "permalink": "/docs/complete_transaction"
+    "title": "Express Checkout Transactions",
+    "permalink": "/docs/express_checkout_transactions"
   },
   "next": {
     "title": "Polling for a Status Update",

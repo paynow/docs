@@ -29,7 +29,7 @@
           },
           {
             "type": "link",
-            "label": "paynow_overview",
+            "label": "How it works",
             "href": "/docs/paynow_overview",
             "docId": "paynow_overview",
             "unlisted": false
@@ -194,8 +194,8 @@
           {
             "type": "link",
             "label": "Initiate a transaction",
-            "href": "/docs/initiate_transaction",
-            "docId": "initiate_transaction",
+            "href": "/docs/paynow_initiate",
+            "docId": "paynow_initiate",
             "unlisted": false
           },
           {
@@ -207,14 +207,7 @@
           },
           {
             "type": "link",
-            "label": "Complete a Transaction",
-            "href": "/docs/complete_transaction",
-            "docId": "complete_transaction",
-            "unlisted": false
-          },
-          {
-            "type": "link",
-            "label": "Status Update",
+            "label": "Payment Status Update",
             "href": "/docs/status_update",
             "docId": "status_update",
             "unlisted": false
@@ -224,6 +217,13 @@
             "label": "Polling for a Status Update",
             "href": "/docs/polling_status",
             "docId": "polling_status",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Complete a Transaction",
+            "href": "/docs/complete_transaction",
+            "docId": "complete_transaction",
             "unlisted": false
           },
           {
@@ -255,6 +255,13 @@
         "type": "category",
         "label": "Library Source Docs",
         "items": [
+          {
+            "type": "link",
+            "label": "PHP",
+            "href": "/docs/sourcedocs_php",
+            "docId": "sourcedocs_php",
+            "unlisted": false
+          },
           {
             "type": "link",
             "label": ".NET",
@@ -315,7 +322,7 @@
     "express_checkout_transactions": {
       "id": "express_checkout_transactions",
       "title": "Express Checkout Transactions",
-      "description": "An express checkout transaction allows the integrator to capture the customers payment method and details inside their application and initiate payment without redirecting the user to Paynow. This is ideal for mobile applications; however, integrators should be aware of PCI DSS requirements for capturing Visa/Mastercard details within their applications.",
+      "description": "Please note that you have to do atleast two test transanctions before you can move on to  a live integrations.",
       "sidebar": "docs"
     },
     "generating_hash": {
@@ -323,6 +330,11 @@
       "title": "Generating Hash",
       "description": "Any message to or from Paynow must include a hash and the hash must be validated to ensure the authenticity of the message. To generate a hash value for the message follow the steps:",
       "sidebar": "docs"
+    },
+    "generation_hash": {
+      "id": "generation_hash",
+      "title": "generation_hash",
+      "description": ""
     },
     "gravity_forms": {
       "id": "gravity_forms",
@@ -344,8 +356,7 @@
     "initiate_transaction": {
       "id": "initiate_transaction",
       "title": "Initiate a transaction",
-      "description": "When the customer is ready to make payment the merchant site must perform an Initiate Transaction",
-      "sidebar": "docs"
+      "description": "When the customer is ready to make payment the merchant site must perform an Initiate Transaction"
     },
     "integration_generation": {
       "id": "integration_generation",
@@ -383,10 +394,16 @@
       "description": "The Paynow interface relies on HTTP POSTs to exchange data between the merchant site and the Paynow server and HTTP GETs to redirect the customer.",
       "sidebar": "docs"
     },
+    "paynow_initiate": {
+      "id": "paynow_initiate",
+      "title": "Initiate Transaction",
+      "description": "This page outlines the process for initiating a transaction. Here, you will submit your payment details to Paynow. In response, Paynow will provide a link from which you can complete your payment.",
+      "sidebar": "docs"
+    },
     "paynow_overview": {
       "id": "paynow_overview",
-      "title": "paynow_overview",
-      "description": "",
+      "title": "How it works",
+      "description": "How Paynow Works - Request flow",
       "sidebar": "docs"
     },
     "php_quickstart": {
@@ -435,6 +452,12 @@
       "id": "sourcedocs_nodejs",
       "title": "Source Docs for Node.js Library",
       "description": "Class: InitResponse",
+      "sidebar": "docs"
+    },
+    "sourcedocs_php": {
+      "id": "sourcedocs_php",
+      "title": "Source Docs for PHP Library",
+      "description": "Class: \\Paynow\\Core\\Constants",
       "sidebar": "docs"
     },
     "springboot_bmukorera_tzifudzi": {

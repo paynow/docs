@@ -8,11 +8,20 @@ export default {
   "tagline": "Integrate With Paynow & #GetPaid",
   "url": "https://developers.paynow.co.zw",
   "baseUrl": "/",
-  "onBrokenLinks": "throw",
+  "onBrokenLinks": "warn",
   "onBrokenMarkdownLinks": "warn",
   "projectName": "paynow-docs",
   "organizationName": "PaynowZW",
   "themeConfig": {
+    "algolia": {
+      "appId": "3H7ITVC7MS",
+      "apiKey": "1a1e673b71df14e33281d0447c1d63f7",
+      "indexName": "paynow",
+      "algoliaOptions": {},
+      "contextualSearch": true,
+      "searchParameters": {},
+      "searchPagePath": "search"
+    },
     "navbar": {
       "title": "Paynow Developer Hub",
       "logo": {
@@ -50,12 +59,106 @@ export default {
     },
     "footer": {
       "style": "dark",
-      "links": [],
+      "links": [
+        {
+          "title": "Documentation",
+          "items": [
+            {
+              "label": "Getting Started",
+              "to": "docs/quickstart"
+            },
+            {
+              "label": "API Reference",
+              "to": "docs/paynow_api"
+            },
+            {
+              "label": "Frequently Asked Questions",
+              "to": "docs/#"
+            },
+            {
+              "label": "Artwork & Buttons",
+              "to": "docs/artwork"
+            }
+          ]
+        },
+        {
+          "title": "Libraries & Plugins",
+          "items": [
+            {
+              "label": "PHP",
+              "to": "docs/php_quickstart"
+            },
+            {
+              "label": ".NET",
+              "to": "docs/csharp_quickstart"
+            },
+            {
+              "label": "Node.JS",
+              "to": "docs/nodejs_quickstart"
+            },
+            {
+              "label": "Python",
+              "to": "docs/python_quickstart"
+            },
+            {
+              "label": "Java",
+              "to": "docs/java_quickstart"
+            }
+          ]
+        },
+        {
+          "title": "Plugins",
+          "items": [
+            {
+              "label": "WooCommerce",
+              "to": "docs/woocommerce"
+            },
+            {
+              "label": "Gravity Forms",
+              "to": "docs/gravity_forms"
+            },
+            {
+              "label": "Easy Digital Downloads",
+              "to": "docs/easy_digital_downloads"
+            },
+            {
+              "label": "Shopify",
+              "to": "docs/shopify"
+            }
+          ]
+        },
+        {
+          "title": "Community",
+          "items": [
+            {
+              "label": "Discussion Forums",
+              "href": "https://forums.paynow.co.zw/"
+            },
+            {
+              "label": "Blogs & Tutorials",
+              "to": "blog"
+            },
+            {
+              "label": "Github",
+              "href": "https://github.com/paynow"
+            },
+            {
+              "label": "Facebook",
+              "href": "https://facebook.com/paynowzw"
+            },
+            {
+              "label": "Twitter",
+              "href": "https://twitter.com/paynowzw"
+            }
+          ]
+        }
+      ],
       "logo": {
-        "alt": "Paynow Logo",
-        "src": "img/paynow.p.emblem.png",
-        "href": "https://www.paynow.co.zw"
-      }
+        "alt": "Paynow Zimbabwe",
+        "src": "img/paynow.png",
+        "href": "https://www.paynow.co.zw/"
+      },
+      "copyright": "Copyright © 2024 Paynow Zimbabwe"
     },
     "image": "img/Paynow-Dev-Hub-Sharer-Image.png",
     "colors": {
@@ -75,7 +178,8 @@ export default {
       "additionalLanguages": [
         "php",
         "powershell",
-        "csharp"
+        "csharp",
+        "rest"
       ],
       "theme": {
         "plain": {
@@ -236,9 +340,11 @@ export default {
           "sidebarPath": "C:\\xampp\\htdocs\\docs\\website\\sidebars.js",
           "editUrl": "https://github.com/paynow/docs/edit/main/website/"
         },
-        "theme": {},
+        "theme": {
+          "customCss": "./src/css/custom.css"
+        },
         "gtag": {
-          "trackingID": "GTM-WN8B6JL5",
+          "trackingID": "UA-126207230-1",
           "anonymizeIP": true
         }
       }

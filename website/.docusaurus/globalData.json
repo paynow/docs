@@ -2,7 +2,7 @@
   "docusaurus-plugin-google-gtag": {
     "default": {
       "trackingID": [
-        "GTM-WN8B6JL5"
+        "UA-126207230-1"
       ],
       "anonymizeIP": true,
       "id": "default"
@@ -60,6 +60,10 @@
               "sidebar": "docs"
             },
             {
+              "id": "generation_hash",
+              "path": "/docs/generation_hash"
+            },
+            {
               "id": "gravity_forms",
               "path": "/docs/gravity_forms",
               "sidebar": "docs"
@@ -75,8 +79,7 @@
             },
             {
               "id": "initiate_transaction",
-              "path": "/docs/initiate_transaction",
-              "sidebar": "docs"
+              "path": "/docs/initiate_transaction"
             },
             {
               "id": "integration_generation",
@@ -106,6 +109,11 @@
             {
               "id": "paynow_api",
               "path": "/docs/paynow_api",
+              "sidebar": "docs"
+            },
+            {
+              "id": "paynow_initiate",
+              "path": "/docs/paynow_initiate",
               "sidebar": "docs"
             },
             {
@@ -151,6 +159,11 @@
             {
               "id": "sourcedocs_nodejs",
               "path": "/docs/sourcedocs_nodejs",
+              "sidebar": "docs"
+            },
+            {
+              "id": "sourcedocs_php",
+              "path": "/docs/sourcedocs_php",
               "sidebar": "docs"
             },
             {

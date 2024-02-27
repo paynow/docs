@@ -4,6 +4,9 @@ title: Generating Hash
 sidebar_label: Generating Hash
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 Any message to or from Paynow must include a hash and the hash must be validated to ensure the authenticity of the message. To generate a hash value for the message follow the steps:
 
 1. Concatenate the values in the message for each element in their raw form (i.e. if it is from a
@@ -55,9 +58,9 @@ You can find code examples for hashing in the [Code Examples](#code-examples) se
 
 > Please note these examples are not intended as examples of the best way of doing the hash, merely ones that are easy to understand.
 
-### PHP
-
-```php
+<Tabs>
+  <TabItem value="php" label="PHP" default>
+ ```php
 private function CreateHash($values, $IntegrationKey) {
     $string = "";
 
@@ -73,11 +76,46 @@ private function CreateHash($values, $IntegrationKey) {
     return strtoupper($hash);
 }
 ```
+  </TabItem>
+  <TabItem value="python" label="Python">
+   ```python
+   import hashlib
 
+def create_hash(values, integration_key):
+    string = ""
+    
+    for key, value in values.items():
+        if key.upper() != "HASH":
+            string += str(value)
+    
+    string += integration_key
+    hash = hashlib.sha512(string.encode()).hexdigest()
+    
+    return hash.upper()
+```
+  </TabItem>
+  <TabItem value="nodejs" label="NodeJS">
+  ```js
+const crypto = require('crypto');
 
-### C#
-
-```csharp
+function createHash(values, integrationKey) {
+  let string = "";
+  
+  Object.keys(values).forEach(key => {
+    if (key.toUpperCase() !== "HASH") {
+      string += values[key];
+    }
+  });
+  
+  string += integrationKey;
+  const hash = crypto.createHash('sha512').update(string).digest('hex');
+  
+  return hash.toUpperCase();
+}
+  ```
+  </TabItem>
+  <TabItem value="charp" label="C#">
+ ```csharp
 private static string GenerateTwoWayHash(Dictionary<string, string> items, Guid guid)
 {
     string concat = string.Join("", 
@@ -99,3 +137,6 @@ public static string ByteArrayToString(byte[] ba)
     return hex.ToString();
 }
 ```
+  </TabItem>
+</Tabs>
+

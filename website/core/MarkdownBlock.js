@@ -36,7 +36,7 @@ export default function MarkdownBlock({children}) {
   return (
     <div>
       <span>
-        <ReactMarkdown renderers={renderers}>{markdown}</ReactMarkdown>
+        <ReactMarkdown components={renderers}>{markdown}</ReactMarkdown>
       </span>
     </div>
   );

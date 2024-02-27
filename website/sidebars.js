@@ -43,18 +43,20 @@ const sidebars = {
       ],
       "API Reference": [
         'paynow_api',
-        'initiate_transaction',
+        'paynow_initiate',
         'express_checkout_transactions',
-        'complete_transaction',
         'status_update',
         'polling_status',
+        'complete_transaction',
         'generating_hash',
         'validating_hash',
         'initiate_ticket_transaction'
       ],
       "Library Source Docs": [
+        'sourcedocs_php',
         'sourcedocs_dotnet',
-        'sourcedocs_nodejs'
+        'sourcedocs_nodejs',
+       
       ]
     }
   };

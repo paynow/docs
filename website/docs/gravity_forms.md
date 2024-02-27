@@ -8,7 +8,7 @@ sidebar_label: Gravity Forms
 
 1. [WordPress](https://www.wordpress.org/)
 2. [Gravity Forms](https://www.gravityforms.com/)
-3. [Integration ID and Key](/docs/integration_generation.html)
+3. [Integration ID and Key](generation.md)
 
 ## Installation
 

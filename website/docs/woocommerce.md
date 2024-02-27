@@ -10,7 +10,7 @@ sidebar_label: WooCommerce
 
 1. [WordPress](https://www.wordpress.org/)
 2. [WooCommerce](https://wordpress.org/plugins/woocommerce/)
-3. [Integration ID and Key](/docs/integration_generation.html)
+3. [Integration ID and Key](generation.md)
 
 ## Installation
 

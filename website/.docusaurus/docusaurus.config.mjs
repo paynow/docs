@@ -6,12 +6,16 @@
 export default {
   "title": "Paynow Developer Hub",
   "tagline": "Integrate With Paynow & #GetPaid",
-  "url": "https://developers.paynow.co.zw",
+  "url": "https://paynowdocs.devpreview.net",
   "baseUrl": "/",
   "onBrokenLinks": "warn",
   "onBrokenMarkdownLinks": "warn",
+  "favicon": "/img/favicon.png",
   "projectName": "paynow-docs",
   "organizationName": "PaynowZW",
+  "scripts": [
+    "/js/custom.js"
+  ],
   "themeConfig": {
     "algolia": {
       "appId": "3H7ITVC7MS",
@@ -337,8 +341,7 @@ export default {
       "@docusaurus/preset-classic",
       {
         "docs": {
-          "sidebarPath": "C:\\xampp\\htdocs\\docs\\website\\sidebars.js",
-          "editUrl": "https://github.com/paynow/docs/edit/main/website/"
+          "sidebarPath": "C:\\xampp\\htdocs\\docs\\website\\sidebars.js"
         },
         "theme": {
           "customCss": "./src/css/custom.css"
@@ -367,7 +370,6 @@ export default {
   "customFields": {},
   "plugins": [],
   "themes": [],
-  "scripts": [],
   "headTags": [],
   "stylesheets": [],
   "clientModules": [],

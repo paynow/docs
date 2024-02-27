@@ -1,7 +1,7 @@
 ---
 id: status_update
 title: Status Update
-sidebar_label: Status Update
+sidebar_label: Payment Status Update
 ---
 ## Status update from Paynow
 Whenever the status of a transaction is changed, for example payment made, the Paynow server will send the following message to the merchant server. The message will be sent as an HTTP POST to the `resulturl` specified by the merchant when the transaction initiation occurred.

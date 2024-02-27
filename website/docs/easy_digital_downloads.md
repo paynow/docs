@@ -10,7 +10,7 @@ sidebar_label: Easy Digital Downloads
 
 1. [WordPress](https://www.wordpress.org/)
 2. [Easy Digital Downloads](https://wordpress.org/plugins/easy-digital-downloads/)
-3. [Integration ID and Key](/docs/integration_generation.html)
+3. [Integration ID and Key](/docs/generation.md)
 
 ## Installation
 

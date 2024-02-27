@@ -14,7 +14,7 @@ The images are supplied in .AI (Adobe Illustrator) and .SVG (Scalable Vector Gra
 
 Dark Background|Light Background
 ---|---
-<img width="350" src="/docs/assets/Paynow%20Badge-vector-hires%20LIGHT.svg"/>|<img width="350" src="/docs/assets/Paynow%20Badge-vector-hires%20DARK.svg"/>
+<img width="350" src="/assets/Paynow%20Badge-vector-hires%20LIGHT.svg"/>|<img width="350" src="/assets/Paynow%20Badge-vector-hires%20DARK.svg"/>
 
 </div>
 
@@ -22,21 +22,21 @@ Dark Background|Light Background
 
 Add To Cart|Buy Now
 ---|---
-<img width="350" src="/docs/assets/button_add-to-cart_large.svg"/>|<img width="350" src="/docs/assets/button_buy-now_large.svg"/>
+<img width="350" src="/assets/button_add-to-cart_large.svg"/>|<img width="350" src="/assets/button_buy-now_large.svg"/>
 <br/>
 
 Donate|Order
 ---|---
-<img width="350" src="/docs/assets/button_donate_large.svg" />|<img width="350" src="/docs/assets/button_order_large.svg"/>
+<img width="350" src="/assets/button_donate_large.svg" />|<img width="350" src="/assets/button_order_large.svg"/>
 <br/>
 
 Buy Now|Pay Now
 ---|---
-<img width="350" src="/docs/assets/button_buy-now_large.svg"/>|<img width="350" src="/docs/assets/button_pay-now_large.svg"/>
+<img width="350" src="/assets/button_buy-now_large.svg"/>|<img width="350" src="/assets/button_pay-now_large.svg"/>
 
 <br/>
 
 ## Download
 
-<a class="button" href="/docs/assets/PAYNOW_BUTTONS_AND_BADGES_2019_06.zip">Download assets</a>
+<a class="button" href="/assets/PAYNOW_BUTTONS_AND_BADGES_2019_06.zip">Download assets</a>
 

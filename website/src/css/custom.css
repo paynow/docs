@@ -109,7 +109,17 @@ body {
 .container .gridBlock .blockContent p {
     padding-bottom: 10px;
 }
-
+.containerV1
+{
+    margin-bottom: 60px;
+    margin-top: 25px;
+}
+.inner
+{
+   
+ 
+    padding-top: 50px;
+}
 .fixedHeaderContainer {
     padding: 15px 0;
     background: #fff;

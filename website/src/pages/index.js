@@ -6,11 +6,8 @@ import MarkdownBlock from '../components/core/MarkdownBlock';
 import GridBlock from '../components/core/GridBlock';
 import siteConfig from '../../docusaurus.config';
 import Layout from '@theme/Layout';
-import { Link } from 'react-router-dom';
 
-import '../css/custom.css';
 import '../components/core/legacyCSS.css';
-import CustomScriptComponent from '../components/CustomScriptComponent';
 
 
 function imgUrl(img) {
@@ -99,12 +96,12 @@ const FeatureCallout = props => (
   <div
     id="signupCallToAction"
     className="productShowcaseSection paddingBottom"
-    style={{textAlign: 'center'}}>
+    style={{textAlign: 'center', padding:'50px'}}>
     <div>
-      <p>Create a free developer account </p>
-      <Button id="signup" href={'https://forums.paynow.co.zw/signup'}>Sign up / Sign in</Button>
+      <p style={{marginTop:'5px'}}>Create a free developer account  </p>
+        <Button id="signup" href={'https://forums.paynow.co.zw/signup'}>Sign up / Sign in</Button>
     </div>
-    <MarkdownBlock>These are features of this project</MarkdownBlock>
+    
   </div>
 );
 
@@ -640,7 +637,7 @@ class Index extends React.Component {
       <div>
         <HomeSplash language={language} />
         <div className="mainContainer">
-        <CustomScriptComponent />
+      
 
           <FeatureCallout />
           <Features />

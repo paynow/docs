@@ -1,0 +1,500 @@
+{
+  "pluginId": "default",
+  "version": "current",
+  "label": "Next",
+  "banner": null,
+  "badge": false,
+  "noIndex": false,
+  "className": "docs-version-current",
+  "isLast": true,
+  "docsSidebars": {
+    "docs": [
+      {
+        "type": "category",
+        "label": "Getting Started",
+        "items": [
+          {
+            "type": "link",
+            "label": "Getting started",
+            "href": "/docs/quickstart",
+            "docId": "quickstart",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Generating Integration Keys",
+            "href": "/docs/integration_generation",
+            "docId": "integration_generation",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "How it works",
+            "href": "/docs/paynow_overview",
+            "docId": "paynow_overview",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Test Mode",
+            "href": "/docs/test_mode",
+            "docId": "test_mode",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Artwork and Buttons",
+            "href": "/docs/artwork",
+            "docId": "artwork",
+            "unlisted": false
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "Quick Start Guides",
+        "items": [
+          {
+            "type": "link",
+            "label": "PHP",
+            "href": "/docs/php_quickstart",
+            "docId": "php_quickstart",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": ".NET",
+            "href": "/docs/csharp_quickstart",
+            "docId": "csharp_quickstart",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Node.JS",
+            "href": "/docs/nodejs_quickstart",
+            "docId": "nodejs_quickstart",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Python",
+            "href": "/docs/python_quickstart",
+            "docId": "python_quickstart",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Java",
+            "href": "/docs/java_quickstart",
+            "docId": "java_quickstart",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "WooCommerce",
+            "href": "/docs/woocommerce",
+            "docId": "woocommerce",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Gravity Forms",
+            "href": "/docs/gravity_forms",
+            "docId": "gravity_forms",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Easy Digital Downloads",
+            "href": "/docs/easy_digital_downloads",
+            "docId": "easy_digital_downloads",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Shopify",
+            "href": "/docs/shopify",
+            "docId": "shopify",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Camptix",
+            "href": "/docs/camptix_nigelrodgers",
+            "docId": "camptix_nigelrodgers",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Magento",
+            "href": "/docs/magento_prizeless",
+            "docId": "magento_prizeless",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Spring Boot",
+            "href": "/docs/springboot_bmukorera_tzifudzi",
+            "docId": "springboot_bmukorera_tzifudzi",
+            "unlisted": false
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "Links & Buttons",
+        "items": [
+          {
+            "type": "link",
+            "label": "Simple Payment Request Button",
+            "href": "/docs/simple_paynow_request_button",
+            "docId": "simple_paynow_request_button",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Advanced Payment Request Button",
+            "href": "/docs/advanced_paynow_request_button",
+            "docId": "advanced_paynow_request_button",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Notification, Success & Cancel URLs",
+            "href": "/docs/notification_success_cancel_urls",
+            "docId": "notification_success_cancel_urls",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "URL Safe Base 64 Encoding",
+            "href": "/docs/url_safe_base64_encoding",
+            "docId": "url_safe_base64_encoding",
+            "unlisted": false
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "API Reference",
+        "items": [
+          {
+            "type": "link",
+            "label": "System Layout",
+            "href": "/docs/paynow_api",
+            "docId": "paynow_api",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Initiate a transaction",
+            "href": "/docs/paynow_initiate",
+            "docId": "paynow_initiate",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Express Checkout Transactions",
+            "href": "/docs/express_checkout_transactions",
+            "docId": "express_checkout_transactions",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Payment Status Update",
+            "href": "/docs/status_update",
+            "docId": "status_update",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Polling for a Status Update",
+            "href": "/docs/polling_status",
+            "docId": "polling_status",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Complete a Transaction",
+            "href": "/docs/complete_transaction",
+            "docId": "complete_transaction",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Generating Hash",
+            "href": "/docs/generating_hash",
+            "docId": "generating_hash",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Validating Hash",
+            "href": "/docs/validating_hash",
+            "docId": "validating_hash",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Initiate a Passenger Ticket Transaction",
+            "href": "/docs/initiate_ticket_transaction",
+            "docId": "initiate_ticket_transaction",
+            "unlisted": false
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      },
+      {
+        "type": "category",
+        "label": "Library Source Docs",
+        "items": [
+          {
+            "type": "link",
+            "label": "PHP",
+            "href": "/docs/sourcedocs_php",
+            "docId": "sourcedocs_php",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": ".NET",
+            "href": "/docs/sourcedocs_dotnet",
+            "docId": "sourcedocs_dotnet",
+            "unlisted": false
+          },
+          {
+            "type": "link",
+            "label": "Node.JS",
+            "href": "/docs/sourcedocs_nodejs",
+            "docId": "sourcedocs_nodejs",
+            "unlisted": false
+          }
+        ],
+        "collapsed": true,
+        "collapsible": true
+      }
+    ]
+  },
+  "docs": {
+    "advanced_paynow_request_button": {
+      "id": "advanced_paynow_request_button",
+      "title": "Advanced Payment Request Button",
+      "description": "How to Create",
+      "sidebar": "docs"
+    },
+    "artwork": {
+      "id": "artwork",
+      "title": "Artwork and Buttons",
+      "description": "In order to give your application a stronger association with our trusted Paynow brand, we've put together a collection of artwork you might want to use.",
+      "sidebar": "docs"
+    },
+    "camptix_nigelrodgers": {
+      "id": "camptix_nigelrodgers",
+      "title": "Paynow for Camptix (by Nigel Rodgers)",
+      "description": "Prerequisites",
+      "sidebar": "docs"
+    },
+    "complete_transaction": {
+      "id": "complete_transaction",
+      "title": "Complete a Transaction",
+      "description": "When the transaction has been completed the Paynow server will send a status update message to the merchant server using the resulturl specified by the merchant when the transaction initiation  occurred.",
+      "sidebar": "docs"
+    },
+    "csharp_quickstart": {
+      "id": "csharp_quickstart",
+      "title": "C# / .NET Quickstart Guide",
+      "description": "Sign in to Paynow and get integration details",
+      "sidebar": "docs"
+    },
+    "easy_digital_downloads": {
+      "id": "easy_digital_downloads",
+      "title": "Paynow for Easy Digital Downloads",
+      "description": "Easy Digital Downloads Banner",
+      "sidebar": "docs"
+    },
+    "express_checkout_transactions": {
+      "id": "express_checkout_transactions",
+      "title": "Express Checkout Transactions",
+      "description": "Please note that you have to do atleast two test transanctions before you can move on to  a live integrations.",
+      "sidebar": "docs"
+    },
+    "generating_hash": {
+      "id": "generating_hash",
+      "title": "Generating Hash",
+      "description": "Any message to or from Paynow must include a hash and the hash must be validated to ensure the authenticity of the message. To generate a hash value for the message follow the steps:",
+      "sidebar": "docs"
+    },
+    "generation_hash": {
+      "id": "generation_hash",
+      "title": "generation_hash",
+      "description": ""
+    },
+    "gravity_forms": {
+      "id": "gravity_forms",
+      "title": "Paynow for Gravity Forms",
+      "description": "Prerequisites",
+      "sidebar": "docs"
+    },
+    "initiate_mobile_transaction": {
+      "id": "initiate_mobile_transaction",
+      "title": "Initiate a mobile money transaction",
+      "description": "Mobile money transactions are currently supported on the EcoCash and OneMoney platforms."
+    },
+    "initiate_ticket_transaction": {
+      "id": "initiate_ticket_transaction",
+      "title": "Initiate a Passenger Ticket Transaction",
+      "description": "A merchant site that wants its customers to make payment for air tickets using Paynow can integrate using the initiatetickettransaction API.",
+      "sidebar": "docs"
+    },
+    "initiate_transaction": {
+      "id": "initiate_transaction",
+      "title": "Initiate a transaction",
+      "description": "When the customer is ready to make payment the merchant site must perform an Initiate Transaction"
+    },
+    "integration_generation": {
+      "id": "integration_generation",
+      "title": "Generating Integration Keys",
+      "description": "Signup and Key Generation",
+      "sidebar": "docs"
+    },
+    "java_quickstart": {
+      "id": "java_quickstart",
+      "title": "Java Quickstart Guide",
+      "description": "Sign in to Paynow and get integration details",
+      "sidebar": "docs"
+    },
+    "magento_prizeless": {
+      "id": "magento_prizeless",
+      "title": "Paynow for Magento (by Prizeless Technologies)",
+      "description": "Prerequisites",
+      "sidebar": "docs"
+    },
+    "nodejs_quickstart": {
+      "id": "nodejs_quickstart",
+      "title": "Node.JS Quickstart Guide",
+      "description": "Sign in to Paynow and get integration details",
+      "sidebar": "docs"
+    },
+    "notification_success_cancel_urls": {
+      "id": "notification_success_cancel_urls",
+      "title": "Notification, Success & Cancel URLs",
+      "description": "How they work",
+      "sidebar": "docs"
+    },
+    "paynow_api": {
+      "id": "paynow_api",
+      "title": "System Layout",
+      "description": "The Paynow interface relies on HTTP POSTs to exchange data between the merchant site and the Paynow server and HTTP GETs to redirect the customer.",
+      "sidebar": "docs"
+    },
+    "paynow_initiate": {
+      "id": "paynow_initiate",
+      "title": "Initiate Transaction",
+      "description": "This page outlines the process for initiating a transaction. Here, you will submit your payment details to Paynow. In response, Paynow will provide a link from which you can complete your payment.",
+      "sidebar": "docs"
+    },
+    "paynow_overview": {
+      "id": "paynow_overview",
+      "title": "How it works",
+      "description": "How Paynow Works - Request flow",
+      "sidebar": "docs"
+    },
+    "php_quickstart": {
+      "id": "php_quickstart",
+      "title": "PHP Quickstart Guide",
+      "description": "Sign in to Paynow and get integration details",
+      "sidebar": "docs"
+    },
+    "polling_status": {
+      "id": "polling_status",
+      "title": "Polling for a Status Update",
+      "description": "The merchant site can poll for a current transaction status to Paynow at any point, but it should only be done in the following two scenarios:",
+      "sidebar": "docs"
+    },
+    "python_quickstart": {
+      "id": "python_quickstart",
+      "title": "Python Quickstart Guide",
+      "description": "Sign in to Paynow and get integration details",
+      "sidebar": "docs"
+    },
+    "quickstart": {
+      "id": "quickstart",
+      "title": "Getting Started",
+      "description": "Setup",
+      "sidebar": "docs"
+    },
+    "shopify": {
+      "id": "shopify",
+      "title": "Paynow for Shopify",
+      "description": "Shopify Logo",
+      "sidebar": "docs"
+    },
+    "simple_paynow_request_button": {
+      "id": "simple_paynow_request_button",
+      "title": "Simple Payment Request Button",
+      "description": "How to Create",
+      "sidebar": "docs"
+    },
+    "sourcedocs_dotnet": {
+      "id": "sourcedocs_dotnet",
+      "title": "Source Docs for .NET Library",
+      "description": "Class: Webdev.Core.CanFail",
+      "sidebar": "docs"
+    },
+    "sourcedocs_nodejs": {
+      "id": "sourcedocs_nodejs",
+      "title": "Source Docs for Node.js Library",
+      "description": "Class: InitResponse",
+      "sidebar": "docs"
+    },
+    "sourcedocs_php": {
+      "id": "sourcedocs_php",
+      "title": "Source Docs for PHP Library",
+      "description": "Class: \\Paynow\\Core\\Constants",
+      "sidebar": "docs"
+    },
+    "springboot_bmukorera_tzifudzi": {
+      "id": "springboot_bmukorera_tzifudzi",
+      "title": "Spring Boot Project QuickStart for Paynow",
+      "description": "Want to create a Spring Boot project that uses the latest release of the official Paynow Java SDK? Then this quickstart project is just for you! It is a nice starting point for creating a Paynow Spring Boot project.",
+      "sidebar": "docs"
+    },
+    "status_update": {
+      "id": "status_update",
+      "title": "Status Update",
+      "description": "Status update from Paynow",
+      "sidebar": "docs"
+    },
+    "test_mode": {
+      "id": "test_mode",
+      "title": "Test Mode",
+      "description": "When you first create an integration it is in test mode.  Test mode allows you to create, cancel and pay a transaction to test all possible scenarios with your system.  However no actual money is moved and you do not need access to Visa/MasterCard/Vpayments/EcoCash/TeleCash/OneMoney to do a test transaction.",
+      "sidebar": "docs"
+    },
+    "url_safe_base64_encoding": {
+      "id": "url_safe_base64_encoding",
+      "title": "URL Safe Base 64 Encoding",
+      "description": "Base64 encoding of strings can result in characters like +, = and / which are not URL safe i.e. if included in a URL they would change the meaning/path of the URL.",
+      "sidebar": "docs"
+    },
+    "validating_hash": {
+      "id": "validating_hash",
+      "title": "Validating a hash on an inbound message",
+      "description": "Take the following example message of a Paynow response message:",
+      "sidebar": "docs"
+    },
+    "woocommerce": {
+      "id": "woocommerce",
+      "title": "Paynow for WooCommerce",
+      "description": "WooCommerce",
+      "sidebar": "docs"
+    }
+  }
+}

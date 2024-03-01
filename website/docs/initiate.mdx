@@ -1,0 +1,410 @@
+---
+id: paynow_initiate
+title: Initiate Transaction
+sidebar_label: Initiate a transaction
+hide_table_of_contents: true
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Admonition from "@theme/Admonition";
+import CodeBlock from '@theme/CodeBlock';
+
+<div style={{ display: 'flex', flexDirection: 'row', flexWrap:'nowrap' }}>
+ <div style={{ width: '55%', marginBottom: '20px',}}>
+  <Admonition type="info" title="Summary">
+        <p>This page outlines the process for initiating a transaction. Here, you will submit your payment details to Paynow. In response, Paynow will provide a link from which you can complete your payment.</p>
+        <p>After Payment completion you get payment status  on  your result, as shown here [Get status update](status_update.md)</p>
+      </Admonition>
+
+        <Admonition type="info" title="Testing Environment">
+        <p>Please note that you should process atleast 2 test transactions before you can set your integration to live</p>
+        <p>Please note that `authemail` should be your Paynow registered email when doing a test transaction</p>
+      </Admonition>
+    <p>When the customer is ready to make payment, the merchant site must perform an Initiate Transaction request. This request is in the form of an HTTP POST to the URL:</p>
+    <div style={{ backgroundColor: '#f0f0f0', padding: '10px', borderRadius: '5px', marginBottom: '10px', marginTop:'10px'}}>
+      <code>
+        <span style={{ color: '#008000' }}>POST </span> <span style={{ color: '#0000FF' }}>https://www.paynow.co.zw/interface/initiatetransaction</span>
+      </code>
+    </div>
+    
+     <p>HTTP POST should include the following fields:</p>
+    <table style={{ fontSize: '0.9em', width: '100%'}}>
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Data Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>id</td>
+          <td>Integer</td>
+          <td>Integration ID shown to the merchant in the “3rd Party Site or Link Profile” area of “Receive Payment Links” section of “Sell or Receive” on Paynow.</td>
+        </tr>
+        <tr>
+          <td>reference</td>
+          <td>String</td>
+          <td>The transaction’s reference on the merchant site, this should be unique to the transaction.</td>
+        </tr>
+        <tr>
+          <td>amount</td>
+          <td>Decimal</td>
+          <td>Final amount of the transaction to two decimal places (do not include a currency symbol).</td>
+        </tr>
+        <tr>
+          <td>additionalinfo</td>
+          <td>String</td>
+          <td>(*optional*) Additional info to be displayed on Paynow to the Customer. This should not include any confidential information.</td>
+        </tr>
+        <tr>
+          <td>returnurl</td>
+          <td>String</td>
+          <td>The URL on the merchant website the customer will be returned to after the transaction has been processed. It is recommended this URL contains enough information for the merchant site to identify the transaction.</td>
+        </tr>
+        <tr>
+          <td>resulturl</td>
+          <td>String</td>
+          <td>The URL on the merchant website Paynow will post transaction results to. It is recommended this URL contains enough information for the merchant site to identify the transaction.</td>
+        </tr>
+        <tr>
+          <td>authemail</td>
+          <td>String</td>
+          <td>(*optional*) If the field is present and set to an email address Paynow will attempt to auto login the customers email address as an anonymous user. If the email address has a registered account the user will be prompted to login to that account.</td>
+        </tr>
+        <tr>
+          <td>authphone</td>
+          <td>String</td>
+          <td>(*optional*) If the field is present and set to a valid mobile phone number, Paynow will attempt to use it as the customers mobile number for the duration of their session.</td>
+        </tr>
+        <tr>
+          <td>authname</td>
+          <td>String</td>
+          <td>(*optional*) If the field is present, Paynow will attempt to use it as the customers name for the duration of their session.</td>
+        </tr>
+        <tr>
+          <td>tokenize</td>
+          <td>Boolean</td>
+          <td>(*optional*) If set to true and the customer uses Visa/Mastercard to complete the transaction, the tokenized payment instrument will be returned in the **status update** which can be used for recurring payments without requiring further input from the card holder. **N.B.** *A merchant may only use this field if permitted to tokenize payment instruments. Contact support@paynow.co.zw to apply for this functionality.*</td>
+        </tr>
+        <tr>
+          <td>merchanttrace</td>
+          <td>String</td>
+          <td>(*optional*) Must be unique per merchant if specified. Can be up to 32 characters in length. Used to check the status of a transaction in the event of a timeout or network error.</td>
+        </tr>
+        <tr>
+          <td>status</td>
+          <td>String</td>
+          <td>Should be set to “Message” at this stage of the transaction.</td>
+        </tr>
+        <tr>
+          <td>hash</td>
+          <td>String</td>
+          <td>Details of Hash generation are provided in the [Generating Hash](generating_hash.md) section.</td>
+        </tr>
+      </tbody>
+    </table>
+<div>
+  <h2>Success</h2>
+  <p>If the initiate transaction request is successful, Paynow will reply with a message as a string and
+  formatted as an HTTP Post, i.e., each field separated by a "&amp;" and Key Value pairs separated by an "=" and
+  all Values URL Encoded.</p>
+
+  <p>The message will contain the following fields:</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Data Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>browserurl</td>
+        <td>String</td>
+        <td>The URL on Paynow that the merchant site will redirect the Customer’s browser to. Upon redirect, the Customer will perform their transaction.</td>
+      </tr>
+      <tr>
+        <td>pollurl</td>
+        <td>String</td>
+        <td>The URL on Paynow the merchant site can poll to confirm the transaction’s current status.</td>
+      </tr>
+      <tr>
+        <td>status</td>
+        <td>String</td>
+        <td>Set to “Ok” at this stage of the transaction.</td>
+      </tr>
+      <tr>
+        <td>hash</td>
+        <td>String</td>
+        <td>Details of Hash generation are provided in a later section of this document.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <blockquote>
+    <p>It is vital that the merchant site verify the hash value contained in the message before redirecting the Customer to the <code>browserurl</code>.</p>
+  </blockquote>
+
+  <p>Below is an example of a successful initiate transaction request:</p>
+
+   <CodeBlock
+        language="http">{
+          `Status=Ok&BrowserUrl=http%3a%2f%2fwww.paynow.co.zw%3a7106%2fPayment%2fConfirmPayment%2f1169&PollUrl=http%3a%2f%2fwww.paynow.co.zw%3a7106%2fInterface%2fCheckPayment%2f%3fg uid%3d3cb27f4b-b3ef-4d1f-9178-5e5e62a43995&Hash=8614C21DD93749339906DB35C51B06006B33DC8C192F40DFE2DB6549942C837C4452E1D1333DE9DB7814B278C8B9E3C34D1A76D2F937DEE57502336E0A071412`
+        }
+      </CodeBlock>
+
+  <h2>Error</h2>
+  <p>If the initiate transaction request failed, Paynow will reply with a message as a string and formatted as an HTTP Post, i.e., each field separated by a "&amp;" and Key Value pairs separated by an "=" and all Values URL Encoded.</p>
+
+  <p>The message will contain the following fields:</p>
+
+  <table style={{width:'100%'}}>
+    <thead>
+      <tr>
+        <th>Field</th>
+        <th>Data Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>status</td>
+        <td>String</td>
+        <td>Set to “Error” at this stage of the transaction.</td>
+      </tr>
+      <tr>
+        <td>error</td>
+        <td>String</td>
+        <td>Details of the failure on Paynow.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Below is an example of an unsuccessful initiate transaction request:</p>
+
+ <CodeBlock
+        language="http">{`Status=Error&Error=Invalid+amount+field`}
+      </CodeBlock>
+
+</div>
+
+  </div>
+  <div  style={{ width:"45%",padding:'10px'  }}>
+    <Tabs groupId="samples">
+      <TabItem value="cURL" label="cURL" >
+        ```js
+        curl -X POST \
+          https://www.paynow.co.zw/interface/initiatetransaction \
+          -H 'Content-Type: application/json' \
+          -d '{
+            "id": 123456, 
+            "reference": "TXN123456789", 
+            "amount": 100.00, 
+            "additionalinfo": "Additional information for the customer", 
+            "returnurl": "https://example.com/payment/success", 
+            "resulturl": "https://example.com/payment/result", 
+            "authemail": "customer@example.com", 
+            "tokenize": false, 
+            "merchanttrace": "TRACE123456", 
+            "status": "Message", 
+            "hash": "followTheGenerateHashTutorial"
+          }'
+        ```
+      </TabItem>
+      <TabItem value="php" label="PHP">
+      ## Installation
+
+Install the library using composer
+
+```sh
+$ composer require paynow/php-sdk
+```
+
+       ```php
+
+require_once('./paynow/vendor/autoload.php');
+
+$paynow = new Paynow\Payments\Paynow(
+'INTEGRATION_ID',
+'INTEGRATION_KEY',
+'http://example.com/gateways/paynow/update',
+
+    // The return url can be set at later stages. You might want to do this if you want to pass data to the return url (like the reference of the transaction)
+    'http://example.com/return?gateway=paynow'
+
+);
+
+# $paynow->setResultUrl('');
+
+# $paynow->setReturnUrl('');
+
+$payment = $paynow->createPayment('Invoice 35', 'melmups@outlook.com');
+
+$payment->add('Sadza and Beans', 1.25);
+
+$response = $paynow->send($payment);
+
+if($response->success()) {
+// Or if you prefer more control, get the link to redirect the user to, then use it as you see fit
+$link = $response->redirectUrl();
+
+    $pollUrl = $response->pollUrl();
+
+
+    // Check the status of the transaction
+    $status = $paynow->pollTransaction($pollUrl);
+
+}
+
+````
+      </TabItem>
+      <TabItem value="node" label="NodeJs">
+      ## Installation
+
+Install the library using NPM or yarn
+
+### npm
+
+```sh
+$ npm install --save paynow
+````
+
+### yarn
+
+```sh
+$ yarn add paynow
+```
+
+## Full Usage Example
+
+```javascript
+// Require in the Paynow class
+const { Paynow } = require("paynow");
+
+// Create instance of Paynow class
+let paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
+
+// Set return and result urls
+paynow.resultUrl = "http://example.com/gateways/paynow/update";
+paynow.returnUrl =
+  "http://example.com/return?gateway=paynow&merchantReference=1234";
+
+// Create a new payment
+let payment = paynow.createPayment("Invoice 35");
+
+// Add items to the payment list passing in the name of the item and it's price
+payment.add("Bananas", 2.5);
+payment.add("Apples", 3.4);
+
+// Send off the payment to Paynow
+paynow.send(payment).then((response) => {
+  // Check if request was successful
+  if (response.success) {
+    // Get the link to redirect the user to, then use it as you see fit
+    let link = response.redirectUrl;
+
+    // Save poll url, maybe (recommended)?
+    let pollUrl = response.pollUrl;
+  }
+});
+```
+
+      </TabItem>
+
+        <TabItem value="python" label="Python">
+
+
+## Installation
+
+Install the library using pip
+
+```sh
+$ pip install paynow
+```
+
+```python
+from paynow import Paynow
+
+
+paynow = Paynow(
+	'INTEGRATION_ID',
+	'INTEGRATION_KEY',
+	'http://google.com',
+	'http://google.com'
+	)
+
+payment = paynow.create_payment('Order', 'test@example.com')
+
+payment.add('Payment for stuff', 1)
+
+response = paynow.send(payment)
+
+
+if response.success:
+
+  # Get the link to redirect the user to, then use it as you see fit
+	link = response.redirect_url
+
+	# Get the poll url (used to check the status of a transaction). You might want to save this in your DB
+	pollUrl = response.poll_url
+```
+
+      </TabItem>
+      <TabItem value=".net" label=".NET">
+              ### Installing using Nuget
+
+        From the Nuget package manager console, enter the follwing command
+
+        ```sh
+        PM> Install-Package Paynow
+        ```
+
+        ```csharp
+        // Require in the Paynow class
+        using System;
+        using Webdev.Payments.Paynow;
+
+
+        class Program
+        {
+            public static void Main(string[] args)
+            {
+                // Create an instance of the paynow class
+                var paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
+
+                paynow.ResultUrl = "http://example.com/gateways/paynow/update";
+                paynow.ReturnUrl = "http://example.com/return?gateway=paynow";
+                // The return url can be set at later stages. You might want to do this if you want to pass data to the return url (like the reference of the transaction)
+
+                // Create a new payment
+                var payment = paynow.CreatePayment("Invoice 35");
+
+                // Send payment to paynow
+                var response = paynow.Send(payment);
+
+                // Add items to the payment
+                payment.Add("Bananas", 2.5);
+                payment.Add("Apples", 3.4);
+
+                // Check if payment was sent without error
+                if(response.Success())
+                {
+                    // Get the url to redirect the user to so they can make payment
+                    var link = response.RedirectLink();
+
+                    // Get the poll url of the transaction
+                    var pollUrl = response.PollUrl();
+                }
+            }
+        }
+```
+
+</TabItem>
+    </Tabs>
+
+  </div>
+</div>

@@ -1,0 +1,28 @@
+{
+  "id": "artwork",
+  "title": "Artwork and Buttons",
+  "description": "In order to give your application a stronger association with our trusted Paynow brand, we've put together a collection of artwork you might want to use.",
+  "source": "@site/docs/artwork.md",
+  "sourceDirName": ".",
+  "slug": "/artwork",
+  "permalink": "/docs/artwork",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/artwork.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "artwork",
+    "title": "Artwork and Buttons",
+    "sidebar_label": "Artwork and Buttons"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Test Mode",
+    "permalink": "/docs/test_mode"
+  },
+  "next": {
+    "title": "PHP",
+    "permalink": "/docs/php_quickstart"
+  }
+}

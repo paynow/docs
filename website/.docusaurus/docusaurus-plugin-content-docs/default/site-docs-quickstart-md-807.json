@@ -1,0 +1,24 @@
+{
+  "id": "quickstart",
+  "title": "Getting Started",
+  "description": "Setup",
+  "source": "@site/docs/quickstart.md",
+  "sourceDirName": ".",
+  "slug": "/quickstart",
+  "permalink": "/docs/quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/quickstart.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "quickstart",
+    "title": "Getting Started",
+    "sidebar_label": "Getting started"
+  },
+  "sidebar": "docs",
+  "next": {
+    "title": "Generating Integration Keys",
+    "permalink": "/docs/integration_generation"
+  }
+}

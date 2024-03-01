@@ -1,0 +1,28 @@
+{
+  "id": "express_checkout_transactions",
+  "title": "Express Checkout Transactions",
+  "description": "An express checkout transaction allows the integrator to capture the customers payment method and details inside their application and initiate payment without redirecting the user to Paynow. This is ideal for mobile applications; however, integrators should be aware of PCI DSS requirements for capturing Visa/Mastercard details within their applications.",
+  "source": "@site/docs/express_checkout_transactions.md",
+  "sourceDirName": ".",
+  "slug": "/express_checkout_transactions",
+  "permalink": "/docs/express_checkout_transactions",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/express_checkout_transactions.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "express_checkout_transactions",
+    "title": "Express Checkout Transactions",
+    "sidebar_label": "Express Checkout Transactions"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Initiate a transaction",
+    "permalink": "/docs/paynow_initiate"
+  },
+  "next": {
+    "title": "Complete a Transaction",
+    "permalink": "/docs/complete_transaction"
+  }
+}

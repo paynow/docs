@@ -1,0 +1,28 @@
+{
+  "id": "simple_paynow_request_button",
+  "title": "Simple Payment Request Button",
+  "description": "How to Create",
+  "source": "@site/docs/simple_paynow_request_button.md",
+  "sourceDirName": ".",
+  "slug": "/simple_paynow_request_button",
+  "permalink": "/docs/simple_paynow_request_button",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/simple_paynow_request_button.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "simple_paynow_request_button",
+    "title": "Simple Payment Request Button",
+    "sidebar_label": "Simple Payment Request Button"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Spring Boot",
+    "permalink": "/docs/springboot_bmukorera_tzifudzi"
+  },
+  "next": {
+    "title": "Advanced Payment Request Button",
+    "permalink": "/docs/advanced_paynow_request_button"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "springboot_bmukorera_tzifudzi",
+  "title": "Spring Boot Project QuickStart for Paynow",
+  "description": "Want to create a Spring Boot project that uses the latest release of the official Paynow Java SDK? Then this quickstart project is just for you! It is a nice starting point for creating a Paynow Spring Boot project.",
+  "source": "@site/docs/springboot_bmukorera_tzifudzi.md",
+  "sourceDirName": ".",
+  "slug": "/springboot_bmukorera_tzifudzi",
+  "permalink": "/docs/springboot_bmukorera_tzifudzi",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/springboot_bmukorera_tzifudzi.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "springboot_bmukorera_tzifudzi",
+    "title": "Spring Boot Project QuickStart for Paynow",
+    "sidebar_label": "Spring Boot"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Magento",
+    "permalink": "/docs/magento_prizeless"
+  },
+  "next": {
+    "title": "Simple Payment Request Button",
+    "permalink": "/docs/simple_paynow_request_button"
+  }
+}

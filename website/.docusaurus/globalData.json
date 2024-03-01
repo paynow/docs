@@ -1,0 +1,214 @@
+{
+  "docusaurus-plugin-google-gtag": {
+    "default": {
+      "trackingID": [
+        "UA-126207230-1"
+      ],
+      "anonymizeIP": true,
+      "id": "default"
+    }
+  },
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs",
+          "mainDocId": "quickstart",
+          "docs": [
+            {
+              "id": "advanced_paynow_request_button",
+              "path": "/docs/advanced_paynow_request_button",
+              "sidebar": "docs"
+            },
+            {
+              "id": "artwork",
+              "path": "/docs/artwork",
+              "sidebar": "docs"
+            },
+            {
+              "id": "camptix_nigelrodgers",
+              "path": "/docs/camptix_nigelrodgers",
+              "sidebar": "docs"
+            },
+            {
+              "id": "complete_transaction",
+              "path": "/docs/complete_transaction",
+              "sidebar": "docs"
+            },
+            {
+              "id": "csharp_quickstart",
+              "path": "/docs/csharp_quickstart",
+              "sidebar": "docs"
+            },
+            {
+              "id": "easy_digital_downloads",
+              "path": "/docs/easy_digital_downloads",
+              "sidebar": "docs"
+            },
+            {
+              "id": "express_checkout_transactions",
+              "path": "/docs/express_checkout_transactions",
+              "sidebar": "docs"
+            },
+            {
+              "id": "generating_hash",
+              "path": "/docs/generating_hash",
+              "sidebar": "docs"
+            },
+            {
+              "id": "generation_hash",
+              "path": "/docs/generation_hash"
+            },
+            {
+              "id": "gravity_forms",
+              "path": "/docs/gravity_forms",
+              "sidebar": "docs"
+            },
+            {
+              "id": "initiate_mobile_transaction",
+              "path": "/docs/initiate_mobile_transaction"
+            },
+            {
+              "id": "initiate_ticket_transaction",
+              "path": "/docs/initiate_ticket_transaction",
+              "sidebar": "docs"
+            },
+            {
+              "id": "initiate_transaction",
+              "path": "/docs/initiate_transaction"
+            },
+            {
+              "id": "integration_generation",
+              "path": "/docs/integration_generation",
+              "sidebar": "docs"
+            },
+            {
+              "id": "java_quickstart",
+              "path": "/docs/java_quickstart",
+              "sidebar": "docs"
+            },
+            {
+              "id": "magento_prizeless",
+              "path": "/docs/magento_prizeless",
+              "sidebar": "docs"
+            },
+            {
+              "id": "nodejs_quickstart",
+              "path": "/docs/nodejs_quickstart",
+              "sidebar": "docs"
+            },
+            {
+              "id": "notification_success_cancel_urls",
+              "path": "/docs/notification_success_cancel_urls",
+              "sidebar": "docs"
+            },
+            {
+              "id": "paynow_api",
+              "path": "/docs/paynow_api",
+              "sidebar": "docs"
+            },
+            {
+              "id": "paynow_initiate",
+              "path": "/docs/paynow_initiate",
+              "sidebar": "docs"
+            },
+            {
+              "id": "paynow_overview",
+              "path": "/docs/paynow_overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "php_quickstart",
+              "path": "/docs/php_quickstart",
+              "sidebar": "docs"
+            },
+            {
+              "id": "polling_status",
+              "path": "/docs/polling_status",
+              "sidebar": "docs"
+            },
+            {
+              "id": "python_quickstart",
+              "path": "/docs/python_quickstart",
+              "sidebar": "docs"
+            },
+            {
+              "id": "quickstart",
+              "path": "/docs/quickstart",
+              "sidebar": "docs"
+            },
+            {
+              "id": "shopify",
+              "path": "/docs/shopify",
+              "sidebar": "docs"
+            },
+            {
+              "id": "simple_paynow_request_button",
+              "path": "/docs/simple_paynow_request_button",
+              "sidebar": "docs"
+            },
+            {
+              "id": "sourcedocs_dotnet",
+              "path": "/docs/sourcedocs_dotnet",
+              "sidebar": "docs"
+            },
+            {
+              "id": "sourcedocs_nodejs",
+              "path": "/docs/sourcedocs_nodejs",
+              "sidebar": "docs"
+            },
+            {
+              "id": "sourcedocs_php",
+              "path": "/docs/sourcedocs_php",
+              "sidebar": "docs"
+            },
+            {
+              "id": "springboot_bmukorera_tzifudzi",
+              "path": "/docs/springboot_bmukorera_tzifudzi",
+              "sidebar": "docs"
+            },
+            {
+              "id": "status_update",
+              "path": "/docs/status_update",
+              "sidebar": "docs"
+            },
+            {
+              "id": "test_mode",
+              "path": "/docs/test_mode",
+              "sidebar": "docs"
+            },
+            {
+              "id": "url_safe_base64_encoding",
+              "path": "/docs/url_safe_base64_encoding",
+              "sidebar": "docs"
+            },
+            {
+              "id": "validating_hash",
+              "path": "/docs/validating_hash",
+              "sidebar": "docs"
+            },
+            {
+              "id": "woocommerce",
+              "path": "/docs/woocommerce",
+              "sidebar": "docs"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/docs/quickstart",
+                "label": "quickstart"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

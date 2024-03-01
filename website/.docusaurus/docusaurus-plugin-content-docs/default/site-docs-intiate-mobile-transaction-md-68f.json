@@ -1,0 +1,19 @@
+{
+  "id": "initiate_mobile_transaction",
+  "title": "Initiate a mobile money transaction",
+  "description": "Mobile money transactions are currently supported on the EcoCash and OneMoney platforms.",
+  "source": "@site/docs/intiate_mobile_transaction.md",
+  "sourceDirName": ".",
+  "slug": "/initiate_mobile_transaction",
+  "permalink": "/docs/initiate_mobile_transaction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/intiate_mobile_transaction.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "initiate_mobile_transaction",
+    "title": "Initiate a mobile money transaction",
+    "sidebar_label": "Initiate a mobile money transaction"
+  }
+}

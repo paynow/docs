@@ -1,0 +1,28 @@
+{
+  "id": "notification_success_cancel_urls",
+  "title": "Notification, Success & Cancel URLs",
+  "description": "How they work",
+  "source": "@site/docs/notification_success_cancel_urls.md",
+  "sourceDirName": ".",
+  "slug": "/notification_success_cancel_urls",
+  "permalink": "/docs/notification_success_cancel_urls",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/notification_success_cancel_urls.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "notification_success_cancel_urls",
+    "title": "Notification, Success & Cancel URLs",
+    "sidebar_label": "Notification, Success & Cancel URLs"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Advanced Payment Request Button",
+    "permalink": "/docs/advanced_paynow_request_button"
+  },
+  "next": {
+    "title": "URL Safe Base 64 Encoding",
+    "permalink": "/docs/url_safe_base64_encoding"
+  }
+}

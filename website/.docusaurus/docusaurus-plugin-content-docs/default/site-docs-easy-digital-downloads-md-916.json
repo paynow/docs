@@ -1,0 +1,28 @@
+{
+  "id": "easy_digital_downloads",
+  "title": "Paynow for Easy Digital Downloads",
+  "description": "Easy Digital Downloads Banner",
+  "source": "@site/docs/easy_digital_downloads.md",
+  "sourceDirName": ".",
+  "slug": "/easy_digital_downloads",
+  "permalink": "/docs/easy_digital_downloads",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/easy_digital_downloads.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "easy_digital_downloads",
+    "title": "Paynow for Easy Digital Downloads",
+    "sidebar_label": "Easy Digital Downloads"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Gravity Forms",
+    "permalink": "/docs/gravity_forms"
+  },
+  "next": {
+    "title": "Shopify",
+    "permalink": "/docs/shopify"
+  }
+}

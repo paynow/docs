@@ -1,0 +1,28 @@
+{
+  "id": "complete_transaction",
+  "title": "Complete a Transaction",
+  "description": "When the transaction has been completed the Paynow server will send a status update message to the merchant server using the resulturl specified by the merchant when the transaction initiation  occurred.",
+  "source": "@site/docs/complete_transaction.md",
+  "sourceDirName": ".",
+  "slug": "/complete_transaction",
+  "permalink": "/docs/complete_transaction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/complete_transaction.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "complete_transaction",
+    "title": "Complete a Transaction",
+    "sidebar_label": "Complete a Transaction"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Polling for a Status Update",
+    "permalink": "/docs/polling_status"
+  },
+  "next": {
+    "title": "Generating Hash",
+    "permalink": "/docs/generating_hash"
+  }
+}

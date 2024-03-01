@@ -1,0 +1,28 @@
+{
+  "id": "paynow_api",
+  "title": "System Layout",
+  "description": "The Paynow interface relies on HTTP POSTs to exchange data between the merchant site and the Paynow server and HTTP GETs to redirect the customer.",
+  "source": "@site/docs/paynow_api.md",
+  "sourceDirName": ".",
+  "slug": "/paynow_api",
+  "permalink": "/docs/paynow_api",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/paynow_api.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "paynow_api",
+    "title": "System Layout",
+    "sidebar_label": "System Layout"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "URL Safe Base 64 Encoding",
+    "permalink": "/docs/url_safe_base64_encoding"
+  },
+  "next": {
+    "title": "Initiate a transaction",
+    "permalink": "/docs/paynow_initiate"
+  }
+}

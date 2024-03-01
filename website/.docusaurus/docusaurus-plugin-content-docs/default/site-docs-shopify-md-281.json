@@ -1,0 +1,28 @@
+{
+  "id": "shopify",
+  "title": "Paynow for Shopify",
+  "description": "Shopify Logo",
+  "source": "@site/docs/shopify.md",
+  "sourceDirName": ".",
+  "slug": "/shopify",
+  "permalink": "/docs/shopify",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/shopify.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "shopify",
+    "title": "Paynow for Shopify",
+    "sidebar_label": "Shopify"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Easy Digital Downloads",
+    "permalink": "/docs/easy_digital_downloads"
+  },
+  "next": {
+    "title": "Camptix",
+    "permalink": "/docs/camptix_nigelrodgers"
+  }
+}

@@ -1,0 +1,300 @@
+---
+id: express_checkout_transactions
+title: Express Checkout Transactions
+sidebar_label: Express Checkout Transactions
+---
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Admonition from '@theme/Admonition';
+
+ <Admonition type="info" title="Testing Enviroment">
+        <p>Please note that you have to do atleast two test transanctions before you can move on to  a live integrations.</p>
+        <p>[Click here ](status_update.md) to get testing numbers.</p>
+  </Admonition>
+
+An express checkout transaction allows the integrator to capture the customers payment method and details inside their application and initiate payment without redirecting the user to Paynow. This is ideal for mobile applications; however, integrators should be aware of PCI DSS requirements for capturing Visa/Mastercard details within their applications.
+
+Express checkout transactions currently support EcoCash, OneMoney, InnBucks, PayGo and Visa/Mastercard payment methods.
+
+For EcoCash and OneMoney, the mobile subscriber specified in the initiate message will have a USSD session pushed to their handset prompting them to enter their mobile wallet PIN number to authorize the transaction (or to cancel the transaction).
+
+## Initiate an Express Checkout Transaction
+
+To initiate an express checkout transaction, an HTTP POST request should be made to the URL:
+
+[https://www.paynow.co.zw/interface/remotetransaction](https://www.paynow.co.zw/interface/remotetransaction)
+
+The fields below are required in addition to those specified in the [Initiate a Transaction](initiate.mdx) section
+
+| Required For | Field | Data Type | Description |
+| --- | --- | --- | --- |
+| All | method | String | ecocash = Ecocash mobile money **OR** onemoney = OneMoney mobile money  **OR** vmc = Visa Mastercard **OR** innbucks = InnBucks **OR** paygo = PayGo |
+| Mobile Money | phone | String | The subscriber number of the mobile money wallet to be debited |
+| Visa/Mastercard | token | String | A token returned by a previous tokenized transaction. Used to carry out recurring payments without requiring further input from the card holder |
+| Visa/Mastercard | merchanttrace | String | A unique merchanttrace is required for each request to ensure that no duplicate debits are processed in the event of a request timeout or network interruption |
+
+## Important Notes
+### Integration
+
+The integration ID you use must be configured in Paynow to include the selected payment method e.g. if you use `method=ecocash` then the integration ID must be configured to include an EcoCash payment method
+
+### InnBucks
+An express checkout request for InnBucks will return the following additional values:
+- **authorizationcode** - the authorization code for the InnBucks transaction (display to customer)
+- **authorizationexpires** - the date and time at which the given authorization code will expire, in the format d-MMM-yyyy HH:mm (display to customer)
+
+The authorization code can also be displayed as a QR code to be scanned by the InnBucks mobile app. See [https://developers.google.com/chart/infographics/docs/qr_codes](https://developers.google.com/chart/infographics/docs/qr_codes) for more details on generating a QR code
+
+You should also present the customer with a deep link [schinn.wbpycode://innbucks.co.zw?pymInnCode=xxxxxx](schinn.wbpycode://innbucks.co.zw?pymInnCode=xxxxxx) where `xxxxxx` is replaced with the authorization code, which can be used to initiate a transaction in the InnBucks mobile app
+
+### PayGo
+
+An express checkout request for PayGo will return the following additional values:
+- **authorizationcode** - the authorization code for the PayGo transaction (display to customer)
+- **authorizationqr** - a URL to the QR code for the PayGo transaction (display to customer)
+- **authorizationexpires** - the date and time at which the authorization code will expire in the format d-MMM-yyyy HH:mm (display to customer)
+
+### Visa/Mastercard
+
+For Visa/Mastercard **token** transactions, the **merchanttrace** field is required. These transactions will be automatically re-tokenized during the payment and the new token returned in the status update callback message
+
+### Code Examples
+<Tabs groupId="samples">
+      <TabItem value="cURL" label="cURL" >
+        ```js
+        curl -X POST \
+          https://www.paynow.co.zw/interface/remotetransaction \
+          -H 'Content-Type: application/json' \
+          -d '{
+            "id": 123456, 
+            "reference": "TXN123456789", 
+            "amount": 100.00, 
+            "additionalinfo": "Additional information for the customer", 
+            "returnurl": "https://example.com/payment/success", 
+            "resulturl": "https://example.com/payment/result", 
+            "authemail": "customer@example.com", 
+            "method": "ecocash",
+            "phone": "077777777"
+            "tokenize": false, 
+            "merchanttrace": "TRACE123456", 
+            "status": "Message", 
+            "hash": "followTheGenerateHashTutorial"
+          }'
+        ```
+      </TabItem>
+      <TabItem value="php" label="PHP">
+      ## Installation
+
+Install the library using composer
+
+```sh
+$ composer require paynow/php-sdk
+```
+
+       ```php
+
+require_once('./paynow/vendor/autoload.php');
+
+$paynow = new Paynow\Payments\Paynow(
+'INTEGRATION_ID',
+'INTEGRATION_KEY',
+'http://example.com/gateways/paynow/update',
+
+    // The return url can be set at later stages. You might want to do this if you want to pass data to the return url (like the reference of the transaction)
+    'http://example.com/return?gateway=paynow'
+
+);
+
+# $paynow->setResultUrl('');
+
+# $paynow->setReturnUrl('');
+
+$payment = $paynow->createPayment('Invoice 35', 'melmups@outlook.com');
+
+$payment->add('Sadza and Beans', 1.25);
+
+$response = $paynow->sendMobile($payment, '077777777', 'ecocash');
+
+if($response->success()) {
+	// Get the poll url (used to check the status of a transaction). You might want to save this in your DB
+	$pollUrl = $response->pollUrl();
+
+	// Get the instructions
+	$instrutions = $response->instructions();
+}
+
+````
+      </TabItem>
+      <TabItem value="node" label="NodeJs">
+      ## Installation
+
+Install the library using NPM or yarn
+
+### npm
+
+```sh
+$ npm install --save paynow
+````
+
+### yarn
+
+```sh
+$ yarn add paynow
+```
+
+## Full Usage Example
+
+```javascript
+// Require in the Paynow class
+const { Paynow } = require("paynow");
+
+// Create instance of Paynow class
+let paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
+
+// Set return and result urls
+paynow.resultUrl = "http://example.com/gateways/paynow/update";
+paynow.returnUrl =
+  "http://example.com/return?gateway=paynow&merchantReference=1234";
+
+// Create a new payment
+let payment = paynow.createPayment("Invoice 35");
+
+// Add items to the payment list passing in the name of the item and it's price
+payment.add("Bananas", 2.5);
+payment.add("Apples", 3.4);
+
+// Send off the payment to Paynow
+paynow.sendMobile(
+    
+    // The payment to send to Paynow
+    payment, 
+
+    // The phone number making payment
+    '0777000000',
+    
+    // The mobile money method to use. 
+    'ecocash' 
+
+).then(function(response) {
+    if(response.success) {
+        // These are the instructions to show the user. 
+        // Instruction for how the user can make payment
+        let instructions = response.instructions // Get Payment instructions for the selected mobile money method
+
+        // Get poll url for the transaction. This is the url used to check the status of the transaction. 
+        // You might want to save this, we recommend you do it
+        let pollUrl = response.pollUrl; 
+
+        console.log(instructions)
+
+    } else {
+        console.log(response.error)
+    }
+}).catch(ex => {
+    // Ahhhhhhhhhhhhhhh
+    // *freak out*
+    console.log('There was a problem initiating transaction', ex)
+});
+```
+
+      </TabItem>
+
+        <TabItem value="python" label="Python">
+
+
+## Installation
+
+Install the library using pip
+
+```sh
+$ pip install paynow
+```
+
+```python
+from paynow import Paynow
+
+
+paynow = Paynow(
+	'INTEGRATION_ID',
+	'INTEGRATION_KEY',
+	'http://google.com',
+	'http://google.com'
+	)
+
+payment = paynow.create_payment('Order', 'test@example.com')
+
+payment.add('Payment for stuff', 1)
+
+response = paynow.send_mobile(payment, '0777777777', 'ecocash')
+
+
+if(response.success):
+    poll_url = response.poll_url
+    instructions = response.instructions
+
+    print("Poll Url: ", poll_url)
+
+    status = paynow.check_transaction_status(poll_url)
+
+    time.sleep(30)
+
+    print("Payment Status: ", status.status)
+
+```
+
+      </TabItem>
+      <TabItem value=".net" label=".NET">
+              ### Installing using Nuget
+
+        From the Nuget package manager console, enter the follwing command
+
+        ```sh
+        PM> Install-Package Paynow
+        ```
+
+        ```csharp
+        // Require in the Paynow class
+        using System;
+        using Webdev.Payments.Paynow;
+
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        // Create an instance of the paynow class
+        var paynow = new Paynow("INTEGRATION_ID", "INTEGRATION_KEY");
+
+        paynow.ResultUrl = "http://example.com/gateways/paynow/update";
+        paynow.ReturnUrl = "http://example.com/return?gateway=paynow";
+        // The return url can be set at later stages. You might want to do this if you want to pass data to the return url (like the reference of the transaction)
+
+        // Create a new payment
+        var payment = paynow.CreatePayment("Invoice 35");
+
+        // Send payment to paynow
+       var response = paynow.SendMobile(payment);
+
+      // Check if request was successful
+      if(response.Success()) 
+        {   
+            // Get the url to redirect the user to so they can make payment
+            var link = response.RedirectLink();
+            
+            // Get the poll url (used to check the status of a transaction). You might want to save this in your DB
+            var pollUrl = response.PollUrl(); 
+            
+            // Get the instructions
+            var instructions =  response.Instructions();
+        }
+      else
+        {
+            // Ahhhhhhhhhhhhhhh
+            // *freak out*
+        }
+    }
+}
+```
+
+</TabItem>
+    </Tabs>

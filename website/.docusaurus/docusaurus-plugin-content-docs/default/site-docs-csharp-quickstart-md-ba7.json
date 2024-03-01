@@ -1,0 +1,28 @@
+{
+  "id": "csharp_quickstart",
+  "title": "C# / .NET Quickstart Guide",
+  "description": "Sign in to Paynow and get integration details",
+  "source": "@site/docs/csharp_quickstart.md",
+  "sourceDirName": ".",
+  "slug": "/csharp_quickstart",
+  "permalink": "/docs/csharp_quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/csharp_quickstart.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "csharp_quickstart",
+    "title": "C# / .NET Quickstart Guide",
+    "sidebar_label": ".NET"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "PHP",
+    "permalink": "/docs/php_quickstart"
+  },
+  "next": {
+    "title": "Node.JS",
+    "permalink": "/docs/nodejs_quickstart"
+  }
+}

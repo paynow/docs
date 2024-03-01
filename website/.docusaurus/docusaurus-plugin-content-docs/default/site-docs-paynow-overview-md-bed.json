@@ -1,0 +1,28 @@
+{
+  "id": "paynow_overview",
+  "title": "How it works",
+  "description": "How Paynow Works - Request flow",
+  "source": "@site/docs/paynow_overview.md",
+  "sourceDirName": ".",
+  "slug": "/paynow_overview",
+  "permalink": "/docs/paynow_overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/paynow_overview.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "paynow_overview",
+    "title": "How it works",
+    "sidebar_label": "How it works"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Generating Integration Keys",
+    "permalink": "/docs/integration_generation"
+  },
+  "next": {
+    "title": "Test Mode",
+    "permalink": "/docs/test_mode"
+  }
+}

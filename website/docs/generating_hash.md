@@ -13,7 +13,7 @@ Any message to or from Paynow must include a hash and the hash must be validated
 result string URL decode any values first, if it is from a form post then this will already have
 been done).
 2. Append the Integration Key which can be found by editing the appropriate receive payment
-link in the Receive Payment Links area of Paynow
+link in the [Receive Payment Links](https://www.paynow.co.zw/Home/Receive) area of Paynow
 3. UTF8 encode the string, note in PHP this should not be necessary, depending on your
 configuration.
 4. Create a SHA512 hash of the string and output the result as upper case hexadecimal

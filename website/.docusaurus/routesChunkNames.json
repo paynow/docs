@@ -1,0 +1,243 @@
+{
+  "/__docusaurus/debug-0c9": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-99-02f"
+    }
+  },
+  "/__docusaurus/debug/config-b5b": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-99-02f"
+    }
+  },
+  "/__docusaurus/debug/content-fba": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-99-02f"
+    },
+    "allContent": "allContent---docusaurus-debug-content-246-9aa"
+  },
+  "/__docusaurus/debug/globalData-180": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-99-02f"
+    }
+  },
+  "/__docusaurus/debug/metadata-8e4": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-99-02f"
+    }
+  },
+  "/__docusaurus/debug/registry-dd1": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-99-02f"
+    }
+  },
+  "/__docusaurus/debug/routes-249": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugf-99-02f"
+    }
+  },
+  "/about-75c": {
+    "__comp": "__comp---site-src-pages-about-js-779-319",
+    "__context": {
+      "plugin": "plugin---about-2-cd-cee"
+    },
+    "config": "config---about-5-e-9-bcb"
+  },
+  "/help-6df": {
+    "__comp": "__comp---site-src-pages-help-js-7-e-3-222",
+    "__context": {
+      "plugin": "plugin---about-2-cd-cee"
+    },
+    "config": "config---about-5-e-9-bcb"
+  },
+  "/search-3e0": {
+    "__comp": "__comp---theme-search-page-1-a-4-d6f",
+    "__context": {
+      "plugin": "plugin---search-86-f-b99"
+    }
+  },
+  "/try-873": {
+    "__comp": "__comp---site-src-pages-try-jsf-89-c25",
+    "__context": {
+      "plugin": "plugin---about-2-cd-cee"
+    },
+    "config": "config---about-5-e-9-bcb"
+  },
+  "/users-8f3": {
+    "__comp": "__comp---site-src-pages-users-js-1-db-7ac",
+    "__context": {
+      "plugin": "plugin---about-2-cd-cee"
+    },
+    "config": "config---about-5-e-9-bcb"
+  },
+  "/docs-d27": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---docseac-fcb"
+    }
+  },
+  "/docs-b6d": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "version": "version---docs-935-398"
+  },
+  "/docs-71a": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/docs/advanced_paynow_request_button-0d0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-advanced-paynow-request-button-16-a-fee"
+  },
+  "/docs/artwork-194": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-artwork-75-d-7ba"
+  },
+  "/docs/camptix_nigelrodgers-f72": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-camptix-nigelrodgers-476-759"
+  },
+  "/docs/complete_transaction-e3b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-complete-transaction-961-322"
+  },
+  "/docs/csharp_quickstart-1b2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-csharp-quickstartba-7-052"
+  },
+  "/docs/easy_digital_downloads-405": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-easy-digital-downloads-916-996"
+  },
+  "/docs/express_checkout_transactions-82d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-express-checkout-transactions-7-fb-fb4"
+  },
+  "/docs/generating_hash-0f8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-generating-hash-0-bd-912"
+  },
+  "/docs/generation_hash-c4a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-generation-hashbff-b46"
+  },
+  "/docs/gravity_forms-fb8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-gravity-formscb-3-3d0"
+  },
+  "/docs/initiate_mobile_transaction-6ee": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-initiate-mobile-transaction-68-f-5d5"
+  },
+  "/docs/initiate_ticket_transaction-49a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-initiate-ticket-transactionf-8-e-a06"
+  },
+  "/docs/initiate_transaction-fc3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-initiate-transaction-66-b-380"
+  },
+  "/docs/integration_generation-e4a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-integration-generation-470-067"
+  },
+  "/docs/java_quickstart-0b3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-java-quickstart-769-355"
+  },
+  "/docs/magento_prizeless-2f1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-magento-prizelesse-99-37e"
+  },
+  "/docs/nodejs_quickstart-03f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-nodejs-quickstartc-6-e-eca"
+  },
+  "/docs/notification_success_cancel_urls-333": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-notification-success-cancel-urls-20-d-3ae"
+  },
+  "/docs/paynow_api-f42": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-paynow-apibd-8-563"
+  },
+  "/docs/paynow_initiate-660": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-paynow-initiate-44-d-710"
+  },
+  "/docs/paynow_overview-028": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-paynow-overviewbed-b42"
+  },
+  "/docs/php_quickstart-60e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-php-quickstartaeb-ddb"
+  },
+  "/docs/polling_status-a2f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-polling-status-92-f-848"
+  },
+  "/docs/python_quickstart-f96": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-python-quickstart-8-af-08f"
+  },
+  "/docs/quickstart-33c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-quickstart-807-6cd"
+  },
+  "/docs/shopify-d21": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-shopify-281-443"
+  },
+  "/docs/simple_paynow_request_button-89a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-simple-paynow-request-button-983-424"
+  },
+  "/docs/sourcedocs_dotnet-438": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-sourcedocs-dotnete-94-ec8"
+  },
+  "/docs/sourcedocs_nodejs-eb9": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-sourcedocs-nodejsd-2-c-c7e"
+  },
+  "/docs/sourcedocs_php-7cb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-sourcedocs-php-1-a-0-fb0"
+  },
+  "/docs/springboot_bmukorera_tzifudzi-926": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-springboot-bmukorera-tzifudzi-297-316"
+  },
+  "/docs/status_update-d83": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-status-update-985-296"
+  },
+  "/docs/test_mode-bba": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-test-mode-1-a-3-1fb"
+  },
+  "/docs/url_safe_base64_encoding-f4b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-url-safe-base-64-encoding-052-e3b"
+  },
+  "/docs/validating_hash-350": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-validating-hash-48-d-4a7"
+  },
+  "/docs/woocommerce-05c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-woocommerce-47-f-fb1"
+  },
+  "/-23c": {
+    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__context": {
+      "plugin": "plugin---about-2-cd-cee"
+    },
+    "config": "config---about-5-e-9-bcb"
+  }
+}

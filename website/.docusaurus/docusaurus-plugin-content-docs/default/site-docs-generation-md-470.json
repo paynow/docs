@@ -1,0 +1,27 @@
+{
+  "id": "integration_generation",
+  "title": "Generating Integration Keys",
+  "description": "Signup and Key Generation",
+  "source": "@site/docs/generation.md",
+  "sourceDirName": ".",
+  "slug": "/integration_generation",
+  "permalink": "/docs/integration_generation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/generation.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "integration_generation",
+    "title": "Generating Integration Keys"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Getting started",
+    "permalink": "/docs/quickstart"
+  },
+  "next": {
+    "title": "How it works",
+    "permalink": "/docs/paynow_overview"
+  }
+}

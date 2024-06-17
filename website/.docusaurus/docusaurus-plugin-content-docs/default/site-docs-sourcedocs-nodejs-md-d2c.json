@@ -1,0 +1,24 @@
+{
+  "id": "sourcedocs_nodejs",
+  "title": "Source Docs for Node.js Library",
+  "description": "Class: InitResponse",
+  "source": "@site/docs/sourcedocs_nodejs.md",
+  "sourceDirName": ".",
+  "slug": "/sourcedocs_nodejs",
+  "permalink": "/docs/sourcedocs_nodejs",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/sourcedocs_nodejs.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "sourcedocs_nodejs",
+    "title": "Source Docs for Node.js Library",
+    "sidebar_label": "Node.JS"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": ".NET",
+    "permalink": "/docs/sourcedocs_dotnet"
+  }
+}

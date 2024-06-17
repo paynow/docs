@@ -1,0 +1,28 @@
+{
+  "id": "polling_status",
+  "title": "Polling for a Status Update",
+  "description": "The merchant site can poll for a current transaction status to Paynow at any point, but it should only be done in the following two scenarios:",
+  "source": "@site/docs/polling_status.md",
+  "sourceDirName": ".",
+  "slug": "/polling_status",
+  "permalink": "/docs/polling_status",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/polling_status.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "polling_status",
+    "title": "Polling for a Status Update",
+    "sidebar_label": "Polling for a Status Update"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Payment Status Update",
+    "permalink": "/docs/status_update"
+  },
+  "next": {
+    "title": "Complete a Transaction",
+    "permalink": "/docs/complete_transaction"
+  }
+}

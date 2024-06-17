@@ -1,0 +1,19 @@
+{
+  "id": "initiate_transaction",
+  "title": "Initiate a transaction",
+  "description": "When the customer is ready to make payment the merchant site must perform an Initiate Transaction",
+  "source": "@site/docs/initiate_transaction.md",
+  "sourceDirName": ".",
+  "slug": "/initiate_transaction",
+  "permalink": "/docs/initiate_transaction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/initiate_transaction.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "initiate_transaction",
+    "title": "Initiate a transaction",
+    "sidebar_label": "Initiate a transaction"
+  }
+}

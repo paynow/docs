@@ -1,0 +1,28 @@
+{
+  "id": "status_update",
+  "title": "Status Update",
+  "description": "Status update from Paynow",
+  "source": "@site/docs/status_update.md",
+  "sourceDirName": ".",
+  "slug": "/status_update",
+  "permalink": "/docs/status_update",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/status_update.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "status_update",
+    "title": "Status Update",
+    "sidebar_label": "Payment Status Update"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Express Checkout Transactions",
+    "permalink": "/docs/express_checkout_transactions"
+  },
+  "next": {
+    "title": "Polling for a Status Update",
+    "permalink": "/docs/polling_status"
+  }
+}

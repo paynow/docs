@@ -1,0 +1,28 @@
+{
+  "id": "python_quickstart",
+  "title": "Python Quickstart Guide",
+  "description": "Sign in to Paynow and get integration details",
+  "source": "@site/docs/python_quickstart.md",
+  "sourceDirName": ".",
+  "slug": "/python_quickstart",
+  "permalink": "/docs/python_quickstart",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/python_quickstart.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "python_quickstart",
+    "title": "Python Quickstart Guide",
+    "sidebar_label": "Python"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Node.JS",
+    "permalink": "/docs/nodejs_quickstart"
+  },
+  "next": {
+    "title": "Java",
+    "permalink": "/docs/java_quickstart"
+  }
+}

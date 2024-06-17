@@ -1,0 +1,28 @@
+{
+  "id": "sourcedocs_php",
+  "title": "Source Docs for PHP Library",
+  "description": "Class: \\Paynow\\Core\\Constants",
+  "source": "@site/docs/sourcedocs_php.md",
+  "sourceDirName": ".",
+  "slug": "/sourcedocs_php",
+  "permalink": "/docs/sourcedocs_php",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/sourcedocs_php.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "sourcedocs_php",
+    "title": "Source Docs for PHP Library",
+    "sidebar_label": "PHP"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Initiate a Passenger Ticket Transaction",
+    "permalink": "/docs/initiate_ticket_transaction"
+  },
+  "next": {
+    "title": ".NET",
+    "permalink": "/docs/sourcedocs_dotnet"
+  }
+}

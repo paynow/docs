@@ -36,10 +36,8 @@
       "initiate_ticket_transaction"
     ],
     "Library Source Docs": [
-      "sourcedocs_php",
       "sourcedocs_dotnet",
-      "sourcedocs_nodejs",
-      "sourcedocs_java"
+      "sourcedocs_nodejs"
     ]    
   }
 }

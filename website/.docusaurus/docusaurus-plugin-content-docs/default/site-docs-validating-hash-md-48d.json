@@ -1,0 +1,28 @@
+{
+  "id": "validating_hash",
+  "title": "Validating a hash on an inbound message",
+  "description": "Take the following example message of a Paynow response message:",
+  "source": "@site/docs/validating_hash.md",
+  "sourceDirName": ".",
+  "slug": "/validating_hash",
+  "permalink": "/docs/validating_hash",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/validating_hash.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "validating_hash",
+    "title": "Validating a hash on an inbound message",
+    "sidebar_label": "Validating Hash"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Generating Hash",
+    "permalink": "/docs/generating_hash"
+  },
+  "next": {
+    "title": "Initiate a Passenger Ticket Transaction",
+    "permalink": "/docs/initiate_ticket_transaction"
+  }
+}

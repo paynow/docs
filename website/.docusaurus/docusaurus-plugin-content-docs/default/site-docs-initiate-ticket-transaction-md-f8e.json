@@ -1,0 +1,28 @@
+{
+  "id": "initiate_ticket_transaction",
+  "title": "Initiate a Passenger Ticket Transaction",
+  "description": "A merchant site that wants its customers to make payment for air tickets using Paynow can integrate using the initiatetickettransaction API.",
+  "source": "@site/docs/initiate_ticket_transaction.md",
+  "sourceDirName": ".",
+  "slug": "/initiate_ticket_transaction",
+  "permalink": "/docs/initiate_ticket_transaction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/paynow/docs/edit/main/website/docs/initiate_ticket_transaction.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "id": "initiate_ticket_transaction",
+    "title": "Initiate a Passenger Ticket Transaction",
+    "sidebar_label": "Initiate a Passenger Ticket Transaction"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Validating Hash",
+    "permalink": "/docs/validating_hash"
+  },
+  "next": {
+    "title": "PHP",
+    "permalink": "/docs/sourcedocs_php"
+  }
+}

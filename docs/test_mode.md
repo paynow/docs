@@ -5,7 +5,7 @@ sidebar_label: Test Mode
 ---
 When you first create an integration it is in test mode.  Test mode allows you to create, cancel and pay a transaction to test all possible scenarios with your system.  However no actual money is moved and you do not need access to Visa/MasterCard/Vpayments/EcoCash/TeleCash/OneMoney to do a test transaction.
 
-> After creating a transaction ONLY THE MERCHANT ACCOUNT USED TO CREATE THE INTEGRATION can login and Fake a Payment.  Any other users will get a message saying the merchant is in testing and they cannot proceed with payment.
+> After creating a transaction ONLY THE MERCHANT ACCOUNT USED TO CREATE THE INTEGRATION can login and Fake a Payment.  Any other users will get a message saying the merchant is in testing and they cannot proceed with payment. <br /><br />If you include the **authemail** field when initiating the transaction with Paynow, make sure its your merchant account email address, otherwise you won't be able to complete the test transaction.
 
 When making payment in test mode select [TESTING: Faked Success] and click [Make Payment], Paynow will reply to your site as if payment has been made. 
 

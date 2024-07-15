@@ -42,7 +42,7 @@ We welcome contributions to this and the SDKs repositories of any kind including
 
 ## Building and Deploying
 
-Changes that are merged into `master` branch are automatically built and deployed by CI.
+Changes merged into the `master` branch are automatically built and deployed by CI.
 
 
 <!-- LINKS -->

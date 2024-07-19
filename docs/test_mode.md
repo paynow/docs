@@ -31,3 +31,29 @@ Paynow will send a FAILED status update message 30 seconds after the transaction
 > Insufficient Balance – 0774444444
 
 Paynow will immediately fail the transaction during initiation and return an “Insufficient balance” error message.
+
+### Express Checkout for Visa, MasterCard and Zimswitch
+To use Visa, Mastercard and Zimswitch Express Checkout  Tokenized transaction in test mode, You can use any of the below pre-configured: 
+
+#### Visa Mastercard Test  Tokens
+Paynow will return  the following statuses when the tokens below are passed during an express checkout transaction for *vmc*
+
+> Success: {11111111-1111-1111-1111-111111111111}
+
+> Pending: {22222222-2222-2222-2222-222222222222}
+
+> Cancelled: {33333333-3333-3333-3333-333333333333}
+
+> Insufficient Balance: {44444444-4444-4444-4444-444444444444}
+
+#### Zimswitch Test  Tokens
+
+Paynow will return  the following statuses when the tokens below are passed during an express checkout transaction for *zimswitch*
+
+> Success: 11111111111111111111111111111111
+
+> Pending: 22222222222222222222222222222222
+
+> Cancelled: 33333333333333333333333333333333
+
+> Insufficient Balance: 44444444444444444444444444444444

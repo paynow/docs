@@ -20,9 +20,9 @@ The fields below are required in addition to those specified in the [Initiate a 
 
 | Required For | Field | Data Type | Description |
 | --- | --- | --- | --- |
-| All | method | String | ecocash = Ecocash mobile money **OR** onemoney = OneMoney mobile money  **OR** vmc = Visa Mastercard **OR** innbucks = InnBucks **OR** paygo = PayGo |
+| All | method | String | ecocash = Ecocash mobile money **OR** onemoney = OneMoney mobile money  **OR** vmc = Visa Mastercard **OR** innbucks = InnBucks **OR** paygo = PayGo | **OR** zimswitch = Zimswitch
 | Mobile Money | phone | String | The subscriber number of the mobile money wallet to be debited |
-| Visa/Mastercard | token | String | A token returned by a previous tokenized transaction. Used to carry out recurring payments without requiring further input from the card holder |
+| Visa/Mastercard/Zimswitch | token | String | A token returned by a previous tokenized transaction. Used to carry out recurring payments without requiring further input from the card holder |
 | Visa/Mastercard | merchanttrace | String | A unique merchanttrace is required for each request to ensure that no duplicate debits are processed in the event of a request timeout or network interruption |
 
 ## Important Notes

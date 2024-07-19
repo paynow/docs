@@ -4,11 +4,15 @@ title: Express Checkout Transactions
 sidebar_label: Express Checkout Transactions
 ---
 
-An express checkout transaction allows the integrator to capture the customers payment method and details inside their application and initiate payment without redirecting the user to Paynow. This is ideal for mobile applications; however, integrators should be aware of PCI DSS requirements for capturing Visa/Mastercard details within their applications.
+An express checkout transaction allows a merchant to capture their customer's payment method and details inside their application and complete payment without redirecting the customer to Paynow.
 
-Express checkout transactions currently support EcoCash, OneMoney, InnBucks, PayGo and Visa/Mastercard payment methods.
-
-For EcoCash and OneMoney, the mobile subscriber specified in the initiate message will have a USSD session pushed to their handset prompting them to enter their mobile wallet PIN number to authorize the transaction (or to cancel the transaction).
+Express checkout transactions currently support the following payment methods:
+- Visa/Mastercard (via tokenized card details)
+- Zimswitch (via tokenized card details)
+- EcoCash
+- OneMoney
+- InnBucks
+- PayGo (e.g. Omari)
 
 ## Initiate an Express Checkout Transaction
 
@@ -16,14 +20,14 @@ To initiate an express checkout transaction, an HTTP POST request should be made
 
 [https://www.paynow.co.zw/interface/remotetransaction](https://www.paynow.co.zw/interface/remotetransaction)
 
-The fields below are required in addition to those specified in the [Initiate a Transaction](/docs/initiate_transaction.html) section
+The fields below are required **in addition to those specified in the [Initiate a Transaction](/docs/initiate_transaction.html) section**
 
-| Required For | Field | Data Type | Description |
+| Field | Required For | Data Type | Description |
 | --- | --- | --- | --- |
-| All | method | String | ecocash = Ecocash mobile money **OR** onemoney = OneMoney mobile money  **OR** vmc = Visa Mastercard **OR** innbucks = InnBucks **OR** paygo = PayGo |
-| Mobile Money | phone | String | The subscriber number of the mobile money wallet to be debited |
-| Visa/Mastercard | token | String | A token returned by a previous tokenized transaction. Used to carry out recurring payments without requiring further input from the card holder |
-| Visa/Mastercard | merchanttrace | String | A unique merchanttrace is required for each request to ensure that no duplicate debits are processed in the event of a request timeout or network interruption |
+| method | All | String | The payment method to be used. One of the following:<ul><li>zimswitch</li><li>vmc (Visa Mastercard)</li><li>ecocash</li><li>onemoney</li><li>innbucks</li><li>paygo</li></ul>
+| phone | Mobile Money | String | The subscriber number of the mobile money wallet to be debited |
+| token | Visa/Mastercard/Zimswitch | String | A token returned by a previous tokenized transaction. Used to carry out recurring payments without requiring further input from the card holder |
+| merchanttrace | Visa/Mastercard/Zimswitch | String | A unique merchanttrace is required for each request to ensure that no duplicate debits are processed in the event of a request timeout or network interruption |
 
 ## Important Notes
 ### Integration
@@ -46,6 +50,10 @@ An express checkout request for PayGo will return the following additional value
 - **authorizationqr** - a URL to the QR code for the PayGo transaction (display to customer)
 - **authorizationexpires** - the date and time at which the authorization code will expire in the format d-MMM-yyyy HH:mm (display to customer)
 
-### Visa/Mastercard
+### Visa/Mastercard & Zimswitch
 
-For Visa/Mastercard **token** transactions, the **merchanttrace** field is required. These transactions will be automatically re-tokenized during the payment and the new token returned in the status update callback message
+For Visa/Mastercard & Zimswitch **token** transactions, the **merchanttrace** field is required. These transactions will be automatically re-tokenized during the payment and the new token returned in the status update callback message
+
+> In order to initially get a token for a customer's payment instrument (card) which can be used repeatedly here, the merchant must redirect the customer to Paynow to complete a transaction where `tokenize=true` is specified in the initiate transaction request (see [Initiate Transaction](initiate_transaction.md#tokenize) for more information)
+>
+>The token is returned following a successful card payment (in the Status Update from Paynow) and can be stored by the merchant for future payments for the customer
